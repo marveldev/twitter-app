@@ -1,0 +1,97 @@
+  
+.dim-theme {
+  background-color: #15202B;
+  color: #fff;
+  height: 100em;
+  width: 100%;
+}
+
+.dim-theme .logo>i {
+  color: #fff;
+}
+
+.dim-theme .logo:hover {
+  background-color: #192734;
+}
+
+.dim-theme .left-side-nav {
+  border-right: 1px solid #38444D;
+}
+
+.dim-theme .left-side-nav>a:hover {
+  color: #1DA1F2;
+}
+
+.dim-theme a:hover,
+.dim-theme .trending-tweets>button:hover {
+  background-color: #192734;
+}
+
+.dim-theme .left-side-nav>a {
+  color: #fff;
+}
+
+.dim-theme .dropdown-content {
+  background-color: #15202B;
+  box-shadow: 0px 8px 16px 0px #fdf8f833;
+}
+
+.dim-theme .dropdown-content a {
+  color: #fff;
+}
+
+.dim-theme .dropdown-content i {
+  color: #6d7d8a;
+}
+
+.dim-theme button:hover {
+  background-color: #2d91cf;
+}
+
+.dim-theme .right-side-nav>input {
+  background-color: #253341;
+}
+
+.dim-theme .right-side-nav>i,
+.dim-theme .right-side-nav>input::placeholder {
+  color: #7C8C99;
+}
+
+.dim-theme .tweet-options>a:hover,
+.dim-theme .tweet-data:hover {
+  background-color: #192734;
+}
+
+.dim-theme textarea {
+  background-color: #15202B;
+}
+
+.dim-theme .tweet-data {
+  border-top: 1px solid #253341;
+  border-bottom: 1px solid #253341;
+}
+
+.dim-theme .tweet-info>a {
+  color: #657786;
+}
+
+.dim-theme .main-content {
+  border-right: 1px solid #253341;
+}
+
+.dim-theme .main-content>h3 {
+  border-bottom: 1px solid #253341;
+}
+
+.dim-theme .user-options {
+  border-bottom: 10px solid #253341;
+}
+
+.dim-theme .trending-tweets,
+.dim-theme .trending-tweets>button {
+  background-color: #1E2C39;
+}
+
+.dim-theme .current-trend {
+  border-top: 2px solid  #38444D;
+}

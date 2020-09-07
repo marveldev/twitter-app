@@ -1,0 +1,87 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+  position: absolute;
+  top: 0;
+  left: 21em;
+}
+
+.main-content {
+  border-right: 1px solid #E6ECF0;
+  width: 42em;
+  height: 100em;
+}
+
+.main-content>h3 {
+  font-weight: bold;
+  height: 1.8em;
+  padding-left: 0.5em;
+  border-bottom: 1px solid #E6ECF0;
+}
+
+.user-input {
+  display: grid;
+  grid-template-columns: 0.3fr 2fr;
+}
+
+.user-options {
+  height: 12em;
+  border-bottom: 10px solid #E6ECF0;
+}
+
+.user-options textarea {
+  width: 33em;
+  border: none;
+  padding: 0.5em 0;
+  outline: none;
+  resize: none;
+}
+
+.user-options textarea::placeholder {
+  color: #969BA7;
+  font-size: 1.3em;
+}
+
+.user-options a:hover {
+  background-color: #F5FBFE;
+}
+
+.user-options button:hover {
+  background-color: #2d91cf;
+}
+
+.tweet-data {
+  display: grid;
+  grid-template-columns: 0.5fr 4fr;
+  padding: 1em 0 1em 0.8em;
+  height: auto;
+  border-top: 1px solid  #E6ECF0;
+  border-bottom: 1px solid  #E6ECF0;
+}
+
+.tweet-data:hover {
+  background-color: #F5F8FA;
+}
+
+.user-profile a {
+  color: black;
+  margin-right: 3em;
+  text-decoration: none;
+}
+
+.user-profile a i {
+  margin-right: 0.5em;
+  font-size: 17px;
+  color: #657786;
+  padding: 0.5em;
+  border-radius: 1em;
+}
+
+.user-profile a i:hover {
+  background-color: #a1a1c248;
+  color: #1DA1F2;
+}
+
+.user-profile a:nth-child(3) i:hover {
+  background-color: #a75044b0;
+}

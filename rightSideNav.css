@@ -1,0 +1,142 @@
+.right-side-nav {
+  margin: 0 0 0 2em;
+}
+
+.right-side-nav input {
+  width: 90%;
+  height: 2.2em;
+  padding-left: 2em;
+  margin-top: 0.8em;
+  border: unset;
+  border-radius: 2em;
+  background-color: #E6ECF0;
+  font-size: 1.5em;
+}
+
+.trending-tweets {
+  margin: 2.5em 0 0 1.8em;
+  background-color: #EFF2F4;
+  padding-top: 1em;
+  border-radius: 1.5em;
+  width: 90%;
+  height: 61em;
+}
+
+.right-side-nav>i {
+  position: relative;
+  left: 2em;
+  font-size: 1.3em;
+}
+
+.tweets-header {
+  font-weight: bold;
+  font-size: 1.3em;
+  padding: 0 0 0.5em 1em;
+}
+
+.trending-tweets>button {
+  border: unset;
+  height: 2.5em;
+  width: 2.5em;
+  border-radius: 1.2em;
+  margin-left: 17em;
+  background-color: #EFF2F4;
+  color: #1DA1F2;
+}
+
+.trending-tweets>button:hover {
+  background-color: #c2daeb;
+}
+
+.trending-tweets>button i {
+  font-size: 1.5em;
+  margin: 0.1em 0 0 0;
+}
+
+.current-trend {
+  height: 7em;
+  width: 100%;
+  margin: 1em 0 0 0;
+  padding: 1em 0 0 1em;
+  border-top: 2px solid #E6ECF0;
+}
+
+.current-trend p {
+  margin: 0;
+  color: #7C8C99;
+}
+
+.current-trend p:last-child {
+  margin: 0.5em 0;
+}
+
+.current-trend:last-child {
+  border-bottom: none;
+}
+
+.trend-modal {
+  display: none;
+  background-color: #fff;
+  position: fixed;
+  top: 3em;
+  left: 25em;
+  width: 43em;
+  height: 40em;
+  border-radius: 1em;
+  z-index: 1;
+}
+
+.trend-modal button {
+  border: unset;
+  font-size: 1.5em;
+  color: #1da1f2;
+  margin: 0.3em 1em 0.3em 0.5em;
+  padding: 0.2em 0.6em;
+  border-radius: 1em;
+  background-color: #fff;
+}
+
+.trend-modal button:hover {
+  background-color: #F5FBFE;
+}
+
+.trend-modal>strong {
+  font-size: 1.3em;
+  font-weight: 800;
+}
+
+.set-location {
+  border-top: 1px solid #e6ecf0;
+  border-bottom: 15px solid #e6ecf0;
+}
+
+.trend-modal p {
+  font-weight: 800;
+  font-size: 1.3em;
+  border-bottom: 1px solid #e6ecf0;
+  padding: 0.4em 0 0.4em 1em;
+}
+
+.trend-modal span {
+  padding: 0 0 0 1.5em;
+}
+
+.trend-modal input {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.set-trend input {
+  margin-left: 30em;
+}
+
+.set-location input {
+  margin-left: 25em;
+}
+
+.trend-modal small {
+  display: block;
+  padding: 0 0 0 1.8em;
+  margin: 1em 0;
+  color: #919ea9;
+}
