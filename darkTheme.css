@@ -1,0 +1,134 @@
+.dark-theme {
+  background-color: #000;
+  color: #fff;
+  height: 100em;
+  width: 100%;
+}
+
+.dark-theme .logo>i {
+  color: #fff;
+}
+
+ .dark-theme .logo:hover {
+  background-color: #192734;
+}
+
+.dark-theme .left-side-nav {
+  border-right: 1px solid #2F3336;
+}
+
+.dark-theme .left-side-nav>a:hover {
+  color: #1DA1F2;
+}
+
+.dark-theme a:hover,
+.dark-theme .trending-tweets>button:hover {
+  background-color: #15181c;
+}
+
+.dark-theme .left-side-nav>a {
+  color: #fff;
+} 
+
+.dark-theme .dropdown-content {
+  background-color: #000;
+  box-shadow: 0px 8px 16px 0px #fdf8f833;
+}
+
+.dark-theme .dropdown-content a {
+  color: #fff;
+}
+
+.dark-theme .dropdown-content i {
+  color: #585f65;
+}
+
+.dark-theme button:hover {
+  background-color: #2d91cf;
+}
+
+.dark-theme .right-side-nav>input {
+  background-color: #15181C;
+}
+
+.dark-theme .right-side-nav>i,
+.dark-theme .right-side-nav>input::placeholder {
+  color: #6E767D;
+}
+
+.dark-theme .tweet-options>a:hover,
+.dark-theme .tweet-data:hover {
+  background-color: #15181C;
+} 
+
+.dark-theme textarea {
+  background-color: #000;
+}
+
+.dark-theme .tweet-data {
+  border-top: 1px solid #2F3336;
+  border-bottom: 1px solid #2F3336;
+}
+
+.dark-theme .tweet-info>a {
+  color: #657786;
+}
+
+.dark-theme .main-content {
+  border-right: 1px solid #2F3336;
+}
+
+.dark-theme .main-content>h3 {
+  border-bottom: 1px solid #2F3336;
+}
+
+.dark-theme .user-options {
+  border-bottom: 10px solid #2F3336;
+}
+
+.dark-theme .trending-tweets,
+.dark-theme .trending-tweets>button {
+  background-color: #15181c;
+}
+
+.dark-theme .current-trend {
+  border-top: 1px solid #2f3336;
+}
+
+.dark-theme .trend-modal,
+.dark-theme .trend-modal button,
+.dark-theme #close-modal-button {
+  background-color: #000;
+}
+
+.dark-theme .trend-modal button:hover,
+.dark-theme #close-modal-button:hover {
+  background-color: #192734;
+}
+
+.dark-theme .set-location {
+  border-top: 1px solid #2f3336;
+  border-bottom: 15px solid #2f3336;
+}
+
+.dark-theme .trend-modal p {
+  border-bottom: 1px solid #2f3336;
+}
+
+.dark-theme .theme-modal,
+.dark-theme .tweet-modal-container {
+  background-color: #000;
+}
+
+.dark-theme .nav-input-modal,
+.dark-theme .tweet-options {
+  border-top: 1px solid #2f3336;
+} 
+ 
+.dark-theme #light-out-button {
+  box-shadow: 0px 8px 16px 0px #fdf8f854;
+}
+
+.dark-theme #tweet-modal-overlay {
+  background-color: #393d43ad; 
+}

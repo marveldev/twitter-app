@@ -9,8 +9,7 @@ const closeTrendButton = document.querySelector('#close-trend-modal');
 const root = document.querySelector('#root');
 const dimThemeButton = document.querySelector('#dim-button');
 const defaultThemeButton = document.querySelector('#default-button');
-
-
+const darkThemeButton = document.querySelector('#light-out-button');
 
 dropdownButton.addEventListener('click', () => {
   document.querySelector('.dropdown-content').style.display = 'block';
@@ -62,4 +61,8 @@ dimThemeButton.addEventListener('click', () => {
 
 defaultThemeButton.addEventListener('click', () => {
   root.className = 'root';
+})
+
+darkThemeButton.addEventListener('click', () => {
+  root.className = 'dark-theme';
 })

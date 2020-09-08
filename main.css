@@ -4,4 +4,5 @@
 @import "./leftSideNav.css";
 @import "./MainContent.css";
 @import "./rightSideNav.css";
-@import "./theme.css";
+@import "./dimTheme.css";
+@import "./darkTheme.css";
