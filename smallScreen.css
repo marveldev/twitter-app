@@ -1,0 +1,56 @@
+@media screen and (max-width: 768px) { 
+  .left-side-nav strong {
+    display: none;
+  }
+
+  #tweet-modal-button {
+    display: none;
+  }
+
+  .left-side-nav {
+    left: 3em;
+    width: 6em;
+  }
+
+  .left-side-nav>a {
+    margin: 0.3em 0;
+    padding: 0.7em 0.1em;
+  }
+  
+  .left-side-nav>a i {
+    margin-left: 0.5em;
+    padding-left: 0.4em;
+  }
+
+  #tweet-modal-icon {
+    display: block;
+    background-color: #1DA1F2;
+    padding: 0.8em 0.1em;
+    color: #fff;
+  }
+
+  .logo>i {
+    margin: 0.2em 0 0 0 !important;
+  }
+  
+  .nav-photo {
+   margin-left: 0.3em;
+  }
+
+  .grid-container {
+    left: 9em;
+  }
+
+  .right-side-nav {
+    display: none;
+  }
+
+  .theme-modal {
+    width: 40em;
+    left: 5em;
+  }
+
+  .tweet-modal-container {
+    left: 5em;
+  }
+}

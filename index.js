@@ -10,6 +10,7 @@ const root = document.querySelector('#root');
 const dimThemeButton = document.querySelector('#dim-button');
 const defaultThemeButton = document.querySelector('#default-button');
 const darkThemeButton = document.querySelector('#light-out-button');
+const tweetModalIcon = document.querySelector('#tweet-modal-icon');
 
 function changeDisplay(element, selector, value, overlay) {
   element.addEventListener('click', () => {
@@ -21,6 +22,7 @@ function changeDisplay(element, selector, value, overlay) {
 changeDisplay(dropdownButton, '.dropdown-content', 'block', dropdownOverlay);
 changeDisplay(dropdownOverlay, '.dropdown-content', 'none', dropdownOverlay);
 changeDisplay(tweetModalButton, '.tweet-modal-container', 'block', tweetModalOverlay)
+changeDisplay(tweetModalIcon, '.tweet-modal-container', 'block', tweetModalOverlay)
 changeDisplay(closeTweetModalButton, '.tweet-modal-container', 'none', tweetModalOverlay);
 changeDisplay(trendButton, '.trend-modal', 'block', tweetModalOverlay);
 changeDisplay(closeTrendButton, '.trend-modal', 'none', tweetModalOverlay);

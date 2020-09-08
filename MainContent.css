@@ -9,7 +9,7 @@
 .main-content {
   border-right: 1px solid #E6ECF0;
   width: 42em;
-  height: 100vh;
+  height: 100%;
 }
 
 .main-content>h3 {
