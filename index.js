@@ -11,15 +11,19 @@ const dimThemeButton = document.querySelector('#dim-button');
 const defaultThemeButton = document.querySelector('#default-button');
 const darkThemeButton = document.querySelector('#light-out-button');
 
-dropdownButton.addEventListener('click', () => {
-  document.querySelector('.dropdown-content').style.display = 'block';
-  dropdownOverlay.style.display = 'block';
-})
+function changeDisplay(element, selector, value, overlay) {
+  element.addEventListener('click', () => {
+    document.querySelector(selector).style.display = value;
+    overlay.style.display = value;
+  })
+}
 
-dropdownOverlay.addEventListener('click', () => {
-  document.querySelector('.dropdown-content').style.display = 'none';
-  dropdownOverlay.style.display = 'none';
-})
+changeDisplay(dropdownButton, '.dropdown-content', 'block', dropdownOverlay);
+changeDisplay(dropdownOverlay, '.dropdown-content', 'none', dropdownOverlay);
+changeDisplay(tweetModalButton, '.tweet-modal-container', 'block', tweetModalOverlay)
+changeDisplay(closeTweetModalButton, '.tweet-modal-container', 'none', tweetModalOverlay);
+changeDisplay(trendButton, '.trend-modal', 'block', tweetModalOverlay);
+changeDisplay(closeTrendButton, '.trend-modal', 'none', tweetModalOverlay);
 
 displayThemeButton.addEventListener('click', () => {
   document.querySelector('.theme-modal').style.display = 'block';
@@ -28,32 +32,12 @@ displayThemeButton.addEventListener('click', () => {
   dropdownOverlay.style.display = 'none';
 })
 
-tweetModalButton.addEventListener('click', () => {
-  document.querySelector('.tweet-modal-container').style.display = 'block';
-  tweetModalOverlay.style.display = 'block';
-})
-
 tweetModalOverlay.addEventListener('click', () => {
   document.querySelector('.tweet-modal-container').style.display = 'none';
   document.querySelector('.trend-modal').style.display = 'none';
   tweetModalOverlay.style.display = 'none';
   document.querySelector('.theme-modal').style.display = 'none';
 })
-
-closeTweetModalButton.addEventListener('click', () => {
-  document.querySelector('.tweet-modal-container').style.display = 'none';
-  tweetModalOverlay.style.display = 'none';
-})
-
-trendButton.addEventListener('click', () => {
-  document.querySelector('.trend-modal').style.display = 'block';
-  tweetModalOverlay.style.display = 'block';
-})
-
-closeTrendButton.addEventListener('click', () => {
-  document.querySelector('.trend-modal').style.display = 'none';
-  tweetModalOverlay.style.display = 'none';
-});
 
 dimThemeButton.addEventListener('click', () => {
   root.className = 'dim-theme';
