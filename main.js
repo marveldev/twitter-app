@@ -1,5 +1,5 @@
 import modal from './Modules/Modal.js';
-import leftSideNav from './Modules/LeftSideNav.js';
+import leftSideNav from './Modules/LeftNav.js';
 import mainContent from './Modules/MainContent.js';
 import rightSideNav from './Modules/RightSideNav.js';
 
