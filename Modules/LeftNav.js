@@ -21,11 +21,11 @@ const leftSideNav = () => {
       </a>
     </nav>
     <nav class="smallscreen-nav">
+      <a href="#"><i class='fas fa-feather-alt'></i></a>
       <a href="#"><i class="glyphicon glyphicon-home"></i></a>
       <a href="#"><i class="fa fa-search"></i></a>
-      <a href="#"><i class='fas fa-bell'></i></a>
+      <a href="#"><i class="fas fa-bell"></i></a>
       <a href="#"><i class="fa fa-envelope-o"></i></a>  
-      <!-- <a href="#" id="tweet-modal-icon"><i class='fas fa-feather-alt'></i></a> -->
     </nav>
   `
 }
