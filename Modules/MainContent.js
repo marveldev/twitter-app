@@ -1,7 +1,13 @@
 const mainContent = () => {
   return `  
     <div class="main-content">
-      <h3>Home</h3>
+      <div class="top-nav">
+        <a href="#">
+          <img src="https://images.pexels.com/photos/3921857/pexels-photo-3921857.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
+            class="small-screen-photo" alt="my profile picture">
+        </a>
+        <strong>Home</strong>
+      </div>
       <div class="user-options">
         <div class="user-input"> 
           <a href="#">
