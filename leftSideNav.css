@@ -252,3 +252,7 @@ body {
 #default-button {
   color: #000;
 }
+
+.smallscreen-nav {
+  display: none;
+}

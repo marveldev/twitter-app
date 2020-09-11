@@ -57,54 +57,40 @@
 
 @media screen and (max-width: 425px) { 
   .left-side-nav {
-    left: 0;
-    width: 4em;
+    display: none;
   }
 
   .grid-container {
-    left: 4em;
+    left: 0; 
   }
 
-  .main-content {
-    width: 32em;
+  .smallscreen-nav {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    z-index: 9999;
+    border-top: 2px solid #E6ECF0;
+    width: 100%;
+    background-color: #fff; 
   }
 
-  .tweet-options>button {
+  .smallscreen-nav>a i {
+    font-size: 1.5em;
+    color: #1DA1F2;
+    padding: 1em 1em;
+    border-radius: 2em;
+    margin: 0 1em;
+  }
+
+  .tweet-options button {
     margin-left: 3em;
+  }
+  
+  .user-profile p {
+    width: 25em;
   }
 
   .user-profile a {
     margin-right: 1.5em;
-  }
-  
-  .user-profile a i {
-    margin-right: 0.2em;
-  }
-
-  .theme-modal {
-    width: 30em;
-    left: 3em;
-    padding: 1.2em;
-  }
-
-  .theme-modal button {
-    width: 8em;
-    margin-left: 1em;
-  }
-
-  .tweet-modal-container {
-    width: 32em;
-    left: 3em;
-  }
-
-  .nav-input-modal>div>textarea {
-    width: 22em;
-    padding: 1em 0 0 1em;
-  }
-
-  .user-profile p,
-  .user-profile strong {
-    margin: 0 1em;
-    line-height: 1.8em;
   }
 }
