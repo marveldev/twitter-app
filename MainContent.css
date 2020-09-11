@@ -12,9 +12,10 @@
   height: 100%;
 }
 
-.main-content>h3 {
+.top-nav>strong  {
   font-weight: bold;
   height: 1.8em;
+  font-size: 1.8em;
   padding-left: 0.5em;
   border-bottom: 1px solid #E6ECF0;
 }
@@ -84,4 +85,8 @@
 
 .user-profile a:nth-child(3) i:hover {
   background-color: #a75044b0;
+}
+
+.small-screen-photo {
+  display: none;
 }
