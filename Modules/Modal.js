@@ -50,7 +50,7 @@ const modal = () => {
         </div>
         <div class="set-trend">
           <p>Personalization</p>
-          <span>Trends for you<span>
+          <span>Trends for you</span>
           <input type="checkbox" />
           <small>You can personalize trends based on your location and who you follow</small>
         </div>  
