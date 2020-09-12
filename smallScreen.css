@@ -146,4 +146,75 @@
     padding: 1.5em 1em 0 0;
     vertical-align: middle;
   }
+  
+  .tweet-modal-container {
+    top: 8em;
+    left: 0.5em;
+  }
+
+  .right-side-nav {
+    position: absolute;
+    left: 0;
+    width: 100%;
+  }
+
+  .trending-tweets {
+    margin: 2.5em 0 5em 0;
+    font-size: 1.8em;
+    height: 61em;
+  }
+
+  .trending-tweets>button {
+    margin-left: 10em;
+  }
+
+  .trend-modal {
+    top: 8em;
+    left: 2em;
+    width: 37em;
+  }
+
+  .set-trend input {
+    margin-left: 23em;
+  }
+  
+  .set-location input {
+    margin-left: 18em;
+  }
+
+  .dropdown-content {
+    top: 8em;
+    width: 25em;
+    height: 35em;
+    padding-top: 2em;
+  }
+  
+  .dropdown-content a {
+    font-size: 1.8em;
+  }
+
+  .theme-modal {
+    width: 40em;
+    left: 1em;
+  }
+
+  .dim-theme .smallscreen-nav {
+    border-top: 2px solid #253341;
+    background-color: #192734;
+  }
+
+  .dim-theme .top-nav {
+    border-bottom: 2px solid #253341;
+    background-color: #192734;
+  }
+
+  .dark-theme .smallscreen-nav {
+    border-top: 2px solid #2F3336;
+    background-color: #000;
+  }
+
+  .dark-theme .top-nav {
+    border-bottom: 2px solid #2F3336;
+    background-color: #000;
+  }
 }

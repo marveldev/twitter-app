@@ -28,6 +28,11 @@ const dimThemeButton = document.querySelector('#dim-button');
 const defaultThemeButton = document.querySelector('#default-button');
 const darkThemeButton = document.querySelector('#light-out-button');
 const tweetModalIcon = document.querySelector('#tweet-modal-icon');
+const smallScreenModal = document.querySelector('#smallscreen-modal');
+const smallScreenTrends = document.querySelector('#smallscreen-trend');
+const smallScreenTheme = document.querySelector('.small-screen-photo');
+const smallScreenHome = document.querySelector('#smallscreen-home');
+
 
 function changeDisplay(element, selector, value, overlay) {
   element.addEventListener('click', () => {
@@ -43,6 +48,18 @@ changeDisplay(tweetModalIcon, '.tweet-modal-container', 'block', tweetModalOverl
 changeDisplay(closeTweetModalButton, '.tweet-modal-container', 'none', tweetModalOverlay);
 changeDisplay(trendButton, '.trend-modal', 'block', tweetModalOverlay);
 changeDisplay(closeTrendButton, '.trend-modal', 'none', tweetModalOverlay);
+changeDisplay(smallScreenModal, '.tweet-modal-container', 'block', tweetModalOverlay);
+changeDisplay(smallScreenTheme, '.dropdown-content', 'block', dropdownOverlay);
+
+smallScreenTrends.addEventListener('click', () => {
+  document.querySelector('.right-side-nav').style.display = 'block';
+  document.querySelector('#tweet-data').style.display = 'none';
+})
+
+smallScreenHome.addEventListener('click', () => {
+  document.querySelector('.right-side-nav').style.display = 'none';
+  document.querySelector('#tweet-data').style.display = 'block';
+})
 
 displayThemeButton.addEventListener('click', () => {
   document.querySelector('.theme-modal').style.display = 'block';
