@@ -119,6 +119,7 @@
     border: none;
     font-weight: 800;
     font-size: 2.5em;
+    vertical-align: middle;
   }
 
   .small-screen-photo {
@@ -201,7 +202,7 @@
   }
 
   .trending-tweets>button {
-    margin-left: 10em;
+    margin-left: 12em;
   }
 
   .trend-modal {
