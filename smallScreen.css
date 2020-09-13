@@ -97,11 +97,12 @@
   }
 
   .user-profile a {
-    margin-right: 0.5em;
-    font-size: 0.7em;
+    margin-right: 0;
+    font-size: 1em;
   } 
 
   .user-profile a i {
+    margin-right: 0;
     font-size: 1.2em;
   }
 
@@ -113,6 +114,7 @@
   .top-nav {
     position: fixed;
     top: 0;
+    margin: 0;
     z-index: 9999;
     background-color: #fff; 
     width: 100%;
