@@ -23,6 +23,11 @@ body {
   border-right: 1px solid #E6ECF0;
 }
 
+.left-side-nav>a:hover,
+.dropdown-content a:hover {
+  background-color: #E8F5FE;
+}
+
 .left-side-nav>a {
   display: block;
   margin: 0.5em 0;

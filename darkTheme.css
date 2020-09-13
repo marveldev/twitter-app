@@ -108,7 +108,8 @@
   border-bottom: 15px solid #2f3336;
 }
 
-.dark-theme .trend-modal p {
+.dark-theme .trend-modal p,
+.dark-theme .top-nav {
   border-bottom: 1px solid #2f3336;
 }
 

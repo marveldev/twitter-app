@@ -75,7 +75,8 @@
   border-right: 1px solid #253341;
 }
 
-.dim-theme .main-content>h3 {
+.dim-theme .main-content>h3,
+.dim-theme .top-nav {
   border-bottom: 1px solid #253341;
 }
 

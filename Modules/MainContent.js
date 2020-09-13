@@ -10,9 +10,9 @@ const mainContent = () => {
       </div>
       <div class="user-options">
         <div class="user-input"> 
-          <a href="#">
+          <a href="#" id="photo-container">
             <img src="https://images.pexels.com/photos/3921857/pexels-photo-3921857.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
-              class="main-content-photo" alt="my profile picture">
+              class="profile-photo" alt="my profile picture">
           </a>
           <div>
             <textarea placeholder="What's happening?"></textarea>

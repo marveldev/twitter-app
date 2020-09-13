@@ -97,8 +97,13 @@
   }
 
   .user-profile a {
-    margin-right: 1em;
+    margin-right: 0.5em;
+    font-size: 0.7em;
   } 
+
+  .user-profile a i {
+    font-size: 1.2em;
+  }
 
   .main-content {
     margin-bottom: 3em;
