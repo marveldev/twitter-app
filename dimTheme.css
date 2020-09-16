@@ -71,6 +71,14 @@
   color: #657786;
 }
 
+.dim-theme .tweet-info>a:hover {
+  color: #1DA1F2;;
+}
+
+.dim-theme .user-profile a:nth-child(3):hover {
+  color: #f11c00;
+}
+
 .dim-theme .main-content {
   border-right: 1px solid #253341;
 }

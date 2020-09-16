@@ -113,6 +113,14 @@
   border-bottom: 1px solid #2f3336;
 }
 
+.dark-theme .tweet-info>a:hover {
+  color: #1DA1F2;;
+}
+
+.dark-theme .user-profile a:nth-child(3):hover {
+  color: #f11c00;
+}
+
 .dark-theme .theme-modal,
 .dark-theme .tweet-modal-container {
   background-color: #000;
