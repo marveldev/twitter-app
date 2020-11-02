@@ -16,8 +16,8 @@ const leftSideNav = () => {
       <button id="tweet-modal-button">Tweet</button>
       <a href="#">
         <img src="https://images.pexels.com/photos/3921857/pexels-photo-3921857.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          class="nav-photo" alt="my profile picture">
-        <strong>Marvelwonders</strong>
+        class="nav-photo image" alt="my profile picture">
+        <strong class="profile-name" id="name">Marvelwonders</strong>
       </a>
     </nav>
     <nav class="smallscreen-nav">

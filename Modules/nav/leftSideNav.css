@@ -121,13 +121,6 @@ body {
   margin-bottom: 2em;
 }
 
-.main-content-photo {
-  height: 3.5em;
-  width: 3.5em;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
 #tweet-modal-overlay {
   display: none; 
   position: fixed; 
