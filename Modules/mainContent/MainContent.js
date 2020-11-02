@@ -4,7 +4,7 @@ const mainContent = () => {
       <div class="top-nav">
         <a href="#">
           <img src="https://images.pexels.com/photos/3921857/pexels-photo-3921857.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
-            class="small-screen-photo" alt="my profile picture">
+            class="small-screen-photo image" alt="my profile picture">
         </a>
         <strong>Home</strong>
       </div>
@@ -12,10 +12,10 @@ const mainContent = () => {
         <div class="user-input"> 
           <a href="#" id="photo-container">
             <img src="https://images.pexels.com/photos/3921857/pexels-photo-3921857.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
-              class="profile-photo" alt="my profile picture">
+              class="profile-photo image" alt="my profile picture">
           </a>
           <div>
-            <textarea placeholder="What's happening?"></textarea>
+            <textarea id="tweet" placeholder="What's happening?"></textarea>
             <div>
               <img src="#" alt="">
             </div>
@@ -31,17 +31,17 @@ const mainContent = () => {
           <a href="#"><i class="fa fa-bar-chart"></i></a>
           <a href="#"><i class="fa fa-smile-o"></i></a>
           <a href="#"><i class="fa fa-calendar-plus-o"></i></a>
-          <button class="add-tweet-button">Tweet</button>
+          <button class="add-tweet-button" title="tweet">Tweet</button>
         </div> 
       </div>
       <div id="tweet-output">
         <div class="tweet-profile">
           <a href="#">
             <img src="https://images.pexels.com/photos/3921857/pexels-photo-3921857.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
-              class="main-content-photo" alt="my profile picture">
+              class="main-content-photo image" alt="my profile picture">
           </a>
           <div class="user-data"> 
-            <strong>Jane Doe</strong>
+            <strong class="profile-name">Jane Doe</strong>
             <button class="delete-button">X</button>
             <p class="tweet-text">Don’t limit yourself. Many people limit themselves to what they think they can do.
               You can go as far as your mind lets you. What you believe, remember, you can achieve.
