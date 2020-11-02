@@ -46,23 +46,24 @@
 }
 
 .user-options {
-  height: 12em;
+  height: auto;
   margin-top: 1em;
   border-bottom: 10px solid #E6ECF0;
 }
 
-.user-options textarea {
-  width: 33em;
-  margin: 0.2em 0 0 1em;
+.user-input textarea {
+  width: 23em;
+  font-size: 1.5em;
+  overflow-y: hidden;
+  height: auto;
   border: none;
   padding: 0.5em 0;
   outline: none;
   resize: none;
 }
 
-.user-options textarea::placeholder {
+.user-input textarea::placeholder {
   color: #969BA7;
-  font-size: 1.5em;
 }
 
 .user-options a:hover {
@@ -73,7 +74,7 @@
   background-color: #2d91cf;
 }
 
-.tweet-data {
+.tweet-profile {
   display: grid;
   grid-template-columns: 0.5fr 4fr;
   padding: 1em 0 1em 0.8em;
@@ -82,7 +83,7 @@
   border-bottom: 1px solid  #E6ECF0;
 }
 
-.tweet-data:hover {
+.tweet-profile:hover {
   background-color: #F5F8FA;
 }
 
@@ -97,7 +98,7 @@
   color: #0a0aff;
 }
 
- .tweet-info a i:hover {
+.tweet-info a i:hover {
   background-color: #a1a1c248;
 }
 
@@ -108,14 +109,66 @@
   border-radius: 1em;
 }
 
-.user-profile a:nth-child(3) i:hover {
+.tweet-info a:nth-child(3) i:hover {
   background-color: #f11c003d;
 } 
 
-.user-profile a:nth-child(3):hover {
+.tweet-info a:nth-child(3):hover {
   color: #f11c00;
 } 
 
 .small-screen-photo {
   display: none;
 }
+
+.delete-button {
+  margin: 0 0 0 23em;
+  width: 2em;
+  height: 2em;
+  font-size: 1.2em;
+  border: unset;
+  border-radius: 1.5em;
+  font-weight: 700;
+}
+
+.delete-modal {
+  display: none;
+  position: fixed;
+  top: 15em;
+  width: 25%;
+  padding: 1em 2em;
+  height: 15em;
+  border-radius: 0.8em;
+  text-align: center;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.delete-modal button {
+  margin: 1em 0.5em;
+  width: 8em;
+  height: 2.5em;
+  border: unset;
+  border-radius: 1.5em;
+  font-weight: 700;
+}
+
+.confirm-button {
+  color: #fff;
+  background-color: #e0245e;
+}
+
+.user-data {
+  width: 35em;
+}
+
+.tweet-text {
+  line-height: 1.8em;
+  margin-top: 0.5em;
+}
+
+#addPhoto {
+  display: none;
+}
+
+

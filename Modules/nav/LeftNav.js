@@ -10,7 +10,7 @@ const leftSideNav = () => {
       <a href="#"><i class="fa fa-envelope-o"></i><strong>Messages</strong></a>
       <a href="#"><i class="fa fa-bookmark-o"></i><strong>Bookmarks</strong></a>
       <a href="#"><i class="fa fa-list-alt"></i><strong>Lists</strong></a>
-      <a href="#"><i class='fas fa-user-alt'></i><strong>Profile</strong></a>
+      <a href="#" id="profileButton"><i class='fas fa-user-alt'></i><strong>Profile</strong></a>
       <a href="#" id="dropdown-button"><i class="fa fa-caret-down"></i><strong>More</strong></a>
       <a href="#" id="tweet-modal-icon"><i class='fas fa-feather-alt'></i></a>
       <button id="tweet-modal-button">Tweet</button>
