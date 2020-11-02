@@ -6,6 +6,7 @@ import toggleTheme from './theme/theme.js';
 import navModalEventListeners from './Modules/modal/navModals.js';
 import { request } from './dataStorage.js';
 import { addProfileEventListeners } from './Modules/nav/events.js';
+import addTweetEventListeners from './Modules/mainContent/events.js';
 // import smallScreenEventListeners from './Modules/smallScreen/smalScreen.js';
 
 const mainApp = () => {
@@ -24,4 +25,5 @@ request.onsuccess = () => {
   toggleTheme();
   navModalEventListeners();
   addProfileEventListeners();
+  addTweetEventListeners();
 }
