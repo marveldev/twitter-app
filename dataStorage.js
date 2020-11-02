@@ -31,4 +31,12 @@ const addEntryToDb = (storeName, entry) => {
     console.log(`error adding to ${storeName}`)
   }
 }
-export { request, addEntryToDb }
+
+const clearAllEntries = (storeName) => {
+  const database = request.result;
+  const transaction = database.transaction([storeName], 'readwrite');
+  const store = transaction.objectStore(storeName);
+  store.clear();
+}
+
+export { request, addEntryToDb, clearAllEntries }
