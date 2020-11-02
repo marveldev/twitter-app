@@ -24,9 +24,9 @@ const modal = () => {
         <button id="close-modal-button">X</button>
         <div class="nav-input-modal"> 
           <img src="https://images.pexels.com/photos/3921857/pexels-photo-3921857.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
-            class="main-content-photo" alt="my profile picture">
+            class="main-content-photo image" alt="my profile picture">
           <div>
-            <textarea class="text-input" placeholder="What's happening?"></textarea>
+            <textarea class="text-input" id="clickme" placeholder="What's happening?"></textarea>
             <div>
               <img src="#" alt="">
             </div>
@@ -42,7 +42,7 @@ const modal = () => {
           <a href="#"><i class="fa fa-bar-chart"></i></a>
           <a href="#"><i class="fa fa-smile-o"></i></a>
           <a href="#"><i class="fa fa-calendar-plus-o"></i></a>
-          <button class="add-tweet-button">Tweet</button>
+          <button class="add-tweet-button" title="clickme">Tweet</button>
         </div> 
       </div>
       <div class="trend-modal">
