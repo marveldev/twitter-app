@@ -32,6 +32,25 @@ const addEntryToDb = (storeName, entry) => {
   }
 }
 
+const getEntryFromDb = (storeName) => {
+  const data = new Promise((resolve, reject) => {
+    const database = request.result
+    const transaction = database.transaction([storeName]);
+    const store = transaction.objectStore(storeName)
+    const getData = store.getAll();
+
+    getData.onsuccess = () => {
+      resolve(getData.result)
+    }
+
+    getData.onerror = () => {
+      console.log(`error adding to 'item'`)
+      reject(getData.error);
+    }
+  })
+  return Promise.resolve(data);
+}
+
 const clearAllEntries = (storeName) => {
   const database = request.result;
   const transaction = database.transaction([storeName], 'readwrite');
@@ -39,4 +58,11 @@ const clearAllEntries = (storeName) => {
   store.clear();
 }
 
-export { request, addEntryToDb, clearAllEntries }
+const deleteEntry = (storeName, entryId) => {
+  const database = request.result;
+  const transaction = database.transaction([storeName], 'readwrite');
+  const store = transaction.objectStore(storeName);
+  store.delete(entryId)
+}
+
+export { request, addEntryToDb, clearAllEntries, getEntryFromDb, deleteEntry }
