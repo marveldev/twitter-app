@@ -9,19 +9,19 @@ import { addProfileEventListeners } from './Modules/nav/events.js';
 import { addTweetItemToDb, getTweetItemFromDb } from './Modules/mainContent/events.js';
 // import smallScreenEventListeners from './Modules/smallScreen/smalScreen.js';
 
-const mainApp = () => {
+const mainApp = async () => {
   return `
-    ${modal()}
-    ${leftSideNav()}
+    ${await modal()}
+    ${await leftSideNav()}
     <section class="grid-container">
-      ${mainContent()}
+      ${await mainContent()}
       ${rightSideNav()}
     </section>
   `
 }
 
-request.onsuccess = () => {
-  document.getElementById('root').innerHTML = mainApp();
+request.onsuccess = async () => {
+  document.getElementById('root').innerHTML = await mainApp();
   toggleTheme();
   navModalEventListeners();
   addProfileEventListeners();

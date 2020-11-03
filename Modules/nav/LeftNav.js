@@ -1,4 +1,7 @@
-const leftSideNav = () => {
+import { getEntryFromDb } from '../../dataStorage.js';
+
+const leftSideNav = async () => {
+  const userProfile = await getEntryFromDb('profile');
   return `
     <nav class="left-side-nav">
       <a href="#" class="logo">
@@ -15,9 +18,9 @@ const leftSideNav = () => {
       <a href="#" id="tweet-modal-icon"><i class='fas fa-feather-alt'></i></a>
       <button id="tweet-modal-button">Tweet</button>
       <a href="#">
-        <img src="https://images.pexels.com/photos/3921857/pexels-photo-3921857.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        <img src=${userProfile ? userProfile[0].photoSource : "https://images.pexels.com/photos/3921857/pexels-photo-3921857.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"}
         class="nav-photo image" alt="my profile picture">
-        <strong class="profile-name" id="name">Marvelwonders</strong>
+        <strong class="profile-name" id="name">${userProfile ? userProfile[0].profileName : "Jane Doe"}</strong>
       </a>
     </nav>
     <nav class="smallscreen-nav">
