@@ -1,4 +1,7 @@
-const modal = () => {
+import { getEntryFromDb } from '../../dataStorage.js';
+
+const modal = async () => {
+  const userProfile = await getEntryFromDb('profile');
   return `
     <section>
       <div id="tweet-modal-overlay"></div>
@@ -23,7 +26,7 @@ const modal = () => {
       <div class="tweet-modal-container">
         <button id="close-modal-button">X</button>
         <div class="nav-input-modal"> 
-          <img src="https://images.pexels.com/photos/3921857/pexels-photo-3921857.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
+          <img src=${userProfile ? userProfile[0].photoSource : "https://images.pexels.com/photos/3921857/pexels-photo-3921857.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"}
             class="main-content-photo image" alt="my profile picture">
           <div>
             <textarea class="text-input" id="clickme" placeholder="What's happening?"></textarea>
@@ -69,14 +72,14 @@ const modal = () => {
         <form class="bio-form">
           <div class="profile-entry">
             <div>
-              <img src="https://images.pexels.com/photos/4343180/pexels-photo-4343180.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              <img src=${userProfile ? userProfile[0].photoSource : "https://images.pexels.com/photos/3921857/pexels-photo-3921857.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"}
               id="photo" alt="photo">
               <input type="file" id="profilePhoto">
               <label for="profilePhoto">
                 <strong id="editPhoto" tabindex="1">EDIT PHOTO</strong>
               </label>
             </div>
-            <input type="text" placeholder="Enter new name..."  id="profileInput" required/>
+            <input type="text" id="profileInput" placeholder="Enter new name..." required/>
           </div>
           <button type="submit" id="editPhotoButton">Save</button>
         </form>
