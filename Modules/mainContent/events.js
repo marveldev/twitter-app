@@ -5,9 +5,9 @@ const addTweetItemToDb = () => {
   for (let index = 0; index < tweetButtons.length; index++) {
     const tweetButton = tweetButtons[index];
     tweetButton.addEventListener('click', () => {
+      const tweetOutput = document.querySelector('#tweet-output')
       const userName = document.querySelector('#name').innerText
       const userPhoto = document.querySelector('.nav-photo').src
-      const tweetOutput = document.querySelector('#tweet-output')
       const element = tweetButton.title
       const inputValue = document.querySelector(`#${element}`).value
       const tweetItemId = 'id' + Math.random().toString(36).substring(7);
@@ -86,17 +86,7 @@ const getTweetItemFromDb = async () => {
     `
   })
   tweetOutput.innerHTML = tweetItems.join('');
-
-  const profilePhotos = document.querySelectorAll('.image')
-  for (let index = 0; index < profilePhotos.length; index++) {
-    const profilePhoto = profilePhotos[index];
-    profilePhoto.src = userProfile[0].photoSource
-  }
-
-  const name = document.querySelector('#name')
-  name.innerText = userProfile[0].profileName;
-
-  deleteTweetItem()
+  deleteTweetItem();
 }
 
 const deleteTweetItem = () => {
