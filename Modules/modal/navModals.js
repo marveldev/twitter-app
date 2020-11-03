@@ -38,6 +38,11 @@ const navModalEventListeners = () => {
     document.querySelector('.trend-modal').style.display = 'none';
     document.querySelector('.theme-modal').style.display = 'none';
     document.querySelector('.edit-profile-modal').style.display = 'none';
+    const deleteModals = document.querySelectorAll('.delete-modal')
+    for (let index = 0; index < deleteModals.length; index++) {
+      const deleteModal = deleteModals[index];
+      deleteModal.style.display = 'none';
+    }
     tweetModalOverlay.style.display = 'none';
   })
 }
