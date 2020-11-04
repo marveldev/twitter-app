@@ -14,8 +14,8 @@ const mainContent = async () => {
       <div class="user-options">
         <div class="user-input"> 
           <a href="#" id="photo-container">
-          <img src=${userProfile ? userProfile[0].photoSource : "https://images.pexels.com/photos/3921857/pexels-photo-3921857.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"} 
-              class="profile-photo image" alt="my profile picture">
+            <img src=${userProfile ? userProfile[0].photoSource : "https://images.pexels.com/photos/3921857/pexels-photo-3921857.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"} 
+            class="profile-photo image" alt="my profile picture">
           </a>
           <div>
             <textarea id="tweet" placeholder="What's happening?"></textarea>
