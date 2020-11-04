@@ -24,7 +24,12 @@ const addEntryToDb = (storeName, entry) => {
   store.add(entry);
 
   transaction.oncomplete = () => {
-    alert('entry successful');
+    const message = document.querySelector('#message');
+    message.style.display = 'block';
+
+    setTimeout(function() {
+      message.style.display = 'none';
+    }, 4000);
   }
 
   transaction.onerror = () => {
