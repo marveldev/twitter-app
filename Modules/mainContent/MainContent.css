@@ -66,11 +66,12 @@
   color: #969BA7;
 }
 
-.user-options a:hover {
+.tweet-options a:hover,
+#photoIcon:hover {
   background-color: #F5FBFE;
 }
 
-.user-options button:hover {
+.add-tweet-button:hover {
   background-color: #2d91cf;
 }
 
@@ -105,9 +106,9 @@
   color: #0a0aff;
 }
 
-.tweet-info a i:hover {
+/* .tweet-info a i:hover {
   background-color: #a1a1c248;
-}
+} */
 
 .tweet-info a i {
   font-size: 17px;
@@ -116,9 +117,9 @@
   border-radius: 1em;
 }
 
-.tweet-info a:nth-child(3) i:hover {
+/* .tweet-info a:nth-child(3) i:hover {
   background-color: #f11c003d;
-} 
+}  */
 
 .tweet-info a:nth-child(3):hover {
   color: #f11c00;
@@ -129,8 +130,6 @@
 }
 
 .delete-button {
-  position: relative;
-  left: 21em;
   width: 2em;
   height: 2em;
   font-size: 1.2em;
@@ -183,3 +182,7 @@
   font-size: 1.2em;
 }
 
+.button-container {
+  position: absolute;
+  left: 50%;
+}
