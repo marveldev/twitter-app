@@ -45,6 +45,12 @@ const navModalEventListeners = () => {
     }
     tweetModalOverlay.style.display = 'none';
   })
+
+  const messageButton = document.querySelector('.message-btn');
+  messageButton.addEventListener('click', () => {
+    const message = document.querySelector('#message');
+    message.style.display = 'none';
+  })
 }
 
 export default navModalEventListeners
