@@ -8,7 +8,7 @@ const addTweetItemToDb = () => {
   for (let index = 0; index < tweetButtons.length; index++) {
     const tweetButton = tweetButtons[index];
     tweetButton.addEventListener('click', () => {
-      const tweetItemId = 'id' + Math.random().toString(36).substring(7);
+      const tweetItemId = 'id' + Date.parse(new Date()).toString();
       const tweetOutput = document.querySelector('#tweet-output')
       const userName = document.querySelector('#name').innerText
       const userPhoto = document.querySelector('.nav-photo').src
@@ -70,7 +70,7 @@ const getTweetItemFromDb = async () => {
   const tweetOutput = document.querySelector('#tweet-output')
   const userProfile = await getEntryFromDb('profile');
   const userTweets = await getEntryFromDb('tweet-item');
-  const tweetItems = userTweets.map((tweetItem) => {
+  const tweetItems = userTweets.reverse().map((tweetItem) => {
     return `
       <div class="tweet-profile" id="${tweetItem.tweetItemId}">
         <a href="#">
