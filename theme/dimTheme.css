@@ -19,7 +19,7 @@
 }
 
 .dim-theme a:hover,
-.dim-theme .trending-tweets>button:hover {
+.dim-theme #trend-button:hover {
   background-color: #192734;
 }
 
@@ -40,6 +40,10 @@
   color: #6d7d8a;
 }
 
+.dim-theme .dropdown-content>a:nth-child(4) {
+  border-bottom: 1px solid #38444d;
+}
+
 .dim-theme button:hover {
   background-color: #2d91cf;
 }
@@ -54,7 +58,8 @@
 }
 
 .dim-theme .tweet-options>a:hover,
-.dim-theme .tweet-data:hover {
+.dim-theme .tweet-profile:hover,
+.dim-theme #photoIcon:hover {
   background-color: #192734;
 }
 
@@ -62,20 +67,21 @@
   background-color: #15202B;
 }
 
-.dim-theme .tweet-data {
+.dim-theme .tweet-profile {
   border-top: 1px solid #253341;
   border-bottom: 1px solid #253341;
 }
+
 
 .dim-theme .tweet-info>a {
   color: #657786;
 }
 
 .dim-theme .tweet-info>a:hover {
-  color: #1DA1F2;;
+  color: #1DA1F2;
 }
 
-.dim-theme .user-profile a:nth-child(3):hover {
+.dim-theme .tweet-info>a:nth-child(3):hover {
   color: #f11c00;
 }
 
@@ -83,7 +89,6 @@
   border-right: 1px solid #253341;
 }
 
-.dim-theme .main-content>h3,
 .dim-theme .top-nav {
   border-bottom: 1px solid #253341;
 }
@@ -101,15 +106,14 @@
   border-top: 1px solid  #38444D;
 }
 
-.dim-theme .trend-modal,
-.dim-theme .trend-modal button,
-.dim-theme #close-modal-button {
-  background-color: #15202B;
-}
-
 .dim-theme .trend-modal button:hover,
 .dim-theme #close-modal-button:hover {
   background-color: #192734;
+} 
+
+.dim-theme .trend-modal,
+.dim-theme .trend-modal button {
+  background-color: #15202B;
 }
 
 .dim-theme .set-location {
@@ -117,16 +121,46 @@
   border-bottom: 15px solid #253341;
 }
 
-.dim-theme .trend-modal p {
+.dim-theme .trend-modal p,
+.dim-theme .heading {
   border-bottom: 1px solid #253341;
 }
 
-.dim-theme .theme-modal,
-.dim-theme .tweet-modal-container {
+.dim-theme .theme-modal {
   background-color: #15202B;
 }
 
-.dim-theme .nav-input-modal,
 .dim-theme .tweet-options {
   border-top: 1px solid #253341;
+}
+
+.dim-theme .tweet-modal-container,
+.dim-theme #close-modal-button {
+  background-color: #15202B;
+}
+
+.dim-theme .nav-input-modal {
+  border-top: 1px solid #253341;
+}
+
+.dim-theme .delete-button,
+.dim-theme .delete-modal,
+.dim-theme .edit-profile-modal {
+  background-color: #15202B;
+}
+
+.dim-theme #tweet-modal-overlay {
+  background-color: #3b465169;
+}
+
+.dim-theme .cancel-button {
+  color: #000;
+}
+
+.dim-theme #profileInput {
+  background-color: #192734;
+}
+
+.dim-theme #profileInput::placeholder {
+  color: #fff;
 }
