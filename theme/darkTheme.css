@@ -6,7 +6,7 @@
   color: #fff;
 }
 
- .dark-theme .logo:hover {
+.dark-theme .logo:hover {
   background-color: #192734;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .dark-theme a:hover,
-.dark-theme .trending-tweets>button:hover {
+.dark-theme #trend-button:hover {
   background-color: #15181c;
 }
 
@@ -40,6 +40,10 @@
   color: #585f65;
 }
 
+.dim-theme .dropdown-content>a:nth-child(4) {
+  border-bottom: 1px solid #38444d;
+}
+
 .dark-theme button:hover {
   background-color: #2d91cf;
 }
@@ -54,7 +58,8 @@
 }
 
 .dark-theme .tweet-options>a:hover,
-.dark-theme .tweet-data:hover {
+.dark-theme .tweet-profile:hover,
+.dark-theme #photoIcon:hover {
   background-color: #15181C;
 } 
 
@@ -62,7 +67,7 @@
   background-color: #000;
 }
 
-.dark-theme .tweet-data {
+.dark-theme .tweet-profile {
   border-top: 1px solid #2F3336;
   border-bottom: 1px solid #2F3336;
 }
@@ -71,13 +76,17 @@
   color: #657786;
 }
 
+/* .dim-theme .tweet-info>a:hover {
+  color: #1DA1F2;
+} */
+
 .dark-theme .main-content {
   border-right: 1px solid #2F3336;
 }
 
-.dark-theme .main-content>h3 {
+/* .dark-theme .main-content>h3 {
   border-bottom: 1px solid #2F3336;
-}
+} */
 
 .dark-theme .user-options {
   border-bottom: 10px solid #2F3336;
@@ -93,8 +102,7 @@
 }
 
 .dark-theme .trend-modal,
-.dark-theme .trend-modal button,
-.dark-theme #close-modal-button {
+.dark-theme .trend-modal button  {
   background-color: #000;
 }
 
@@ -108,7 +116,6 @@
   border-bottom: 15px solid #2f3336;
 }
 
-.dark-theme .trend-modal p,
 .dark-theme .top-nav {
   border-bottom: 1px solid #2f3336;
 }
@@ -117,24 +124,54 @@
   color: #1DA1F2;;
 }
 
-.dark-theme .user-profile a:nth-child(3):hover {
+.dark-theme .tweet-info>a:nth-child(3):hover {
   color: #f11c00;
 }
 
-.dark-theme .theme-modal,
-.dark-theme .tweet-modal-container {
+.dark-theme .trend-modal p,
+.dark-theme .heading {
+  border-bottom: 1px solid #253341;
+}
+
+.dark-theme .theme-modal {
   background-color: #000;
 }
 
-.dark-theme .nav-input-modal,
 .dark-theme .tweet-options {
   border-top: 1px solid #2f3336;
 } 
- 
+
 .dark-theme #light-out-button {
   box-shadow: 0px 8px 16px 0px #fdf8f854;
 }
 
 .dark-theme #tweet-modal-overlay {
   background-color: #393d43ad; 
+}
+
+.dark-theme .tweet-modal-container,
+.dark-theme #close-modal-button {
+  background-color: #000;
+}
+
+.dark-theme .nav-input-modal {
+  border-top: 1px solid #2F3336;
+}
+
+.dark-theme .delete-button,
+.dark-theme .delete-modal,
+.dark-theme .edit-profile-modal {
+  background-color: #000;
+}
+
+.dark-theme .cancel-button {
+  color: #000;
+}
+
+.dark-theme #profileInput {
+  background-color: #18181c;
+}
+
+.dark-theme #profileInput::placeholder {
+  color: #fff;
 }
