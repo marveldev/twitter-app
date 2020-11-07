@@ -2,6 +2,7 @@ import { getEntryFromDb } from '../../dataStorage.js';
 
 const modal = async () => {
   const userProfile = await getEntryFromDb('profile');
+  console.log(userProfile);
   return `
     <section>
       <div id="tweet-modal-overlay"></div>
