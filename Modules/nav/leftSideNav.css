@@ -395,3 +395,7 @@ body {
 #root button:active {
   transform: translateY(4px);
 }
+
+.smallscreen-left-nav {
+  display: none;
+}
