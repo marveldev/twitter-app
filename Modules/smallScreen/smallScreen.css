@@ -82,11 +82,6 @@
     margin: 0.5em 1.5em;
   }
 
-  .user-profile {
-    /* font-size: 1.8em;
-    margin: 0 1em; */
-  }
-
   .main-content-photo {
     height: 4.5em;
     width: 4.5em;
@@ -94,16 +89,6 @@
 
   .user-options {
     display: none;
-  }
-
-  .user-profile a {
-    /* margin-right: 0;
-    font-size: 1em; */
-  } 
-
-  .user-profile a i {
-    /* margin-right: 0;
-    font-size: 1.2em; */
   }
 
   .main-content {
@@ -115,7 +100,7 @@
     position: fixed;
     top: 0;
     margin: 0;
-    z-index: 9999;
+    z-index: 1;
     background-color: #fff; 
     width: 100%;
     height: 6em;
@@ -157,7 +142,6 @@
   .tweet-modal-container {
     top: 8em;
     left: 0em;
-    /* font-size: 1em; */
   }
 
   #close-modal-button {
@@ -166,24 +150,21 @@
 
   .right-side-nav {
     margin: 0;
+    overflow-y: hidden;
   }
   
   .right-side-nav input {
-  display: none;
+    display: none;
   }
   
   .trending-tweets {
     position: absolute; 
-    left: 0.7em;
-    top: 5em;
+    left: 0.5em;
+    top: 3em;
     margin: 2em 0 8em 0;
-    width: 90%;
+    width: 95%;
     font-size: 1.5em;
   }
-
-  /* .trending-tweets>button {
-    margin-left: ;
-  } */
 
   .trend-modal p {
     font-size: 1.6em;
@@ -217,40 +198,76 @@
     padding: 0 1em 0 1.1em;
   }
 
-
-
-
-  /* .tweet-options a i {
+  .tweet-profile {
     font-size: 1.5em;
-    vertical-align: middle;
-  } */
-  
-  /* .tweet-options button {
-    margin-left: 5em;
-    width: 8em;
-    height: 3em;
-    font-weight: 800;
-  } */
+    overflow-x: hidden;
+  }
 
-  /* .nav-input-modal a {
-    font-size: 1.5em;
-  } */
+  .user-data {
+    width: 22em;
+    padding: 0 1em;
+  }
 
-  /* .nav-input-modal>div>textarea {
-    width: 20em;
-    font-size: 1.5em;
-    margin-left: 1em;
-  } */
-
-  .dropdown-content {
-    top: 8em;
-    width: 25em;
-    height: 35em;
-    padding-top: 2em;
+  .tweet-info a {
+    margin-right: 0.8em;
   }
   
-  .dropdown-content a {
-    font-size: 1.8em;
+  .delete-button {
+    margin-left: 8em;
+  }
+
+  .delete-modal {
+    top: 10em;
+    left: 3em;
+    width: 70%;
+    padding: 1em;
+    height: 13em;
+  }
+  
+  .delete-modal button {
+    margin: 1em 0em;
+  }
+
+  .delete-modal p,
+  .delete-modal>h3 {
+    font-size: 1.2em;
+  }
+
+  .smallscreen-left-nav {
+    display: none;
+    position: fixed;
+    left: 0;
+    z-index: 1;
+    top: 6em;
+    background-color: #fff;
+    width: 50%;
+    height: 100%;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+  }
+
+  @keyframes fadeIn {
+    from {left: -300px; opacity: 0}
+    to {left: 0; opacity: 1}
+  }
+
+  .smallscreen-left-nav>a {
+    display: block;
+    padding: 1em;
+    font-size: 1.5em;
+    color: #000;
+    font-weight: 700;
+  }
+  
+  .smallscreen-left-nav>a i{
+    margin: 0 1em;
+  }
+
+  .edit-profile-modal {
+    top: 10em;
+    left: 0;
+    font-size: 1.05em;
+    animation: none;
   }
 
   .theme-modal {
@@ -269,9 +286,14 @@
     font-size: 1.3em;
   }
 
+  .dim-theme .smallscreen-left-nav {
+    background-color: #192734;
+  }
 
+  .dim-theme .smallscreen-left-nav>a {
+    color: #fff;
+  }
 
-  
   .dim-theme .smallscreen-nav {
     border-top: 2px solid #253341;
     background-color: #192734;
@@ -280,6 +302,14 @@
   .dim-theme .top-nav {
     border-bottom: 2px solid #253341;
     background-color: #192734;
+  }
+
+  .dark-theme .smallscreen-left-nav {
+    background-color: #000;
+  }
+
+  .dark-theme .smallscreen-left-nav>a {
+    color: #fff;
   }
 
   .dark-theme .smallscreen-nav {
