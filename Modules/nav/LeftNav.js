@@ -23,6 +23,19 @@ const leftSideNav = async () => {
         <strong class="profile-name" id="name">${userProfile ? userProfile[0].profileName : "Jane Doe"}</strong>
       </a>
     </nav>
+    <nav class="smallscreen-left-nav">
+      <a href="#">
+        <img src=${userProfile ? userProfile[0].photoSource : "https://images.pexels.com/photos/3921857/pexels-photo-3921857.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"}
+        class="nav-photo image" alt="my profile picture">
+        <strong class="profile-name" id="name">${userProfile ? userProfile[0].profileName : "Jane Doe"}</strong>
+      </a>
+      <a href="#"><i class='fab fa-rocketchat'></i>Topics</a>
+      <a href="#"><i class="fa fa-bolt"></i>Moments</a>
+      <a href="#"><i class="fa fa-external-link-square"></i>Twitter Ads</a>
+      <a href="#" id="profile-button"><i class='fas fa-user-alt'></i>Profile</a>
+      <a href="#"><i class="fa fa-question-circle-o"></i>Help Center</a>
+      <a href="#" id="displayButton"><i class="material-icons">&#xe3ae;</i>Display</a>
+    </nav>
     <nav class="smallscreen-nav">
       <a href="#" id="smallscreen-modal"><i class='fas fa-feather-alt'></i></a>
       <a href="#" id="smallscreen-home"><i class="glyphicon glyphicon-home"></i></a>
