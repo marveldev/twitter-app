@@ -23,7 +23,6 @@ const navModalEventListeners = () => {
   changeDisplay(closeTweetModalButton, '.tweet-modal-container', 'none', tweetModalOverlay); //closes
   changeDisplay(trendButton, '.trend-modal', 'block', tweetModalOverlay); //opens right side trend modal
   changeDisplay(closeTrendButton, '.trend-modal', 'none', tweetModalOverlay); //closes
-  changeDisplay(profileButton, '.edit-profile-modal', 'block', tweetModalOverlay) //opens profile modal
   changeDisplay(profileModalButton,'.edit-profile-modal', 'none', tweetModalOverlay) //closes
 
   displayThemeButton.addEventListener('click', () => { //opens theme modal
@@ -31,6 +30,13 @@ const navModalEventListeners = () => {
     document.querySelector('.dropdown-content').style.display = 'none';
     tweetModalOverlay.style.display = 'block';
     dropdownOverlay.style.display = 'none';
+  })
+
+  profileButton.addEventListener('click', () => { 
+    document.querySelector('.edit-profile-modal').style.display = 'block';
+    document.querySelector('.dropdown-content').style.display = 'none';
+    dropdownOverlay.style.display = 'none'
+    tweetModalOverlay.style.display = 'block';
   })
 
   tweetModalOverlay.addEventListener('click', () => { //closes all modals
