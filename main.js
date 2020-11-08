@@ -7,7 +7,7 @@ import navModalEventListeners from './Modules/modal/navModals.js';
 import { request } from './dataStorage.js';
 import { addProfileEventListeners } from './Modules/nav/events.js';
 import { addTweetItemToDb, getTweetItemFromDb } from './Modules/mainContent/events.js';
-import smallScreenEventListeners from './Modules/smallScreen/smalScreen.js';
+import smallScreenEventListeners from './Modules/smallScreen/events.js';
 
 const mainApp = async () => {
   return `
@@ -27,5 +27,5 @@ request.onsuccess = async () => {
   addProfileEventListeners();
   addTweetItemToDb();
   getTweetItemFromDb();
-  smallScreenEventListeners()
+  smallScreenEventListeners();
 }
