@@ -88,10 +88,11 @@ const getTweetItemFromDb = async () => {
     return `
       <div class="tweet-profile" id="${tweetItem.tweetItemId}">
         <a href="#">
-          <img src="${userProfile[0].photoSource}" class="main-content-photo image" alt="my profile picture">
+          <img src="${userProfile[0] ? userProfile[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}"
+          class="main-content-photo image" alt="my profile picture">
         </a>
         <div class="user-data"> 
-          <strong class="profile-name">${userProfile[0].profileName}</strong>
+          <strong class="profile-name">${userProfile[0] ? userProfile[0].profileName : 'Jane Doe'}</strong>
           <span class="button-container">
             <button class="delete-button" title="${tweetItem.tweetItemId}">X</button>
           </span>
