@@ -6,7 +6,7 @@ const mainContent = async () => {
     <div class="main-content">
       <div class="top-nav">
         <a href="#">
-          <img src=${userProfile ? userProfile[0].photoSource : "https://images.pexels.com/photos/3921857/pexels-photo-3921857.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"}
+          <img src=${userProfile[0] ? userProfile[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
             class="small-screen-photo image" alt="my profile picture">
         </a>
         <strong>Home</strong>
@@ -14,11 +14,11 @@ const mainContent = async () => {
       <div class="user-options">
         <div class="user-input"> 
           <a href="#" id="photo-container">
-            <img src=${userProfile ? userProfile[0].photoSource : "https://images.pexels.com/photos/3921857/pexels-photo-3921857.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"} 
+            <img src=${userProfile[0] ? userProfile[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
             class="profile-photo image" alt="my profile picture">
           </a>
           <div>
-            <textarea id="tweet" placeholder="What's happening?"></textarea>
+            <textarea id="tweet" class="input" placeholder="What's happening?"></textarea>
             <div>
               <img src="#" alt="">
             </div>
@@ -34,7 +34,7 @@ const mainContent = async () => {
           <a href="#"><i class="fa fa-bar-chart"></i></a>
           <a href="#"><i class="fa fa-smile-o"></i></a>
           <a href="#"><i class="fa fa-calendar-plus-o"></i></a>
-          <button class="add-tweet-button" title="tweet">Tweet</button>
+          <button class="add-tweet-button" title="tweet" disabled>Tweet</button>
         </div> 
       </div>
       <div id="tweet-output"></div>

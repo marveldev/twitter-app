@@ -13,21 +13,21 @@ const leftSideNav = async () => {
       <a href="#"><i class="fa fa-envelope-o"></i><strong>Messages</strong></a>
       <a href="#"><i class="fa fa-bookmark-o"></i><strong>Bookmarks</strong></a>
       <a href="#"><i class="fa fa-list-alt"></i><strong>Lists</strong></a>
-      <a href="#" id="profileButton"><i class='fas fa-user-alt'></i><strong>Profile</strong></a>
+      <a href="#"><i class='fas fa-user-alt'></i><strong>Profile</strong></a>
       <a href="#" id="dropdown-button"><i class="fa fa-caret-down"></i><strong>More</strong></a>
       <a href="#" id="tweet-modal-icon"><i class='fas fa-feather-alt'></i></a>
       <button id="tweet-modal-button">Tweet</button>
       <a href="#">
-        <img src=${userProfile ? userProfile[0].photoSource : "https://images.pexels.com/photos/3921857/pexels-photo-3921857.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"}
+        <img src=${userProfile[0] ? userProfile[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
         class="nav-photo image" alt="my profile picture">
-        <strong class="profile-name" id="name">${userProfile ? userProfile[0].profileName : "Jane Doe"}</strong>
+        <strong class="profile-name" id="name">${userProfile[0] ? userProfile[0].profileName : 'Jane Doe'}</strong>
       </a>
     </nav>
     <nav class="smallscreen-left-nav">
       <a href="#">
-        <img src=${userProfile ? userProfile[0].photoSource : "https://images.pexels.com/photos/3921857/pexels-photo-3921857.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"}
+        <img src=${userProfile[0] ? userProfile[0] : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
         class="nav-photo image" alt="my profile picture">
-        <strong class="profile-name" id="name">${userProfile ? userProfile[0].profileName : "Jane Doe"}</strong>
+        <strong class="profile-name" id="name">${userProfile[0] ? userProfile[0].profileName : 'Jane Doe'}</strong>
       </a>
       <a href="#"><i class='fab fa-rocketchat'></i>Topics</a>
       <a href="#"><i class="fa fa-bolt"></i>Moments</a>

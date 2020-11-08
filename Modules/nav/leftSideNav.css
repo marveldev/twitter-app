@@ -53,6 +53,7 @@ body {
   width: 2.2em;
   border-radius: 50%;
   object-fit: cover;
+  background-color: #000000d7;
 }
 
 #dropdown-overlay {
@@ -159,7 +160,7 @@ body {
   padding: 0.8em 0 0 1em;
 }
 
-.text-input {
+.text {
   width: 23em;
   height: 10em;
   overflow-y: hidden;
@@ -170,7 +171,7 @@ body {
   resize: none;
 }
 
-.text-input::placeholder {
+.text::placeholder {
   color: #9197A3;
 }
 
@@ -321,20 +322,21 @@ body {
   width: 15em;
   height: 15em;
   object-fit: cover;
-  background-color: violet;
+  background-color: #000000d7;
 }
 
 #editPhoto {
   position: relative;
-  bottom: 8em;
-  padding: 1em 2em;
+  bottom: 4.4em;
+  padding: 0.5em 1em;
+  text-align: center;
   border-radius: 0.5em;
   background-color: #1DA1F2;
   color: #fff;
   cursor: pointer;
 }
 
-#editPhotoButton {
+#saveProfileButton {
   width: 90%;
   border: unset;
   font-weight: 700;
@@ -364,12 +366,13 @@ body {
   right: 0;
   margin: auto;
   height: 4em;
+  width: 30%;
   padding: 1em;
-  color: #fff;
+  color: #000;
   text-align: center;
   animation-name: slide;
   animation-duration: 1s;
-  background-color: #03a803;
+  background-color: #8ED0F9;
   z-index: 1;
 }
 
@@ -389,7 +392,6 @@ body {
   font-weight: 700;
   width: 4em;
   height: 2em;
-  background-color: #1DA1F2;
 }
 
 #root button:active {

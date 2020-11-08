@@ -2,7 +2,6 @@ import { getEntryFromDb } from '../../dataStorage.js';
 
 const modal = async () => {
   const userProfile = await getEntryFromDb('profile');
-  console.log(userProfile);
   return `
     <section>
       <div id="tweet-modal-overlay"></div>
@@ -17,7 +16,7 @@ const modal = async () => {
           <a href="#"><i class="fa fa-bolt"></i>Moments</a>
           <a href="#"><i class="fa fa-external-link-square"></i>Twitter Ads</a>
           <a href="#"><i class="fa fa-bar-chart"></i>Analytics</a>
-          <a href="#"><i class="material-icons">&#xe8b8;</i>Settings and privacy</a>
+          <a href="#" id="profileButton"><i class="material-icons">&#xe8b8;</i>Edit Profile</a>
           <a href="#"><i class="fa fa-question-circle-o"></i>Help Center</a>
           <a href="#" id="display-button"><i class="material-icons">&#xe3ae;</i>Display</a>
         </div>  
@@ -31,10 +30,10 @@ const modal = async () => {
       <div class="tweet-modal-container">
         <button id="close-modal-button">X</button>
         <div class="nav-input-modal"> 
-          <img src=${userProfile ? userProfile[0].photoSource : "https://images.pexels.com/photos/3921857/pexels-photo-3921857.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"}
-            class="main-content-photo image" alt="my profile picture">
+          <img src=${userProfile[0] ? userProfile[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
+          class="main-content-photo image" alt="my profile picture">
           <div>
-            <textarea class="text-input" id="clickme" placeholder="What's happening?"></textarea>
+            <textarea class="text input" id="clickme" placeholder="What's happening?"></textarea>
             <div>
               <img src="#" alt="">
             </div>
@@ -50,7 +49,7 @@ const modal = async () => {
           <a href="#"><i class="fa fa-bar-chart"></i></a>
           <a href="#"><i class="fa fa-smile-o"></i></a>
           <a href="#"><i class="fa fa-calendar-plus-o"></i></a>
-          <button class="add-tweet-button" title="clickme">Tweet</button>
+          <button class="add-tweet-button" title="clickme" disabled>Tweet</button>
         </div> 
       </div>
       <div class="trend-modal">
@@ -77,7 +76,7 @@ const modal = async () => {
         <form class="bio-form">
           <div class="profile-entry">
             <div>
-              <img src=${userProfile ? userProfile[0].photoSource : "https://images.pexels.com/photos/3921857/pexels-photo-3921857.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"}
+              <img src=${userProfile[0] ? userProfile[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
               id="photo" alt="photo">
               <input type="file" id="profilePhoto">
               <label for="profilePhoto">
@@ -86,7 +85,7 @@ const modal = async () => {
             </div>
             <input type="text" id="profileInput" placeholder="Enter new name..." required/>
           </div>
-          <button type="submit" id="editPhotoButton">Save</button>
+          <button type="submit" id="saveProfileButton">Save</button>
         </form>
       </div>
     </section> 
