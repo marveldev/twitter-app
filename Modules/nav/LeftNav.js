@@ -25,14 +25,14 @@ const leftSideNav = async () => {
     </nav>
     <nav class="smallscreen-left-nav">
       <a href="#">
-        <img src=${userProfile[0] ? userProfile[0] : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
+        <img src=${userProfile[0] ? userProfile[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
         class="nav-photo image" alt="my profile picture">
         <strong class="profile-name" id="name">${userProfile[0] ? userProfile[0].profileName : 'Jane Doe'}</strong>
       </a>
       <a href="#"><i class='fab fa-rocketchat'></i>Topics</a>
       <a href="#"><i class="fa fa-bolt"></i>Moments</a>
-      <a href="#"><i class="fa fa-external-link-square"></i>Twitter Ads</a>
-      <a href="#" id="profile-button"><i class='fas fa-user-alt'></i>Profile</a>
+      <a href="#" id="editProfile"><i class="material-icons">&#xe8b8;</i>Edit Profile</a>
+      <a href="#"><i class='fas fa-user-alt'></i>Profile</a>
       <a href="#"><i class="fa fa-question-circle-o"></i>Help Center</a>
       <a href="#" id="displayButton"><i class="material-icons">&#xe3ae;</i>Display</a>
     </nav>
