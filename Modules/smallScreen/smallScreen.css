@@ -287,38 +287,52 @@
     font-size: 1.3em;
   }
 
-  .dim-theme .smallscreen-left-nav {
+  #message {
+    height: 5.5em;
+    width: 100%;
+    padding: 1.3em 0 0 0;
+  }
+
+  #message>strong {
+    font-size: 1.3em;
+  }
+
+  .message-btn {
+    font-size: 1.2em;
+  }
+
+  .dim .smallscreen-left-nav {
     background-color: #192734;
   }
 
-  .dim-theme .smallscreen-left-nav>a {
+  .dim .smallscreen-left-nav>a {
     color: #fff;
   }
 
-  .dim-theme .smallscreen-nav {
+  .dim .smallscreen-nav {
     border-top: 2px solid #253341;
     background-color: #192734;
   }
 
-  .dim-theme .top-nav {
+  .dim .top-nav {
     border-bottom: 2px solid #253341;
     background-color: #192734;
   }
 
-  .dark-theme .smallscreen-left-nav {
+  .lights-out .smallscreen-left-nav {
     background-color: #000;
   }
 
-  .dark-theme .smallscreen-left-nav>a {
+  .lights-out .smallscreen-left-nav>a {
     color: #fff;
   }
 
-  .dark-theme .smallscreen-nav {
+  .lights-out .smallscreen-nav {
     border-top: 2px solid #2F3336;
     background-color: #000;
   }
 
-  .dark-theme .top-nav {
+  .lights-out .top-nav {
     border-bottom: 2px solid #2F3336;
     background-color: #000;
   }
