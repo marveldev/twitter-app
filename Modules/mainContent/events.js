@@ -4,64 +4,78 @@ const addTweetItemToDb = () => {
   const tweetContainer = document.querySelector('.tweet-modal-container')
   const tweetModalOverlay = document.querySelector('#tweet-modal-overlay');
   const tweetButtons = document.querySelectorAll('.add-tweet-button')
+  const tweetOutput = document.querySelector('#tweet-output')
+  const inputs = document.querySelectorAll('.input');
+
+  for (let index = 0; index < inputs.length; index++) {
+    const input = inputs[index];
+    input.addEventListener('keyup', () => {
+      if (input.value.trim().length >= 1) {
+        const element = input.id
+        const tweetButton = document.querySelector(`[title=${element}]`);
+        tweetButton.removeAttribute('disabled')
+      } else {
+        const element = input.id
+        const tweetButton = document.querySelector(`[title=${element}]`);
+        tweetButton.setAttribute('disabled', '')
+      }
+    })
+  }
 
   for (let index = 0; index < tweetButtons.length; index++) {
     const tweetButton = tweetButtons[index];
     tweetButton.addEventListener('click', () => {
       const tweetItemId = 'id' + Date.parse(new Date()).toString();
-      const tweetOutput = document.querySelector('#tweet-output')
       const userName = document.querySelector('#name').innerText
       const userPhoto = document.querySelector('.nav-photo').src
       const element = tweetButton.title
       const input = document.querySelector(`#${element}`)
-      if (input.value.trim().length>1) {
-        const inputValue = input.value;
-        let tweetItem = `
-          <div class="tweet-profile" id="${tweetItemId}">
-            <a href="#">
-              <img src="${userPhoto}" class="main-content-photo image" alt="my profile picture">
-            </a>
-            <div class="user-data"> 
-              <strong class="profile-name">${userName}</strong>
-              <span class="button-container">
-                <button class="delete-button" title="${tweetItemId}">X</button>
-              </span>
-              <p class="tweet-text">${inputValue}</p>
-              <div>
-                <!-- <img src="#" alt=""> -->
-              </div>
-              <div class="tweet-info">
-                <a href="#"><i class="fa fa-comment-o"></i>5.1k</a>
-                <a href="#"><i class='fas fa-retweet'></i>2.1k</a>
-                <a href="#"><i class="fa fa-heart-o"></i>3.1k</a>
-                <a href="#"><i class="fa fa-upload"></i></a>
-              </div>
-              <div class="delete-modal ${tweetItemId}">
-                <h3>Delete Tweet?</h3>
-                <p>This can't be undone and it will be removed from your timeline.</p>
-                <button class="cancel-button">Cancel</button>
-                <button class="confirm-button" title="${tweetItemId}">Delete</button>
-              </div>
-            </div>  
-          </div>
-        `
-        tweetItem += tweetOutput.innerHTML;
-        tweetOutput.innerHTML = tweetItem;
+      const inputValue = input.value;
+      let tweetItem = `
+        <div class="tweet-profile" id="${tweetItemId}">
+          <a href="#">
+            <img src="${userPhoto}" class="main-content-photo image" alt="my profile picture">
+          </a>
+          <div class="user-data"> 
+            <strong class="profile-name">${userName}</strong>
+            <span class="button-container">
+              <button class="delete-button" title="${tweetItemId}">X</button>
+            </span>
+            <p class="tweet-text">${inputValue}</p>
+            <div>
+              <!-- <img src="#" alt=""> -->
+            </div>
+            <div class="tweet-info">
+              <a href="#"><i class="fa fa-comment-o"></i>5.1k</a>
+              <a href="#"><i class='fas fa-retweet'></i>2.1k</a>
+              <a href="#"><i class="fa fa-heart-o"></i>3.1k</a>
+              <a href="#"><i class="fa fa-upload"></i></a>
+            </div>
+            <div class="delete-modal ${tweetItemId}">
+              <h3>Delete Tweet?</h3>
+              <p>This can't be undone and it will be removed from your timeline.</p>
+              <button class="cancel-button">Cancel</button>
+              <button class="confirm-button" title="${tweetItemId}">Delete</button>
+            </div>
+          </div>  
+        </div>
+      `
+      tweetItem += tweetOutput.innerHTML;
+      tweetOutput.innerHTML = tweetItem;
 
-        if (tweetContainer.style.display == 'block') {
-          tweetContainer.style.display = 'none';
-          tweetModalOverlay.style.display = 'none';
-        }
-
-        const addItemToIndexDb = {
-          tweetItemId: tweetItemId,
-          inputValue: inputValue
-        }
-        addEntryToDb('tweet-item', addItemToIndexDb);
-        deleteTweetItem()
-
-        input.value = '';
+      if (tweetContainer.style.display == 'block') {
+        tweetContainer.style.display = 'none';
+        tweetModalOverlay.style.display = 'none';
       }
+
+      const addItemToIndexDb = {
+        tweetItemId: tweetItemId,
+        inputValue: inputValue
+      }
+      addEntryToDb('tweet-item', addItemToIndexDb);
+      deleteTweetItem()
+
+      input.value = '';
     })
   }
 }
