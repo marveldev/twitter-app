@@ -6,10 +6,6 @@ const modal = async () => {
     <section>
       <div id="tweet-modal-overlay"></div>
       <div id="dropdown-overlay"></div>
-      <div id="message">
-        <strong>ENTRY ADDED SUCCESSFULLY</strong>
-        <button class="message-btn">OK</button>
-      </div>
       <div>
         <div class="dropdown-content">
           <a href="#"><i class='fab fa-rocketchat'></i>Topics</a>
@@ -83,7 +79,8 @@ const modal = async () => {
                 <strong id="editPhoto" tabindex="1">EDIT PHOTO</strong>
               </label>
             </div>
-            <input type="text" id="profileInput" placeholder="Enter new name..." required/>
+            <input type="text" id="profileInput" placeholder="Enter new name..."
+            value="${userProfile[0] ? userProfile[0].profileName : 'Jane Doe'}" required/>
           </div>
           <button type="submit" id="saveProfileButton">Save</button>
         </form>
