@@ -1,42 +1,42 @@
-.dark-theme {
+.lights-out {
   color: #fff;
 }
 
-.dark-theme .logo>i {
+.lights-out .logo>i {
   color: #fff;
 }
 
-.dark-theme .logo:hover {
+.lights-out .logo:hover {
   background-color: #192734;
 }
 
-.dark-theme .left-side-nav {
+.lights-out .left-side-nav {
   border-right: 1px solid #2F3336;
 }
 
-.dark-theme .left-side-nav>a:hover {
+.lights-out .left-side-nav>a:hover {
   color: #1DA1F2;
 }
 
-.dark-theme a:hover,
-.dark-theme #trend-button:hover {
+.lights-out a:hover,
+.lights-out #trend-button:hover {
   background-color: #15181c;
 }
 
-.dark-theme .left-side-nav>a {
+.lights-out .left-side-nav>a {
   color: #fff;
 } 
 
-.dark-theme .dropdown-content {
+.lights-out .dropdown-content {
   background-color: #000;
   box-shadow: 0px 8px 16px 0px #fdf8f833;
 }
 
-.dark-theme .dropdown-content a {
+.lights-out .dropdown-content a {
   color: #fff;
 }
 
-.dark-theme .dropdown-content i {
+.lights-out .dropdown-content i {
   color: #585f65;
 }
 
@@ -44,35 +44,35 @@
   border-bottom: 1px solid #38444d;
 }
 
-.dark-theme button:hover {
+.lights-out button:hover {
   background-color: #2d91cf;
 }
 
-.dark-theme .right-side-nav>input {
+.lights-out .right-side-nav>input {
   background-color: #15181C;
 }
 
-.dark-theme .right-side-nav>i,
-.dark-theme .right-side-nav>input::placeholder {
+.lights-out .right-side-nav>i,
+.lights-out .right-side-nav>input::placeholder {
   color: #6E767D;
 }
 
-.dark-theme .tweet-options>a:hover,
-.dark-theme .tweet-profile:hover,
-.dark-theme #photoIcon:hover {
+.lights-out .tweet-options>a:hover,
+.lights-out .tweet-profile:hover,
+.lights-out #photoIcon:hover {
   background-color: #15181C;
 } 
 
-.dark-theme textarea {
+.lights-out textarea {
   background-color: #000;
 }
 
-.dark-theme .tweet-profile {
+.lights-out .tweet-profile {
   border-top: 1px solid #2F3336;
   border-bottom: 1px solid #2F3336;
 }
 
-.dark-theme .tweet-info>a {
+.lights-out .tweet-info>a {
   color: #657786;
 }
 
@@ -80,98 +80,98 @@
   color: #1DA1F2;
 } */
 
-.dark-theme .main-content {
+.lights-out .main-content {
   border-right: 1px solid #2F3336;
 }
 
-/* .dark-theme .main-content>h3 {
+/* .lights-out .main-content>h3 {
   border-bottom: 1px solid #2F3336;
 } */
 
-.dark-theme .user-options {
+.lights-out .user-options {
   border-bottom: 10px solid #2F3336;
 }
 
-.dark-theme .trending-tweets,
-.dark-theme .trending-tweets>button {
+.lights-out .trending-tweets,
+.lights-out .trending-tweets>button {
   background-color: #15181c;
 }
 
-.dark-theme .current-trend {
+.lights-out .current-trend {
   border-top: 1px solid #2f3336;
 }
 
-.dark-theme .trend-modal,
-.dark-theme .trend-modal button  {
+.lights-out .trend-modal,
+.lights-out .trend-modal button  {
   background-color: #000;
 }
 
-.dark-theme .trend-modal button:hover,
-.dark-theme #close-modal-button:hover {
+.lights-out .trend-modal button:hover,
+.lights-out #close-modal-button:hover {
   background-color: #192734;
 }
 
-.dark-theme .set-location {
+.lights-out .set-location {
   border-top: 1px solid #2f3336;
   border-bottom: 15px solid #2f3336;
 }
 
-.dark-theme .top-nav {
+.lights-out .top-nav {
   border-bottom: 1px solid #2f3336;
 }
 
-.dark-theme .tweet-info>a:hover {
+.lights-out .tweet-info>a:hover {
   color: #1DA1F2;;
 }
 
-.dark-theme .tweet-info>a:nth-child(3):hover {
+.lights-out .tweet-info>a:nth-child(3):hover {
   color: #f11c00;
 }
 
-.dark-theme .trend-modal p,
-.dark-theme .heading {
+.lights-out .trend-modal p,
+.lights-out .heading {
   border-bottom: 1px solid #253341;
 }
 
-.dark-theme .theme-modal {
+.lights-out .theme-modal {
   background-color: #000;
 }
 
-.dark-theme .tweet-options {
+.lights-out .tweet-options {
   border-top: 1px solid #2f3336;
 } 
 
-.dark-theme #light-out-button {
+.lights-out #light-out-button {
   box-shadow: 0px 8px 16px 0px #fdf8f854;
 }
 
-.dark-theme #tweet-modal-overlay {
+.lights-out #tweet-modal-overlay {
   background-color: #393d43ad; 
 }
 
-.dark-theme .tweet-modal-container,
-.dark-theme #close-modal-button {
+.lights-out .tweet-modal-container,
+.lights-out #close-modal-button {
   background-color: #000;
 }
 
-.dark-theme .nav-input-modal {
+.lights-out .nav-input-modal {
   border-top: 1px solid #2F3336;
 }
 
-.dark-theme .delete-button,
-.dark-theme .delete-modal,
-.dark-theme .edit-profile-modal {
+.lights-out .delete-button,
+.lights-out .delete-modal,
+.lights-out .edit-profile-modal {
   background-color: #000;
 }
 
-.dark-theme .cancel-button {
+.lights-out .cancel-button {
   color: #000;
 }
 
-.dark-theme #profileInput {
+.lights-out #profileInput {
   background-color: #18181c;
 }
 
-.dark-theme #profileInput::placeholder {
+.lights-out #profileInput::placeholder {
   color: #fff;
 }

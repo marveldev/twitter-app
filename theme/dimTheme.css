@@ -1,166 +1,166 @@
-.dim-theme {
+.dim {
   color: #fff;
 }
 
-.dim-theme .logo>i {
+.dim .logo>i {
   color: #fff;
 }
 
-.dim-theme .logo:hover {
+.dim .logo:hover {
   background-color: #192734;
 }
 
-.dim-theme .left-side-nav {
+.dim .left-side-nav {
   border-right: 1px solid #38444D;
 }
 
-.dim-theme .left-side-nav>a:hover {
+.dim .left-side-nav>a:hover {
   color: #1DA1F2;
 }
 
-.dim-theme a:hover,
-.dim-theme #trend-button:hover {
+.dim a:hover,
+.dim #trend-button:hover {
   background-color: #192734;
 }
 
-.dim-theme .left-side-nav>a {
+.dim .left-side-nav>a {
   color: #fff;
 }
 
-.dim-theme .dropdown-content {
+.dim .dropdown-content {
   background-color: #15202B;
   box-shadow: 0px 8px 16px 0px #fdf8f833;
 }
 
-.dim-theme .dropdown-content a {
+.dim .dropdown-content a {
   color: #fff;
 }
 
-.dim-theme .dropdown-content i {
+.dim .dropdown-content i {
   color: #6d7d8a;
 }
 
-.dim-theme .dropdown-content>a:nth-child(4) {
+.dim .dropdown-content>a:nth-child(4) {
   border-bottom: 1px solid #38444d;
 }
 
-.dim-theme button:hover {
+.dim button:hover {
   background-color: #2d91cf;
 }
 
-.dim-theme .right-side-nav>input {
+.dim .right-side-nav>input {
   background-color: #253341;
 }
 
-.dim-theme .right-side-nav>i,
-.dim-theme .right-side-nav>input::placeholder {
+.dim .right-side-nav>i,
+.dim .right-side-nav>input::placeholder {
   color: #7C8C99;
 }
 
-.dim-theme .tweet-options>a:hover,
-.dim-theme .tweet-profile:hover,
-.dim-theme #photoIcon:hover {
+.dim .tweet-options>a:hover,
+.dim .tweet-profile:hover,
+.dim #photoIcon:hover {
   background-color: #192734;
 }
 
-.dim-theme textarea {
+.dim textarea {
   background-color: #15202B;
 }
 
-.dim-theme .tweet-profile {
+.dim .tweet-profile {
   border-top: 1px solid #253341;
   border-bottom: 1px solid #253341;
 }
 
 
-.dim-theme .tweet-info>a {
+.dim .tweet-info>a {
   color: #657786;
 }
 
-.dim-theme .tweet-info>a:hover {
+.dim .tweet-info>a:hover {
   color: #1DA1F2;
 }
 
-.dim-theme .tweet-info>a:nth-child(3):hover {
+.dim .tweet-info>a:nth-child(3):hover {
   color: #f11c00;
 }
 
-.dim-theme .main-content {
+.dim .main-content {
   border-right: 1px solid #253341;
 }
 
-.dim-theme .top-nav {
+.dim .top-nav {
   border-bottom: 1px solid #253341;
 }
 
-.dim-theme .user-options {
+.dim .user-options {
   border-bottom: 10px solid #253341;
 }
 
-.dim-theme .trending-tweets,
-.dim-theme .trending-tweets>button {
+.dim .trending-tweets,
+.dim .trending-tweets>button {
   background-color: #1E2C39;
 }
 
-.dim-theme .current-trend {
+.dim .current-trend {
   border-top: 1px solid  #38444D;
 }
 
-.dim-theme .trend-modal button:hover,
-.dim-theme #close-modal-button:hover {
+.dim .trend-modal button:hover,
+.dim #close-modal-button:hover {
   background-color: #192734;
 } 
 
-.dim-theme .trend-modal,
-.dim-theme .trend-modal button {
+.dim .trend-modal,
+.dim .trend-modal button {
   background-color: #15202B;
 }
 
-.dim-theme .set-location {
+.dim .set-location {
   border-top: 1px solid #253341;
   border-bottom: 15px solid #253341;
 }
 
-.dim-theme .trend-modal p,
-.dim-theme .heading {
+.dim .trend-modal p,
+.dim .heading {
   border-bottom: 1px solid #253341;
 }
 
-.dim-theme .theme-modal {
+.dim .theme-modal {
   background-color: #15202B;
 }
 
-.dim-theme .tweet-options {
+.dim .tweet-options {
   border-top: 1px solid #253341;
 }
 
-.dim-theme .tweet-modal-container,
-.dim-theme #close-modal-button {
+.dim .tweet-modal-container,
+.dim #close-modal-button {
   background-color: #15202B;
 }
 
-.dim-theme .nav-input-modal {
+.dim .nav-input-modal {
   border-top: 1px solid #253341;
 }
 
-.dim-theme .delete-button,
-.dim-theme .delete-modal,
-.dim-theme .edit-profile-modal {
+.dim .delete-button,
+.dim .delete-modal,
+.dim .edit-profile-modal {
   background-color: #15202B;
 }
 
-.dim-theme #tweet-modal-overlay {
+.dim #tweet-modal-overlay {
   background-color: #3b465169;
 }
 
-.dim-theme .cancel-button {
+.dim .cancel-button {
   color: #000;
 }
 
-.dim-theme #profileInput {
+.dim #profileInput {
   background-color: #192734;
 }
 
-.dim-theme #profileInput::placeholder {
+.dim #profileInput::placeholder {
   color: #fff;
 }
