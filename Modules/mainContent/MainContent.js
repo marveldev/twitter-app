@@ -5,6 +5,10 @@ const mainContent = async () => {
   return `  
     <div class="main-content">
       <div class="top-nav">
+        <div id="message">
+          <strong>ENTRY ADDED SUCCESSFULLY</strong>
+          <button class="message-btn">OK</button>
+        </div>
         <a href="#">
           <img src=${userProfile[0] ? userProfile[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
             class="small-screen-photo image" alt="my profile picture">
