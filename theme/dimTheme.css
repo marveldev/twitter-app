@@ -164,3 +164,23 @@
 .dim #profileInput::placeholder {
   color: #fff;
 }
+
+@media screen and (max-width: 425px) { 
+  .dim .smallscreen-left-nav {
+    background-color: #192734;
+  }
+
+  .dim .smallscreen-left-nav>a {
+    color: #fff;
+  }
+
+  .dim .smallscreen-nav {
+    border-top: 2px solid #253341;
+    background-color: #192734;
+  }
+
+  .dim .top-nav {
+    border-bottom: 2px solid #253341;
+    background-color: #192734;
+  }
+}

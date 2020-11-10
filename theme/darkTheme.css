@@ -175,3 +175,23 @@
 .lights-out #profileInput::placeholder {
   color: #fff;
 }
+
+@media screen and (max-width: 425px) { 
+  .lights-out .smallscreen-left-nav {
+    background-color: #000;
+  }
+
+  .lights-out .smallscreen-left-nav>a {
+    color: #fff;
+  }
+
+  .lights-out .smallscreen-nav {
+    border-top: 2px solid #2F3336;
+    background-color: #000;
+  }
+
+  .lights-out .top-nav {
+    border-bottom: 2px solid #2F3336;
+    background-color: #000;
+  }
+}

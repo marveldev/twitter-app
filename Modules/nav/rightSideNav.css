@@ -140,3 +140,55 @@
   margin: 1em 0;
   color: #919ea9;
 }
+
+@media screen and (max-width: 425px) { 
+  .right-side-nav {
+    margin: 0;
+    overflow-y: hidden;
+  }
+
+  .right-side-nav input {
+    display: none;
+  }
+
+  .trending-tweets {
+    position: absolute; 
+    left: 0.5em;
+    top: 3em;
+    margin: 2em 0 8em 0;
+    width: 95%;
+    font-size: 1.5em;
+  }
+
+  .trend-modal p {
+    font-size: 1.6em;
+  }
+  
+  .trend-modal span {
+    font-size: 1.4em;
+    padding: 0 0 0 1em;
+  }
+
+  .trend-modal {
+    top: 8em;
+    left: 2em;
+    width: 37em;
+  }
+
+  .trend-modal>strong {
+    font-size: 1.6em;
+  }
+
+  .set-trend input {
+    margin-left: 22em;
+  }
+  
+  .set-location input {
+    margin-left: 13em;
+  }
+
+  .trend-modal small {
+    font-size: 1.3em;
+    padding: 0 1em 0 1.1em;
+  }
+}

@@ -401,3 +401,69 @@ body {
 .smallscreen-left-nav {
   display: none;
 }
+
+@media screen and (max-width: 425px) { 
+  .left-side-nav {
+    display: none;
+  }
+
+  .smallscreen-left-nav {
+    display: none;
+    position: fixed;
+    left: 0;
+    z-index: 1;
+    top: 6em;
+    background-color: #fff;
+    width: 50%;
+    height: 100%;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+  }
+
+  @keyframes fadeIn {
+    from {left: -300px; opacity: 0}
+    to {left: 0; opacity: 1}
+  }
+
+  .smallscreen-left-nav>a {
+    display: block;
+    padding: 1em;
+    font-size: 1.5em;
+    color: #000;
+    font-weight: 700;
+  }
+
+  .smallscreen-left-nav>a i{
+    margin: 0 1em;
+  }
+
+  .theme-modal {
+    width: 40em;
+    left: 1em;
+  }
+
+  .theme-modal p {
+    font-size: 1.8em;
+  }
+
+  .theme-modal button {
+    display: block;
+    width: 90%;
+    margin: 1em auto;
+    font-size: 1.3em;
+  }
+
+  #message {
+    height: 5.5em;
+    width: 100%;
+    padding: 1.3em 0 0 0;
+  }
+
+  #message>strong {
+    font-size: 1.3em;
+  }
+
+  .message-btn {
+    font-size: 1.2em;
+  }
+}
