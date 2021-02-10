@@ -11,7 +11,7 @@ const MainContent = async () => {
         </div>
         <a href="#">
           <img src=${userProfile[0] ? userProfile[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
-            class="small-screen-photo image" alt="my profile picture">
+            class="small-screen-photo image" alt="photo">
         </a>
         <strong>Home</strong>
       </div>
@@ -19,7 +19,7 @@ const MainContent = async () => {
         <div class="user-input"> 
           <a href="#" id="photo-container">
             <img src=${userProfile[0] ? userProfile[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
-            class="profile-photo image" alt="my profile picture">
+            class="profile-photo image" alt="photo">
           </a>
           <div>
             <textarea id="tweet" class="input" placeholder="What's happening?"></textarea>

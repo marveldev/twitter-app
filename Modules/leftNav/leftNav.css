@@ -23,24 +23,27 @@ body {
   border-right: 1px solid #E6ECF0;
 }
 
-.left-nav > a:hover,
+button {
+  border: unset;
+  background: transparent;
+  outline: none;
+}
+
+.left-nav > button:hover,
 .dropdown-content a:hover {
   background-color: #E8F5FE;
 }
 
-.left-nav > a {
+.left-nav > button {
   display: block;
   margin: 0.5em 0;
   padding: 0.5em 2.5em 0.5em 0.5em;
   width: fit-content;
   border-radius: 2em;
-  color: black;
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: none;
+  font-size: 1.3em;
 }
 
-.left-nav > a i {
+.left-nav > button i {
   margin-right: 1em;
 }
 
@@ -49,8 +52,8 @@ body {
 }
 
 .nav-photo {
-  height: 2.2em;
-  width: 2.2em;
+  height: 3em;
+  max-width: 3em;
   border-radius: 50%;
   object-fit: cover;
   background-color: #000000d7;
@@ -97,7 +100,7 @@ body {
   margin-right: 1.5em;
 }
 
-.dropdown-content > a:nth-child(4) {
+.dropdown-content > button:nth-child(4) {
   border-bottom: 1px solid #E6ECF0;
   border-radius: 0;
 }
@@ -108,14 +111,12 @@ body {
 }
 
 #tweet-modal-button {
-  width: 17em;
-  height: 3.5em;
-  border: unset;
-  border-radius: 2em;
-  font-weight: bold;
+  width: 88%;
+  height: 3em;
   color: #fff;
   background-color: #1DA1F2;
   margin-bottom: 2em;
+  padding: 0;
 }
 
 #tweet-modal-button:hover {
@@ -425,7 +426,7 @@ body {
     to {left: 0; opacity: 1}
   }
 
-  .smallscreen-left-nav > a {
+  .smallscreen-left-nav > button {
     display: block;
     padding: 1em;
     font-size: 1.5em;
@@ -433,7 +434,7 @@ body {
     font-weight: 700;
   }
 
-  .smallscreen-left-nav > a i{
+  .smallscreen-left-nav > button i{
     margin: 0 1em;
   }
 

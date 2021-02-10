@@ -27,7 +27,7 @@ const Modal = async () => {
         <button id="close-modal-button">X</button>
         <div class="nav-input-modal"> 
           <img src=${userProfile[0] ? userProfile[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
-          class="main-content-photo image" alt="my profile picture">
+          class="main-content-photo image" alt="photo">
           <div>
             <textarea class="text input" id="clickme" placeholder="What's happening?"></textarea>
             <div>

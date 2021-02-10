@@ -34,7 +34,7 @@ const addTweetItemToDb = () => {
       let tweetItem = `
         <div class="tweet-profile" id="${tweetItemId}">
           <a href="#">
-            <img src="${userPhoto}" class="main-content-photo image" alt="my profile picture">
+            <img src="${userPhoto}" class="main-content-photo image" alt="photo">
           </a>
           <div class="user-data"> 
             <strong class="profile-name">${userName}</strong>
@@ -89,7 +89,7 @@ const getTweetItemFromDb = async () => {
       <div class="tweet-profile" id="${tweetItem.tweetItemId}">
         <a href="#">
           <img src="${userProfile[0] ? userProfile[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}"
-          class="main-content-photo image" alt="my profile picture">
+          class="main-content-photo image" alt="photo">
         </a>
         <div class="user-data"> 
           <strong class="profile-name">${userProfile[0] ? userProfile[0].profileName : 'Jane Doe'}</strong>
