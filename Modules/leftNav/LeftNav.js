@@ -45,4 +45,5 @@ const leftSideNav = async () => {
     </nav>
   `
 }
+
 export default leftSideNav;

@@ -2,7 +2,7 @@ import { getEntryFromDb } from '../../dataStorage.js';
 
 const MainContent = async () => {
   const userProfile = await getEntryFromDb('profile');
-  return `  
+  return `
     <div class="main-content">
       <div class="top-nav">
         <div id="message">
@@ -45,4 +45,5 @@ const MainContent = async () => {
     </div>
   `
 }
+
 export default MainContent;

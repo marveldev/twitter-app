@@ -1,4 +1,4 @@
-const trendingPane = () => {
+const TrendingPane = () => {
   return `
     <div class="trending-pane">
       <i class="fa fa-search"></i>
@@ -52,4 +52,5 @@ const trendingPane = () => {
     </div> 
   `
 }
-export default trendingPane;
+
+export default TrendingPane;
