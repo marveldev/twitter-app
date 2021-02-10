@@ -10,11 +10,11 @@
   background-color: #192734;
 }
 
-.dim .left-side-nav {
+.dim .left-nav {
   border-right: 1px solid #38444D;
 }
 
-.dim .left-side-nav > a:hover {
+.dim .left-nav > a:hover {
   color: #1DA1F2;
 }
 
@@ -23,7 +23,7 @@
   background-color: #192734;
 }
 
-.dim .left-side-nav > a {
+.dim .left-nav > a {
   color: #fff;
 }
 

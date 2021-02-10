@@ -1,5 +1,5 @@
 import modal from './Modules/modal/Modal.js';
-import leftSideNav from './Modules/leftNav/LeftNav.js';
+import LeftNav from './Modules/leftNav/LeftNav.js';
 import MainContent from './Modules/MainContent/MainContent.js';
 import TrendingPane from './Modules/trendingPane/TrendingPane.js';
 import toggleTheme from './theme/theme.js';
@@ -12,7 +12,7 @@ import smallScreenEventListeners from './Modules/smallScreen/events.js';
 const mainApp = async () => {
   return `
     ${await modal()}
-    ${await leftSideNav()}
+    ${await LeftNav()}
     <section class="grid-container">
       ${await MainContent()}
       ${TrendingPane()}

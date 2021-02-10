@@ -1,9 +1,9 @@
 import { getEntryFromDb } from '../../dataStorage.js';
 
-const leftSideNav = async () => {
+const LeftNav = async () => {
   const userProfile = await getEntryFromDb('profile');
   return `
-    <nav class="left-side-nav">
+    <nav class="left-nav">
       <a href="#" class="logo">
         <i class='fab fa-twitter'></i>
       </a>
@@ -46,4 +46,4 @@ const leftSideNav = async () => {
   `
 }
 
-export default leftSideNav;
+export default LeftNav;

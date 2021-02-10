@@ -10,11 +10,11 @@
   background-color: #192734;
 }
 
-.lights-out .left-side-nav {
+.lights-out .left-nav {
   border-right: 1px solid #2F3336;
 }
 
-.lights-out .left-side-nav > a:hover {
+.lights-out .left-nav > a:hover {
   color: #1DA1F2;
 }
 
@@ -23,7 +23,7 @@
   background-color: #15181c;
 }
 
-.lights-out .left-side-nav > a {
+.lights-out .left-nav > a {
   color: #fff;
 } 
 
