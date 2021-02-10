@@ -7,15 +7,6 @@ const Modal = async () => {
       <div id="tweet-modal-overlay"></div>
       <div id="dropdown-overlay"></div>
       <div>
-        <div class="dropdown-content">
-          <a href="#"><i class='fab fa-rocketchat'></i>Topics</a>
-          <a href="#"><i class="fa fa-bolt"></i>Moments</a>
-          <a href="#"><i class="fa fa-external-link-square"></i>Twitter Ads</a>
-          <a href="#"><i class="fa fa-bar-chart"></i>Analytics</a>
-          <a href="#" id="profileButton"><i class="material-icons">&#xe8b8;</i>Edit Profile</a>
-          <a href="#"><i class="fa fa-question-circle-o"></i>Help Center</a>
-          <a href="#" id="display-button"><i class="material-icons">&#xe3ae;</i>Display</a>
-        </div>  
         <div class="theme-modal">
           <p>Background</p>
           <button id="default-button">DEFAULT</button>
@@ -64,27 +55,6 @@ const Modal = async () => {
           <small>You can personalize trends based on your location and who you follow</small>
         </div>  
       </div> 
-      <div class="edit-profile-modal">
-        <div class="heading">
-          <strong>Edit Profile</strong>
-          <button id="profileModalButton">X</button>
-        </div>
-        <form class="bio-form">
-          <div class="profile-entry">
-            <div>
-              <img src=${userProfile[0] ? userProfile[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
-              id="photo" alt="photo">
-              <input type="file" id="profilePhoto">
-              <label for="profilePhoto">
-                <strong id="editPhoto" tabindex="1">EDIT PHOTO</strong>
-              </label>
-            </div>
-            <input type="text" id="profileInput" placeholder="Enter new name..."
-            value="${userProfile[0] ? userProfile[0].profileName : 'Jane Doe'}" required/>
-          </div>
-          <button type="submit" id="saveProfileButton">Save</button>
-        </form>
-      </div>
     </section> 
   `
 }
