@@ -2,7 +2,7 @@
   color: #fff;
 }
 
-.dim .logo>i {
+.dim .logo > i {
   color: #fff;
 }
 
@@ -14,7 +14,7 @@
   border-right: 1px solid #38444D;
 }
 
-.dim .left-side-nav>a:hover {
+.dim .left-side-nav > a:hover {
   color: #1DA1F2;
 }
 
@@ -23,7 +23,7 @@
   background-color: #192734;
 }
 
-.dim .left-side-nav>a {
+.dim .left-side-nav > a {
   color: #fff;
 }
 
@@ -40,7 +40,7 @@
   color: #6d7d8a;
 }
 
-.dim .dropdown-content>a:nth-child(4) {
+.dim .dropdown-content > a:nth-child(4) {
   border-bottom: 1px solid #38444d;
 }
 
@@ -48,16 +48,16 @@
   background-color: #2d91cf;
 }
 
-.dim .right-side-nav>input {
+.dim .trending-pane > input {
   background-color: #253341;
 }
 
-.dim .right-side-nav>i,
-.dim .right-side-nav>input::placeholder {
+.dim .trending-pane > i,
+.dim .trending-pane > input::placeholder {
   color: #7C8C99;
 }
 
-.dim .tweet-options>a:hover,
+.dim .tweet-options > a:hover,
 .dim .tweet-profile:hover,
 .dim #photoIcon:hover {
   background-color: #192734;
@@ -73,15 +73,15 @@
 }
 
 
-.dim .tweet-info>a {
+.dim .tweet-info > a {
   color: #657786;
 }
 
-.dim .tweet-info>a:hover {
+.dim .tweet-info > a:hover {
   color: #1DA1F2;
 }
 
-.dim .tweet-info>a:nth-child(3):hover {
+.dim .tweet-info > a:nth-child(3):hover {
   color: #f11c00;
 }
 
@@ -98,7 +98,7 @@
 }
 
 .dim .trending-tweets,
-.dim .trending-tweets>button {
+.dim .trending-tweets > button {
   background-color: #1E2C39;
 }
 
@@ -170,7 +170,7 @@
     background-color: #192734;
   }
 
-  .dim .smallscreen-left-nav>a {
+  .dim .smallscreen-left-nav > a {
     color: #fff;
   }
 

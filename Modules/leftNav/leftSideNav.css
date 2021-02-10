@@ -40,7 +40,7 @@ body {
   text-decoration: none;
 }
 
-.left-side-nav>a i {
+.left-side-nav > a i {
   margin-right: 1em;
 }
 
@@ -313,7 +313,7 @@ body {
   border-bottom: 1px solid #E6ECF0;
 }
 
-.heading>strong {
+.heading > strong {
   font-size: 1.5em;
 }
 
@@ -381,7 +381,7 @@ body {
   to {top: 0; opacity: 1}
 }
 
-#message>strong {
+#message > strong {
   font-size: 1.2em;
   margin-right: 2em;
 }
@@ -425,7 +425,7 @@ body {
     to {left: 0; opacity: 1}
   }
 
-  .smallscreen-left-nav>a {
+  .smallscreen-left-nav > a {
     display: block;
     padding: 1em;
     font-size: 1.5em;
@@ -433,7 +433,7 @@ body {
     font-weight: 700;
   }
 
-  .smallscreen-left-nav>a i{
+  .smallscreen-left-nav > a i{
     margin: 0 1em;
   }
 
@@ -459,7 +459,7 @@ body {
     padding: 1.3em 0 0 0;
   }
 
-  #message>strong {
+  #message > strong {
     font-size: 1.3em;
   }
 

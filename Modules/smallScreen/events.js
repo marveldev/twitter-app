@@ -22,12 +22,12 @@ const smallScreenEventListeners = () => {
 
 
   smallScreenTrends.addEventListener('click', () => {
-    document.querySelector('.right-side-nav').style.display = 'block';
+    document.querySelector('.trending-pane').style.display = 'block';
     document.querySelector('#tweet-output').style.display = 'none';
   })
 
   smallScreenHome.addEventListener('click', () => {
-    document.querySelector('.right-side-nav').style.display = 'none';
+    document.querySelector('.trending-pane').style.display = 'none';
     document.querySelector('#tweet-output').style.display = 'block';
   })
 

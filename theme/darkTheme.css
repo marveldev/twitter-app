@@ -2,7 +2,7 @@
   color: #fff;
 }
 
-.lights-out .logo>i {
+.lights-out .logo > i {
   color: #fff;
 }
 
@@ -14,7 +14,7 @@
   border-right: 1px solid #2F3336;
 }
 
-.lights-out .left-side-nav>a:hover {
+.lights-out .left-side-nav > a:hover {
   color: #1DA1F2;
 }
 
@@ -23,7 +23,7 @@
   background-color: #15181c;
 }
 
-.lights-out .left-side-nav>a {
+.lights-out .left-side-nav > a {
   color: #fff;
 } 
 
@@ -40,7 +40,7 @@
   color: #585f65;
 }
 
-.dim-theme .dropdown-content>a:nth-child(4) {
+.dim-theme .dropdown-content > a:nth-child(4) {
   border-bottom: 1px solid #38444d;
 }
 
@@ -48,16 +48,16 @@
   background-color: #2d91cf;
 }
 
-.lights-out .right-side-nav>input {
+.lights-out .trending-pane > input {
   background-color: #15181C;
 }
 
-.lights-out .right-side-nav>i,
-.lights-out .right-side-nav>input::placeholder {
+.lights-out .trending-pane > i,
+.lights-out .trending-pane > input::placeholder {
   color: #6E767D;
 }
 
-.lights-out .tweet-options>a:hover,
+.lights-out .tweet-options > a:hover,
 .lights-out .tweet-profile:hover,
 .lights-out #photoIcon:hover {
   background-color: #15181C;
@@ -72,7 +72,7 @@
   border-bottom: 1px solid #2F3336;
 }
 
-.lights-out .tweet-info>a {
+.lights-out .tweet-info > a {
   color: #657786;
 }
 
@@ -85,7 +85,7 @@
 }
 
 .lights-out .trending-tweets,
-.lights-out .trending-tweets>button {
+.lights-out .trending-tweets > button {
   background-color: #15181c;
 }
 
@@ -112,11 +112,11 @@
   border-bottom: 1px solid #2f3336;
 }
 
-.lights-out .tweet-info>a:hover {
+.lights-out .tweet-info > a:hover {
   color: #1DA1F2;;
 }
 
-.lights-out .tweet-info>a:nth-child(3):hover {
+.lights-out .tweet-info > a:nth-child(3):hover {
   color: #f11c00;
 }
 
@@ -173,7 +173,7 @@
     background-color: #000;
   }
 
-  .lights-out .smallscreen-left-nav>a {
+  .lights-out .smallscreen-left-nav > a {
     color: #fff;
   }
 

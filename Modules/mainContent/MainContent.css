@@ -34,7 +34,7 @@
   border-bottom: 1px solid #E6ECF0;
 }
 
-.top-nav>strong  {
+.top-nav > strong  {
   font-weight: bold;
   height: 1.8em;
   font-size: 1.8em;
@@ -172,7 +172,7 @@
   display: none;
 }
 
-.user-data>strong {
+.user-data > strong {
   font-size: 1.2em;
 }
 
@@ -197,7 +197,7 @@
     background-color: #fff; 
   }
 
-  .smallscreen-nav>a i {
+  .smallscreen-nav > a i {
     font-size: 2.5em;
     color:#1DA1F2;
     border-radius: 2em;
@@ -246,7 +246,7 @@
     background-color: #000000d7;
   }
 
-  .smallscreen-nav>a:nth-child(1) {
+  .smallscreen-nav > a:nth-child(1) {
     position: fixed;
     bottom: 8em;
     right: 2em;
@@ -256,7 +256,7 @@
     height: 6em;
   } 
 
-  .smallscreen-nav>a:nth-child(1) i {
+  .smallscreen-nav > a:nth-child(1) i {
     color: #fff;
     font-size: 2em;
     margin: 1em 0 0 1em;
@@ -288,7 +288,7 @@
   }
 
   .delete-modal p,
-  .delete-modal>h3 {
+  .delete-modal > h3 {
     font-size: 1.2em;
   }
 

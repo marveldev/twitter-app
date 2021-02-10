@@ -1,6 +1,6 @@
-const rightSideNav = () => {
+const trendingPane = () => {
   return `
-    <div class="right-side-nav">
+    <div class="trending-pane">
       <i class="fa fa-search"></i>
       <input type="text" placeholder="Search Twitter">
       <div class="trending-tweets">
@@ -52,4 +52,4 @@ const rightSideNav = () => {
     </div> 
   `
 }
-export default rightSideNav;
+export default trendingPane;

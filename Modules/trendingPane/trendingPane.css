@@ -1,8 +1,8 @@
-.right-side-nav {
+.trending-pane {
   margin: 0 0 0 2em;
 }
 
-.right-side-nav input {
+.trending-pane input {
   width: 90%;
   height: 2.2em;
   padding-left: 2em;
@@ -22,7 +22,7 @@
   height: 61em;
 }
 
-.right-side-nav>i {
+.trending-pane > i {
   position: relative;
   left: 2em;
   font-size: 1.3em;
@@ -34,7 +34,7 @@
   padding: 0 0 0 1em;
 }
 
-.trending-tweets>button {
+.trending-tweets > button {
   border: unset;
   height: 2.5em;
   width: 2.5em;
@@ -44,11 +44,11 @@
   color: #1DA1F2;
 }
 
-.trending-tweets>button:hover {
+.trending-tweets > button:hover {
   background-color: #c2daeb;
 }
 
-.trending-tweets>button i {
+.trending-tweets > button i {
   font-size: 1.5em;
   margin: 0.1em 0 0 0;
 }
@@ -100,7 +100,7 @@
   background-color: #F5FBFE;
 }
 
-.trend-modal>strong {
+.trend-modal > strong {
   font-size: 1.3em;
   font-weight: 800;
 }
@@ -142,12 +142,12 @@
 }
 
 @media screen and (max-width: 425px) { 
-  .right-side-nav {
+  .trending-pane {
     margin: 0;
     overflow-y: hidden;
   }
 
-  .right-side-nav input {
+  .trending-pane input {
     display: none;
   }
 
@@ -175,7 +175,7 @@
     width: 37em;
   }
 
-  .trend-modal>strong {
+  .trend-modal > strong {
     font-size: 1.6em;
   }
 
