@@ -9,7 +9,7 @@ body {
   height: 3em !important;
 }
 
-.logo>i {
+.logo > i {
   color: #1DA1F2;
   font-size: 1.5em;
   margin: 0.2em 0 0 0.2em;
@@ -23,12 +23,12 @@ body {
   border-right: 1px solid #E6ECF0;
 }
 
-.left-side-nav>a:hover,
+.left-side-nav > a:hover,
 .dropdown-content a:hover {
   background-color: #E8F5FE;
 }
 
-.left-side-nav>a {
+.left-side-nav > a {
   display: block;
   margin: 0.5em 0;
   padding: 0.5em 2.5em 0.5em 0.5em;
@@ -97,7 +97,7 @@ body {
   margin-right: 1.5em;
 }
 
-.dropdown-content>a:nth-child(4) {
+.dropdown-content > a:nth-child(4) {
   border-bottom: 1px solid #E6ECF0;
   border-radius: 0;
 }

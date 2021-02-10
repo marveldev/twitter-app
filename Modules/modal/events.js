@@ -1,4 +1,4 @@
-const navModalEventListeners = () => {
+const addModalEventListeners = () => {
   const dropdownButton = document.querySelector('#dropdown-button');
   const tweetModalButton = document.querySelector('#tweet-modal-button');
   const closeTweetModalButton = document.querySelector('#close-modal-button');
@@ -9,7 +9,7 @@ const navModalEventListeners = () => {
   const displayThemeButton = document.querySelector('#display-button');
   const profileButton = document.querySelector('#profileButton')
   const profileModalButton = document.querySelector('#profileModalButton')
-  
+
   function changeDisplay(element, selector, value, overlay) {
     element.addEventListener('click', () => {
       document.querySelector(selector).style.display = value;
@@ -59,4 +59,4 @@ const navModalEventListeners = () => {
   })
 }
 
-export default navModalEventListeners
+export default addModalEventListeners

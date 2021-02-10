@@ -1,12 +1,12 @@
 import modal from './Modules/modal/Modal.js';
-import leftSideNav from './Modules/nav/LeftNav.js';
-import mainContent from './Modules/mainContent/MainContent.js';
-import rightSideNav from './Modules/nav/RightSideNav.js';
+import leftSideNav from './Modules/leftNav/LeftNav.js';
+import MainContent from './Modules/MainContent/MainContent.js';
+import rightSideNav from './Modules/trendingPane/RightSideNav.js';
 import toggleTheme from './theme/theme.js';
-import navModalEventListeners from './Modules/modal/navModals.js';
+import addModalEventListeners from './Modules/modal/events.js';
 import { request } from './dataStorage.js';
-import { addProfileEventListeners } from './Modules/nav/events.js';
-import { addTweetItemToDb, getTweetItemFromDb } from './Modules/mainContent/events.js';
+import { addProfileEventListeners } from './Modules/leftNav/events.js';
+import { addTweetItemToDb, getTweetItemFromDb } from './Modules/MainContent/events.js';
 import smallScreenEventListeners from './Modules/smallScreen/events.js';
 
 const mainApp = async () => {
@@ -14,7 +14,7 @@ const mainApp = async () => {
     ${await modal()}
     ${await leftSideNav()}
     <section class="grid-container">
-      ${await mainContent()}
+      ${await MainContent()}
       ${rightSideNav()}
     </section>
   `
@@ -23,7 +23,7 @@ const mainApp = async () => {
 request.onsuccess = async () => {
   document.getElementById('root').innerHTML = await mainApp();
   toggleTheme();
-  navModalEventListeners();
+  addModalEventListeners();
   addProfileEventListeners();
   addTweetItemToDb();
   getTweetItemFromDb();

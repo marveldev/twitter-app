@@ -1,6 +1,6 @@
 import { getEntryFromDb } from '../../dataStorage.js';
 
-const modal = async () => {
+const Modal = async () => {
   const userProfile = await getEntryFromDb('profile');
   return `
     <section>
@@ -88,4 +88,4 @@ const modal = async () => {
     </section> 
   `
 }
-export default modal;
+export default Modal;
