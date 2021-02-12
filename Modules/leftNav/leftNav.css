@@ -9,7 +9,7 @@
   margin: 0.2em 0 0 0.2em;
 }
 
-.left-nav {
+.left-nav-content {
   position: fixed;
   left: 3em;
   height: 100%;
@@ -27,7 +27,7 @@ button {
   background-color: #E8F5FE;
 }
 
-.left-nav > button {
+.left-nav-content > button {
   display: block;
   margin: 0.5em 0;
   padding: 0.5em 2.5em 0.5em 0.5em;
@@ -36,7 +36,7 @@ button {
   font-size: 1.3em;
 }
 
-.left-nav > button i {
+.left-nav-content > button i {
   margin-right: 1em;
 }
 
@@ -57,7 +57,7 @@ button {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 1;
   width: 100%;
   height: 100%;
   background-color: tomato;
@@ -68,8 +68,10 @@ button {
   display: none;
   position: absolute;
   bottom: 15em;
+  left: 3em;
   background-color: #ffff;
   width: 14em;
+  z-index: 1;
   border-radius: 0.5em;
   padding: 1em 0;
   box-shadow: 0px 8px 16px 0px #00000033;
@@ -98,7 +100,7 @@ button {
   background-color: #F5FBFE;
 }
 
-#tweet-modal-button {
+#tweetModalButton {
   width: 88%;
   height: 3em;
   color: #fff;
@@ -107,66 +109,53 @@ button {
   padding: 0;
 }
 
-#tweet-modal-button:hover {
+#tweetModalButton:hover {
   background-color: #1a8acf;
-}
-
-#tweet-modal-overlay {
-  display: none; 
-  position: fixed; 
-  top: 0;
-  left: 0;
-  z-index: 1; 
-  width: 100%; 
-  height: 100%; 
-  background-color: #00000066; 
 }
 
 .tweet-modal-container {
   display: none;
-  z-index: 1;
-  width: 42em;
-  position: fixed; 
-  top: 3em;
-  left: 25em;
+  position: absolute;
+  top: 15%;
+  left: 25%;
+  width: 40em;
   height: auto;
   border-radius: 0.8em;
   background-color: #fff;
+  z-index: 1;
   box-shadow: 5px 5px 10px 5px #00000033;
 }
 
-.user-input a {
+/* .user-input button {
   padding: 0.7em 1.2em;
   text-decoration: none;
   border-radius: 2em;
   color: #1DA1F2;
-}
+} */
 
-.nav-input-modal {
+.tweet-input {
   display: grid;
-  grid-template-columns: 0.3fr 2fr;
+  grid-template-columns: 0.5fr 2fr;
   border-top: 1px solid #ccd6dd;
   padding: 0.8em 0 0 1em;
 }
 
-.text {
+.tweet-input-box {
   width: 23em;
   height: 10em;
-  overflow-y: hidden;
   font-size: 1.5em;
   border: none;
-  padding: 1em 0;
+  padding: 0.5em 1em;
   outline: none;
   resize: none;
 }
 
-.text::placeholder {
+.tweet-input-box::placeholder {
   color: #9197A3;
 }
 
-.nav-input-modal a {
+.tweet-input strong {
   padding: 0.7em 1.2em;
-  text-decoration: none;
   border-radius: 2em;
   color: #1DA1F2;
 }
@@ -177,14 +166,7 @@ button {
   border-top: 1px solid  #E6ECF0;
 }
 
-.tweet-options a {
-  font-size: 1.5em;
-  padding: 0.5em;
-  border-radius: 1.5em;
-  color: #1DA1F2;
-}
-
-#photoIcon {
+.tweet-options i {
   font-size: 1.5em;
   padding: 0.5em;
   border-radius: 1.5em;
@@ -193,7 +175,8 @@ button {
 }
 
 .add-tweet-button {
-  margin-left: 14em;
+  float: right;
+  margin: 0.5em;
   width: 5em;
   height: 2.5em;
   border: unset;
@@ -257,12 +240,9 @@ button {
 .edit-profile-modal {
   display: none;
   background-color: #fff;
-  position: fixed;
+  position: absolute;
   top: 15%;
-  left: 70%;
-  /* top: 7em; */
-  /* left: 0; */
-  right: 4em;
+  left: 25%;
   width: 40em;
   height: auto;
   padding-bottom: 1.5em;
@@ -298,13 +278,13 @@ button {
   display: none;
 }
 
-.heading {
+.edit-profile-modal > div {
   padding: 1em 0;
   margin-bottom: 1em;
   border-bottom: 1px solid #E6ECF0;
 }
 
-.heading > strong {
+.edit-profile-modal > div > strong {
   font-size: 1.5em;
 }
 
@@ -347,46 +327,6 @@ button {
   background-color: #1DA1F2;
   color: #fff;
   margin-left: 19.5em;
-}
-
-#message {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  height: 4em;
-  width: 30%;
-  padding: 1em;
-  color: #000;
-  text-align: center;
-  animation-name: slide;
-  animation-duration: 1s;
-  background-color: #8ED0F9;
-  z-index: 1;
-}
-
-@keyframes slide {
-  from {top: -300px; opacity: 0}
-  to {top: 0; opacity: 1}
-}
-
-#message > strong {
-  font-size: 1.2em;
-  margin-right: 2em;
-}
-
-.message-btn {
-  border: unset;
-  border-radius: 1.8em;
-  font-weight: 700;
-  width: 4em;
-  height: 2em;
-}
-
-#root button:active {
-  transform: translateY(4px);
 }
 
 .smallscreen-left-nav {

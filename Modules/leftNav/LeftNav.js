@@ -19,26 +19,51 @@ const themeModal = `
   </div>
 `
 const editProfileModal = `
-  <div class="edit-profile-modal">
-    <div class="heading">
+  <section class="edit-profile-modal">
+    <div>
       <strong>Edit Profile</strong>
       <button id="profileModalButton">X</button>
     </div>
-    <form class="bio-form">
+    <section>
       <div class="profile-entry">
         <div>
           <img src='https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
             id="photo" alt="photo">
           <input type="file" id="profilePhoto">
           <label for="profilePhoto">
-            <strong id="editPhoto" tabindex="1">EDIT PHOTO</strong>
+            <strong id="editPhoto">EDIT PHOTO</strong>
           </label>
         </div>
         <input type="text" id="profileInput" placeholder="Enter new name..."
           value='Jane Doe' required/>
       </div>
       <button type="submit" id="saveProfileButton">Save</button>
-    </form>
+    </section>
+  </section>
+`
+
+const tweetModal = `
+  <div class="tweet-modal-container">
+    <button id="close-modal-button">X</button>
+    <div class="tweet-input"> 
+      <img src='https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
+        class="main-content-photo image" alt="photo">
+      <div>
+        <textarea class="tweet-input-box" id="clickme" placeholder="What's happening?"></textarea>
+        <strong>Everyone can reply</strong>
+      </div>
+    </div>
+    <div class="tweet-options">
+      <input type="file" id="addPhoto">
+      <label for="addPhoto">
+        <i class="fa fa-file-picture-o" id="photoIcon"></i>
+      </label>
+      <button><i class="material-icons">&#xe908;</i></button>
+      <button><i class="fa fa-bar-chart"></i></button>
+      <button><i class="fa fa-smile-o"></i></button>
+      <button><i class="fa fa-calendar-plus-o"></i></button>
+      <button class="add-tweet-button" title="clickme" disabled>Tweet</button>
+    </div> 
   </div>
 `
 
@@ -46,26 +71,30 @@ const LeftNav = async () => {
   const userProfile = await getEntryFromDb('profile');
   return `
     <div class="left-nav">
-      <div id="overlay"></div>
-      <button id="logo"><i class='fab fa-twitter'></i></button>
-      <button><i class="glyphicon glyphicon-home"></i><strong>Home</strong></button>
-      <button><i class='fas fa-hashtag'></i><strong>Explore</strong></button>
-      <button><i class='fas fa-bell'></i><strong>Notifications</strong></button>
-      <button><i class="fa fa-envelope-o"></i><strong>Messages</strong></button>
-      <button><i class="fa fa-bookmark-o"></i><strong>Bookmarks</strong></button>
-      <button><i class="fa fa-list-alt"></i><strong>Lists</strong></button>
-      <button><i class='fas fa-user-alt'></i><strong>Profile</strong></button>
-      <button id="dropdownButton"><i class="fa fa-caret-down"></i><strong>More</strong></button>
-      <button id="tweet-modal-icon"><i class='fas fa-feather-alt'></i></button>
-      <button id="tweet-modal-button">Tweet</button>
-      <div>
-        <img src=${userProfile[0] ? userProfile[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
-          class="nav-photo image" alt="photo">
-        <strong class="profile-name" id="name">${userProfile[0] ? userProfile[0].profileName : 'Jane Doe'}</strong>
+      <div class="left-nav-content">
+        <button id="logo"><i class='fab fa-twitter'></i></button>
+        <button><i class="glyphicon glyphicon-home"></i><strong>Home</strong></button>
+        <button><i class='fas fa-hashtag'></i><strong>Explore</strong></button>
+        <button><i class='fas fa-bell'></i><strong>Notifications</strong></button>
+        <button><i class="fa fa-envelope-o"></i><strong>Messages</strong></button>
+        <button><i class="fa fa-bookmark-o"></i><strong>Bookmarks</strong></button>
+        <button><i class="fa fa-list-alt"></i><strong>Lists</strong></button>
+        <button><i class='fas fa-user-alt'></i><strong>Profile</strong></button>
+        <button id="dropdownButton"><i class="fa fa-caret-down"></i><strong>More</strong></button>
+        <button id="tweet-modal-icon"><i class='fas fa-feather-alt'></i></button>
+        <button id="tweetModalButton">Tweet</button>
+        <div>
+          <img src=${userProfile[0] ? userProfile[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
+            class="nav-photo image" alt="photo">
+          <strong class="profile-name" id="name">${userProfile[0] ? userProfile[0].profileName : 'Jane Doe'}</strong>
+        </div>
       </div>
-      ${dropdownModal}
-      ${themeModal}
-      ${editProfileModal}
+      <div>
+        ${dropdownModal}
+        ${themeModal}
+        ${editProfileModal}
+        ${tweetModal}
+      </div>
     </div>
     <nav class="smallscreen-left-nav">
       <button>

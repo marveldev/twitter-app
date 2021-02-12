@@ -11,6 +11,7 @@ import toggleTheme from "./theme.js"
 
 const App = async () => {
   return `
+    <div id="overlay"></div>
     ${await LeftNav()}
     <section class="grid-container">
       ${await MainContent()}
@@ -23,9 +24,9 @@ request.onsuccess = async () => {
   document.getElementById('root').innerHTML = await App()
   addLeftNavEventListeners()
 
-  toggleTheme()
-  addModalEventListeners()
-  addTweetItemToDb()
-  getTweetItemFromDb()
-  smallScreenEventListeners()
+  // toggleTheme()
+  // addModalEventListeners()
+  // addTweetItemToDb()
+  // getTweetItemFromDb()
+  // smallScreenEventListeners()
 }

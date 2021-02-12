@@ -17,6 +17,11 @@ const addLeftNavEventListeners = () => {
     document.querySelector('.dropdown-content').style.display = 'none'
   })
 
+  document.querySelector('#tweetModalButton').addEventListener('click', () => {
+    document.querySelector('.tweet-modal-container').style.display = 'block'
+    document.querySelector('#overlay').style.display = 'block'
+  })
+
   const photoInput = document.querySelector('#profilePhoto')
   const profilePhoto = document.querySelector('#photo')
   photoInput.addEventListener('change', () => {
