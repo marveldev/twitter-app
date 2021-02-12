@@ -4,12 +4,19 @@
   position: absolute;
   top: 0;
   left: 21em;
+  height: 100%;
 }
 
 .main-content {
+  position: relative;
   border-right: 1px solid #E6ECF0;
   width: 42em;
   height: 100%;
+}
+
+.tweet-output {
+  max-height: 30em;
+  background-color: tomato;
 }
 
 #photo-container {

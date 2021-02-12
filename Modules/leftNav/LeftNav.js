@@ -5,12 +5,19 @@ const dropdownModal = `
     <button><i class="fa fa-bolt"></i>Moments</button>
     <button><i class="fa fa-external-link-square"></i>Twitter Ads</button>
     <button><i class="fa fa-bar-chart"></i>Analytics</button>
-    <button id="profileButton"><i class="material-icons">&#xe8b8;</i>Edit Profile</button>
+    <button id="editProfileButton"><i class="material-icons">&#xe8b8;</i>Edit Profile</button>
     <button><i class="fa fa-question-circle-o"></i>Help Center</button>
-    <button id="displayButton"><i class="material-icons">&#xe3ae;</i>Display</button>
+    <button id="themeButton"><i class="material-icons">&#xe3ae;</i>Display</button>
   </div>
 `
-
+const themeModal = `
+  <div class="theme-modal">
+    <p>Background</p>
+    <button id="default-button">DEFAULT</button>
+    <button id="dim-button">DIM</button>
+    <button id="light-out-button">Lights Outs</button>
+  </div>
+`
 const editProfileModal = `
   <div class="edit-profile-modal">
     <div class="heading">
@@ -20,15 +27,15 @@ const editProfileModal = `
     <form class="bio-form">
       <div class="profile-entry">
         <div>
-          <img src=${userProfile[0] ? userProfile[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
-          id="photo" alt="photo">
+          <img src='https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
+            id="photo" alt="photo">
           <input type="file" id="profilePhoto">
           <label for="profilePhoto">
             <strong id="editPhoto" tabindex="1">EDIT PHOTO</strong>
           </label>
         </div>
         <input type="text" id="profileInput" placeholder="Enter new name..."
-        value="${userProfile[0] ? userProfile[0].profileName : 'Jane Doe'}" required/>
+          value='Jane Doe' required/>
       </div>
       <button type="submit" id="saveProfileButton">Save</button>
     </form>
@@ -38,8 +45,9 @@ const editProfileModal = `
 const LeftNav = async () => {
   const userProfile = await getEntryFromDb('profile');
   return `
-    <nav class="left-nav">
-      <button class="logo"><i class='fab fa-twitter'></i></button>
+    <div class="left-nav">
+      <div id="overlay"></div>
+      <button id="logo"><i class='fab fa-twitter'></i></button>
       <button><i class="glyphicon glyphicon-home"></i><strong>Home</strong></button>
       <button><i class='fas fa-hashtag'></i><strong>Explore</strong></button>
       <button><i class='fas fa-bell'></i><strong>Notifications</strong></button>
@@ -56,8 +64,9 @@ const LeftNav = async () => {
         <strong class="profile-name" id="name">${userProfile[0] ? userProfile[0].profileName : 'Jane Doe'}</strong>
       </div>
       ${dropdownModal}
+      ${themeModal}
       ${editProfileModal}
-    </nav>
+    </div>
     <nav class="smallscreen-left-nav">
       <button>
         <img src=${userProfile[0] ? userProfile[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
