@@ -21,7 +21,7 @@ const themeModal = `
 `
 
 const LeftNav = async () => {
-  const userData = await getEntryFromDb('userData')
+  const userData = await getEntryFromDb('user-data')
   return `
     <div class="left-nav">
       <div class="left-nav-content">
@@ -82,7 +82,7 @@ const LeftNav = async () => {
             <button><i class="fa fa-bar-chart"></i></button>
             <button><i class="fa fa-smile-o"></i></button>
             <button><i class="fa fa-calendar-plus-o"></i></button>
-            <button class="add-tweet-button" disabled>Tweet</button>
+            <button class="add-tweet-button">Tweet</button>
           </div> 
         </div>
         ${dropdownModal}

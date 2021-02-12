@@ -1,7 +1,7 @@
-import { getEntryFromDb } from '../../dataStorage.js';
+import { getEntryFromDb } from '../../dataStorage.js'
 
 const MainContent = async () => {
-  const userData = await getEntryFromDb('userData');
+  const userData = await getEntryFromDb('user-data')
   return `
     <div class="main-content">
       <div class="top-nav">
@@ -34,16 +34,16 @@ const MainContent = async () => {
           <label for="addPhoto">
             <i class="fa fa-file-picture-o" id="photoIcon"></i>
           </label>
-          <a href="#"><i class="material-icons">&#xe908;</i></a>
+          <a href="#"><i class="material-icons">&#xe908</i></a>
           <a href="#"><i class="fa fa-bar-chart"></i></a>
           <a href="#"><i class="fa fa-smile-o"></i></a>
           <a href="#"><i class="fa fa-calendar-plus-o"></i></a>
           <button class="add-tweet-button">Tweet</button>
         </div> 
       </div>
-      <div id="tweet-output"></div>
+      <div id="tweetOutput"></div>
     </div>
   `
 }
 
-export default MainContent;
+export default MainContent

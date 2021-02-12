@@ -1,4 +1,5 @@
 import { addEntryToDb, clearAllEntries } from '../../dataStorage.js'
+import { addTweetItemToDb } from '../MainContent/events.js'
 
 const toggleTheme = () => {
   const root = document.querySelector('#root')
@@ -87,11 +88,12 @@ const addLeftNavEventListeners = () => {
 
     document.querySelector('.edit-profile-modal').style.display = 'none'
     document.querySelector('#overlay').style.display = 'none'
-    clearAllEntries('userData')
-    addEntryToDb('userData', { userName, photoSource })
+    clearAllEntries('user-data')
+    addEntryToDb('user-data', { userName, photoSource })
   })
 
   toggleTheme()
+  addTweetItemToDb(document.querySelector('.tweet-input-box'))
 }
 
 export default addLeftNavEventListeners

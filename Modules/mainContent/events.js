@@ -1,15 +1,9 @@
 import { addEntryToDb, getEntryFromDb, deleteEntry } from '../../dataStorage.js';
 
-const addMainContentEvents = () => {
-  const input = document.querySelector('.input')
-  addTweetItemToDb(input)
-}
-
 const addTweetItemToDb = (input) => {
   const addTweetButtons = document.querySelectorAll('.add-tweet-button')
   const tweetContainer = document.querySelector('.tweet-modal-container')
-  const tweetModalOverlay = document.querySelector('#tweet-modal-overlay');
-  const tweetOutput = document.querySelector('#tweet-output')
+  const tweetOutput = document.querySelector('#tweetOutput')
 
   addTweetButtons.forEach(addTweetButton => {
     addTweetButton.addEventListener('click', () => {
@@ -36,65 +30,52 @@ const addTweetItemToDb = (input) => {
         `
         tweetItem += tweetOutput.innerHTML;
         tweetOutput.innerHTML = tweetItem;
-  
+
         if (tweetContainer.style.display == 'block') {
           tweetContainer.style.display = 'none';
-          tweetModalOverlay.style.display = 'none';
+          document.querySelector('#overlay').style.display = 'none';
         }
-  
+
         const addItemToIndexDb = {
           tweetItemId: tweetItemId,
+          userPhoto: userPhoto,
+          userName: userName,
           inputValue: inputValue
         }
-  
-        addEntryToDb('tweet-item', addItemToIndexDb);
-        // deleteTweetItem()
-  
-        input.value = '';
 
+        addEntryToDb('tweet-data', addItemToIndexDb);
+        // deleteTweetItem()
+        input.value = '';
       }
     })
   });
 }
 
 const getTweetItemFromDb = async () => {
-  const tweetOutput = document.querySelector('#tweet-output')
-  const userProfile = await getEntryFromDb('profile');
-  const userTweets = await getEntryFromDb('tweet-item');
-  const tweetItems = userTweets.reverse().map((tweetItem) => {
+  const tweetOutput = document.querySelector('#tweetOutput')
+  const tweetData = await getEntryFromDb('tweet-data');
+  const tweetItems = tweetData.reverse().map((tweetItem) => {
+    const { tweetItemId, userPhoto, userName, inputValue } = tweetItem
     return `
-      <div class="tweet-item" id="${tweetItem.tweetItemId}">
-        <button>
-          <img src="${userProfile[0] ? userProfile[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}"
-          class="main-content-photo image" alt="photo">
-        </button>
+      <div class="tweet-item" id="${tweetItemId}">
+        <img src="${userPhoto}" class="main-content-photo image" alt="photo">
         <div>
-          <strong class="profile-name">${userProfile[0] ? userProfile[0].profileName : 'Jane Doe'}</strong>
-          <span class="button-container">
-            <button class="delete-button" title="${tweetItem.tweetItemId}">X</button>
-          </span>
-          <p class="tweet-text">${tweetItem.inputValue}</p>
-          <div>
-            <!-- <img src="#" alt=""> -->
-          </div>
+          <strong class="profile-name">${userName}</strong>
+          <button class="delete-button" title="${tweetItemId}">X</button>
+          <p class="tweet-text">${inputValue}</p>
           <div class="tweet-info">
             <button><i class="fa fa-comment-o"></i>5.1k</button>
             <button><i class='fas fa-retweet'></i>2.1k</button>
             <button><i class="fa fa-heart-o"></i>3.1k</button>
             <button><i class="fa fa-upload"></i></button>
           </div>
-          <div class="delete-modal ${tweetItem.tweetItemId}">
-            <h3>Delete Tweet?</h3>
-            <p>This can't be undone and it will be removed from your timeline.</p>
-            <button class="cancel-button">Cancel</button>
-            <button class="confirm-button" title="${tweetItem.tweetItemId}">Delete</button>
-          </div>
-        </div>  
+        </div>
       </div>
     `
   })
+
   tweetOutput.innerHTML = tweetItems.join('');
-  deleteTweetItem();
+  // deleteTweetItem();
 }
 
 const deleteTweetItem = () => {
@@ -135,7 +116,11 @@ const deleteTweetItem = () => {
   }
 }
 
+const addMainContentEvents = () => {
+  const input = document.querySelector('.input')
+  addTweetItemToDb(input)
+  getTweetItemFromDb()
+}
+
 export default addMainContentEvents
-
-
 export { addTweetItemToDb, getTweetItemFromDb }
