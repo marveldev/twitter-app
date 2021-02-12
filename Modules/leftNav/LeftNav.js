@@ -20,31 +20,6 @@ const themeModal = `
   </div>
 `
 
-const tweetModal = `
-  <div class="tweet-modal-container">
-    <button id="closeTweetButton">X</button>
-    <div class="tweet-input"> 
-      <img src='https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
-        class="main-content-photo image" alt="photo">
-      <div>
-        <textarea class="tweet-input-box" id="clickme" placeholder="What's happening?"></textarea>
-        <strong>Everyone can reply</strong>
-      </div>
-    </div>
-    <div class="tweet-options">
-      <input type="file" id="addPhoto">
-      <label for="addPhoto">
-        <i class="fa fa-file-picture-o" id="photoIcon"></i>
-      </label>
-      <button><i class="material-icons">&#xe908;</i></button>
-      <button><i class="fa fa-bar-chart"></i></button>
-      <button><i class="fa fa-smile-o"></i></button>
-      <button><i class="fa fa-calendar-plus-o"></i></button>
-      <button class="add-tweet-button" title="clickme" disabled>Tweet</button>
-    </div> 
-  </div>
-`
-
 const LeftNav = async () => {
   const userData = await getEntryFromDb('userData')
   return `
@@ -63,7 +38,7 @@ const LeftNav = async () => {
         <button id="tweetModalButton">Tweet</button>
         <div>
           <img src=${userData[0] ? userData[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
-            class="nav-photo image" alt="photo">
+            class="left-nav-photo image" alt="photo">
           <strong class="profile-name">${userData[0] ? userData[0].userName : 'Jane Doe'}</strong>
         </div>
       </div>
@@ -88,15 +63,36 @@ const LeftNav = async () => {
             <button type="submit" id="saveProfileButton">Save</button>
           </div>
         </div>
+        <div class="tweet-modal-container">
+          <button id="closeTweetButton">X</button>
+          <div class="tweet-input"> 
+            <img src=${userData[0] ? userData[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
+              class="main-content-photo image" alt="photo">
+            <div>
+              <textarea class="tweet-input-box" placeholder="What's happening?"></textarea>
+              <strong>Everyone can reply</strong>
+            </div>
+          </div>
+          <div class="tweet-options">
+            <input type="file" id="addPhoto">
+            <label for="addPhoto">
+              <i class="fa fa-file-picture-o" id="photoIcon"></i>
+            </label>
+            <button><i class="material-icons">&#xe908;</i></button>
+            <button><i class="fa fa-bar-chart"></i></button>
+            <button><i class="fa fa-smile-o"></i></button>
+            <button><i class="fa fa-calendar-plus-o"></i></button>
+            <button class="add-tweet-button" disabled>Tweet</button>
+          </div> 
+        </div>
         ${dropdownModal}
         ${themeModal}
-        ${tweetModal}
       </div>
     </div>
     <nav class="smallscreen-left-nav">
       <button>
         <img src=${userData[0] ? userData[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
-        class="nav-photo image" alt="photo">
+        class="left-nav-photo image" alt="photo">
         <strong class="profile-name">${userData[0] ? userData[0].profileName : 'Jane Doe'}</strong>
       </button>
       <button><i class='fab fa-rocketchat'></i>Topics</button>

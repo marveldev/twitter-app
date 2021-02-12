@@ -93,7 +93,7 @@
   background-color: #000000d7;
 }
 
-.tweet-profile {
+.tweet-item {
   display: grid;
   grid-template-columns: 0.5fr 4fr;
   padding: 1em 0 1em 0.8em;
@@ -102,7 +102,7 @@
   border-bottom: 1px solid  #E6ECF0;
 }
 
-.tweet-profile:hover {
+.tweet-item:hover {
   background-color: #F5F8FA;
 }
 
@@ -168,7 +168,7 @@
   background-color: #e0245e;
 }
 
-.user-data {
+.tweet-item > div {
   width: 35em;
 }
 
@@ -181,7 +181,7 @@
   display: none;
 }
 
-.user-data > strong {
+.tweet-item > div > strong {
   font-size: 1.2em;
 }
 
@@ -351,12 +351,12 @@
     animation: none;
   }
 
-  .tweet-profile {
+  .tweet-item {
     font-size: 1.5em;
     overflow-x: hidden;
   }
 
-  .user-data {
+  .tweet-item > div {
     width: 22em;
     padding: 0 1em;
   }

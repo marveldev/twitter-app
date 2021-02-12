@@ -58,7 +58,7 @@
 }
 
 .lights-out .tweet-options > a:hover,
-.lights-out .tweet-profile:hover,
+.lights-out .tweet-item:hover,
 .lights-out #photoIcon:hover {
   background-color: #15181C;
 } 
@@ -67,7 +67,7 @@
   background-color: #000;
 }
 
-.lights-out .tweet-profile {
+.lights-out .tweet-item {
   border-top: 1px solid #2F3336;
   border-bottom: 1px solid #2F3336;
 }

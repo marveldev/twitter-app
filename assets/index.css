@@ -4,5 +4,5 @@
 @import "../Modules/leftNav/leftNav.css";
 @import "../Modules/mainContent/mainContent.css";
 @import "../Modules/trendingPane/trendingPane.css";
-@import "./theme/darkTheme.css";
-@import "./theme/darkTheme.css";
+@import "./theme/lightsOutTheme.css";
+@import "./theme/dimTheme.css";

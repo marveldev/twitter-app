@@ -22,7 +22,7 @@ const MainContent = async () => {
             class="profile-photo image" alt="photo">
           </a>
           <div>
-            <textarea id="tweet" class="input" placeholder="What's happening?"></textarea>
+            <textarea class="input" placeholder="What's happening?"></textarea>
             <div>
               <img src="#" alt="">
             </div>
@@ -38,7 +38,7 @@ const MainContent = async () => {
           <a href="#"><i class="fa fa-bar-chart"></i></a>
           <a href="#"><i class="fa fa-smile-o"></i></a>
           <a href="#"><i class="fa fa-calendar-plus-o"></i></a>
-          <button class="add-tweet-button" title="tweet" disabled>Tweet</button>
+          <button class="add-tweet-button">Tweet</button>
         </div> 
       </div>
       <div id="tweet-output"></div>

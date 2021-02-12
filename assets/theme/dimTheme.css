@@ -58,7 +58,7 @@
 }
 
 .dim .tweet-options > a:hover,
-.dim .tweet-profile:hover,
+.dim .tweet-item:hover,
 .dim #photoIcon:hover {
   background-color: #192734;
 }
@@ -67,7 +67,7 @@
   background-color: #15202B;
 }
 
-.dim .tweet-profile {
+.dim .tweet-item {
   border-top: 1px solid #253341;
   border-bottom: 1px solid #253341;
 }
