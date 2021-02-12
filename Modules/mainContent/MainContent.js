@@ -1,7 +1,7 @@
 import { getEntryFromDb } from '../../dataStorage.js';
 
 const MainContent = async () => {
-  const userProfile = await getEntryFromDb('profile');
+  const userData = await getEntryFromDb('userData');
   return `
     <div class="main-content">
       <div class="top-nav">
@@ -10,7 +10,7 @@ const MainContent = async () => {
           <button class="message-btn">OK</button>
         </div>
         <a href="#">
-          <img src=${userProfile[0] ? userProfile[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
+          <img src=${userData[0] ? userData[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
             class="small-screen-photo image" alt="photo">
         </a>
         <strong>Home</strong>
@@ -18,7 +18,7 @@ const MainContent = async () => {
       <div class="user-options">
         <div class="user-input"> 
           <a href="#" id="photo-container">
-            <img src=${userProfile[0] ? userProfile[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
+            <img src=${userData[0] ? userData[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
             class="profile-photo image" alt="photo">
           </a>
           <div>

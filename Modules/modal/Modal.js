@@ -9,9 +9,9 @@ const Modal = async () => {
       <div>
         <div class="theme-modal">
           <p>Background</p>
-          <button id="default-button">DEFAULT</button>
-          <button id="dim-button">DIM</button>
-          <button id="light-out-button">Lights Outs</button>
+          <button id="defaultButton">DEFAULT</button>
+          <button id="dimButton">DIM</button>
+          <button id="lightOutButton">Lights Outs</button>
         </div>
       </div> 
       <div class="tweet-modal-container">

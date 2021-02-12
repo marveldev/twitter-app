@@ -133,7 +133,7 @@
   border-top: 1px solid #2f3336;
 } 
 
-.lights-out #light-out-button {
+.lights-out #lightOutButton {
   box-shadow: 0px 8px 16px 0px #fdf8f854;
 }
 
@@ -160,11 +160,11 @@
   color: #000;
 }
 
-.lights-out #profileInput {
+.lights-out #nameInput {
   background-color: #18181c;
 }
 
-.lights-out #profileInput::placeholder {
+.lights-out #nameInput::placeholder {
   color: #fff;
 }
 

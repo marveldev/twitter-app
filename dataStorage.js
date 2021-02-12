@@ -1,15 +1,14 @@
-const request = indexedDB.open('twitter', 2);
+const request = indexedDB.open('twitter', 3);
 
 request.onsuccess = () => {
   const database = request.result;
-  const transaction = database.transaction(['profile'], 'readwrite')
-  const store = transaction.objectStore('profile');
-  store.add({text: 'This is a sample Text', userPhoto: 'This is a sample image'})
+  const transaction = database.transaction(['userData'], 'readwrite')
+  const store = transaction.objectStore('userData');
 }
 
 request.onupgradeneeded = () => {
   const database = request.result;
-  database.createObjectStore('profile', { autoIncrement: true });
+  database.createObjectStore('userData', { autoIncrement: true });
   database.createObjectStore('tweet-item', { keyPath: 'tweetItemId' });
 }
 

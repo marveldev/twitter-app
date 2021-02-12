@@ -45,6 +45,7 @@ button {
 }
 
 .nav-photo {
+  width: 3em;
   height: 3em;
   max-width: 3em;
   border-radius: 50%;
@@ -60,8 +61,7 @@ button {
   z-index: 1;
   width: 100%;
   height: 100%;
-  background-color: tomato;
-  /* background-color: #ffffff00; */
+  background-color: #99999981;
 }
 
 .dropdown-content {
@@ -96,7 +96,7 @@ button {
   border-radius: 0;
 }
 
-#close-modal-button:hover {
+#closeTweetButton:hover {
   background-color: #F5FBFE;
 }
 
@@ -186,8 +186,7 @@ button {
   background-color: #8ED0F9;
 }
 
-#close-modal-button {
-  border: unset;
+#closeTweetButton {
   font-size: 1.5em;
   color: #1da1f2;
   margin: 0.5em 0 0.5em 0.5em;
@@ -221,15 +220,15 @@ button {
   box-shadow: 5px 5px 10px 5px #00000033;
 }
 
-#dim-button {
+#dimButton {
   background-color: #15202B;
 }
 
-#light-out-button {
+#lightOutButton {
   background-color: #000;
 }
 
-#default-button {
+#defaultButton {
   color: #000;
 }
 
@@ -264,7 +263,7 @@ button {
   grid-template-columns: 1fr 1fr;
 }
 
-#profileInput {
+#nameInput {
   height: 3em;
   margin: auto 0;
   width: 15em;
@@ -309,7 +308,6 @@ button {
 
 #saveProfileButton {
   width: 90%;
-  border: unset;
   font-weight: 700;
   border-radius: 0.5em;
   height: 3em;
@@ -317,8 +315,7 @@ button {
   color: #fff;
 }
 
-#profileModalButton {
-  border: unset;
+#closeProfileButton {
   font-weight: 700;
   border-radius: 1.5em;
   height: 2em;

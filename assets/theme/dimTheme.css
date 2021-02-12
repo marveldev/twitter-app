@@ -157,11 +157,11 @@
   color: #000;
 }
 
-.dim #profileInput {
+.dim #nameInput {
   background-color: #192734;
 }
 
-.dim #profileInput::placeholder {
+.dim #nameInput::placeholder {
   color: #fff;
 }
 

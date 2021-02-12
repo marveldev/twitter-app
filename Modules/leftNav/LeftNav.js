@@ -1,4 +1,5 @@
-import { getEntryFromDb } from '../../dataStorage.js';
+import { getEntryFromDb } from '../../dataStorage.js'
+
 const dropdownModal = `
   <div class="dropdown-content">
     <button><i class='fab fa-rocketchat'></i>Topics</button>
@@ -13,38 +14,15 @@ const dropdownModal = `
 const themeModal = `
   <div class="theme-modal">
     <p>Background</p>
-    <button id="default-button">DEFAULT</button>
-    <button id="dim-button">DIM</button>
-    <button id="light-out-button">Lights Outs</button>
+    <button id="defaultButton">DEFAULT</button>
+    <button id="dimButton">DIM</button>
+    <button id="lightOutButton">Lights Outs</button>
   </div>
-`
-const editProfileModal = `
-  <section class="edit-profile-modal">
-    <div>
-      <strong>Edit Profile</strong>
-      <button id="profileModalButton">X</button>
-    </div>
-    <section>
-      <div class="profile-entry">
-        <div>
-          <img src='https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
-            id="photo" alt="photo">
-          <input type="file" id="profilePhoto">
-          <label for="profilePhoto">
-            <strong id="editPhoto">EDIT PHOTO</strong>
-          </label>
-        </div>
-        <input type="text" id="profileInput" placeholder="Enter new name..."
-          value='Jane Doe' required/>
-      </div>
-      <button type="submit" id="saveProfileButton">Save</button>
-    </section>
-  </section>
 `
 
 const tweetModal = `
   <div class="tweet-modal-container">
-    <button id="close-modal-button">X</button>
+    <button id="closeTweetButton">X</button>
     <div class="tweet-input"> 
       <img src='https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
         class="main-content-photo image" alt="photo">
@@ -68,7 +46,7 @@ const tweetModal = `
 `
 
 const LeftNav = async () => {
-  const userProfile = await getEntryFromDb('profile');
+  const userData = await getEntryFromDb('userData')
   return `
     <div class="left-nav">
       <div class="left-nav-content">
@@ -84,23 +62,42 @@ const LeftNav = async () => {
         <button id="tweet-modal-icon"><i class='fas fa-feather-alt'></i></button>
         <button id="tweetModalButton">Tweet</button>
         <div>
-          <img src=${userProfile[0] ? userProfile[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
+          <img src=${userData[0] ? userData[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
             class="nav-photo image" alt="photo">
-          <strong class="profile-name" id="name">${userProfile[0] ? userProfile[0].profileName : 'Jane Doe'}</strong>
+          <strong class="profile-name">${userData[0] ? userData[0].userName : 'Jane Doe'}</strong>
         </div>
       </div>
       <div>
+        <div class="edit-profile-modal">
+          <div>
+            <strong>Edit Profile</strong>
+            <button id="closeProfileButton">X</button>
+          </div>
+          <div>
+            <div class="profile-entry">
+              <div>
+                <img src=${userData[0] ? userData[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
+                  id="photo" alt="photo">
+                <input type="file" id="profilePhoto">
+                <label for="profilePhoto">
+                  <strong id="editPhoto">EDIT PHOTO</strong>
+                </label>
+              </div>
+              <input type="text" id="nameInput" placeholder="Enter new name..." required/>
+            </div>
+            <button type="submit" id="saveProfileButton">Save</button>
+          </div>
+        </div>
         ${dropdownModal}
         ${themeModal}
-        ${editProfileModal}
         ${tweetModal}
       </div>
     </div>
     <nav class="smallscreen-left-nav">
       <button>
-        <img src=${userProfile[0] ? userProfile[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
+        <img src=${userData[0] ? userData[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
         class="nav-photo image" alt="photo">
-        <strong class="profile-name" id="name">${userProfile[0] ? userProfile[0].profileName : 'Jane Doe'}</strong>
+        <strong class="profile-name">${userData[0] ? userData[0].profileName : 'Jane Doe'}</strong>
       </button>
       <button><i class='fab fa-rocketchat'></i>Topics</button>
       <button><i class="fa fa-bolt"></i>Moments</button>
@@ -119,4 +116,4 @@ const LeftNav = async () => {
   `
 }
 
-export default LeftNav;
+export default LeftNav
