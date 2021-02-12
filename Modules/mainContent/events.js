@@ -61,7 +61,7 @@ const getTweetItemFromDb = async () => {
         <img src="${userPhoto}" class="main-content-photo image" alt="photo">
         <div>
           <strong class="profile-name">${userName}</strong>
-          <button class="delete-button" title="${tweetItemId}">X</button>
+          <button class="delete-button" property="${tweetItemId}">X</button>
           <p class="tweet-text">${inputValue}</p>
           <div class="tweet-info">
             <button><i class="fa fa-comment-o"></i>5.1k</button>
@@ -75,21 +75,18 @@ const getTweetItemFromDb = async () => {
   })
 
   tweetOutput.innerHTML = tweetItems.join('');
-  // deleteTweetItem();
+  deleteTweetItem();
 }
 
 const deleteTweetItem = () => {
-  const tweetModalOverlay = document.querySelector('#tweet-modal-overlay');
   const deleteButtons = document.querySelectorAll('.delete-button')
-  for (let index = 0; index < deleteButtons.length; index++) {
-    const deleteButton = deleteButtons[index];
+  deleteButtons.forEach(deleteButton => {
     deleteButton.addEventListener('click', () => {
-      const element = deleteButton.title;
-      const deleteModal = document.querySelector(`.${element}`);
-      deleteModal.style.display = 'block';
-      tweetModalOverlay.style.display = 'block';
+      document.querySelector('.delete-modal').style.display = 'block';
+      document.querySelector('#overlay').style.display = 'block';
+      console.log(document.querySelector('.delete-modal'));
     })
-  }
+  })
 
   const confirmButtons = document.querySelectorAll('.confirm-button')
   for (let index = 0; index < confirmButtons.length; index++) {
@@ -99,7 +96,6 @@ const deleteTweetItem = () => {
       const element = confirmButton.title
       const tweetItem = document.querySelector(`#${element}`);
       tweetOutput.removeChild(tweetItem);
-      tweetModalOverlay.style.display = 'none';
 
       deleteEntry('tweet-item', element)
     })
@@ -111,7 +107,6 @@ const deleteTweetItem = () => {
     cancelButton.addEventListener('click', () => {
       const deleteModal = cancelButton.parentElement;
       deleteModal.style.display = 'none';
-      tweetModalOverlay.style.display = 'none';
     })
   }
 }

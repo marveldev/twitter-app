@@ -1,5 +1,16 @@
 import { getEntryFromDb } from '../../dataStorage.js'
 
+const deleteModal = (tweetItemId) => {
+  return  `
+    <div class="delete-modal">
+      <h3>Delete Tweet?</h3>
+      <p>This can't be undone and it will be removed from your timeline.</p>
+      <button class="cancel-button">Cancel</button>
+      <button class="confirm-button" id="${tweetItemId}">Delete</button>
+    </div>
+  `
+}
+
 const MainContent = async () => {
   const userData = await getEntryFromDb('user-data')
   return `
@@ -17,16 +28,16 @@ const MainContent = async () => {
       </div>
       <div class="user-options">
         <div class="user-input"> 
-          <a href="#" id="photo-container">
+          <button id="photo-container">
             <img src=${userData[0] ? userData[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
             class="profile-photo image" alt="photo">
-          </a>
+          </button>
           <div>
             <textarea class="input" placeholder="What's happening?"></textarea>
             <div>
               <img src="#" alt="">
             </div>
-            <a href="#"><strong>Everyone can reply</strong></a>
+            <button><strong>Everyone can reply</strong></button>
           </div>
         </div>
         <div class="tweet-options">
@@ -34,10 +45,10 @@ const MainContent = async () => {
           <label for="addPhoto">
             <i class="fa fa-file-picture-o" id="photoIcon"></i>
           </label>
-          <a href="#"><i class="material-icons">&#xe908</i></a>
-          <a href="#"><i class="fa fa-bar-chart"></i></a>
-          <a href="#"><i class="fa fa-smile-o"></i></a>
-          <a href="#"><i class="fa fa-calendar-plus-o"></i></a>
+          <button><i class="material-icons">&#xe908</i></button>
+          <button><i class="fa fa-bar-chart"></i></button>
+          <button><i class="fa fa-smile-o"></i></button>
+          <button><i class="fa fa-calendar-plus-o"></i></button>
           <button class="add-tweet-button">Tweet</button>
         </div> 
       </div>
