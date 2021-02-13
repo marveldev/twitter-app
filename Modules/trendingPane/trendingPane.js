@@ -1,3 +1,22 @@
+const trendModal = `
+  <div class="trend-modal">
+    <button id="close-trend-modal">X</button>
+    <strong>Trends</strong>
+    <div class="set-location">
+      <p>Location</p>
+      <span>Show content in this location</span>
+      <input type="checkbox" />
+      <small>When this is on, you'll see what's happening around you right now.</small>
+    </div>
+    <div class="set-trend">
+      <p>Personalization</p>
+      <span>Trends for you</span>
+      <input type="checkbox" />
+      <small>You can personalize trends based on your location and who you follow</small>
+    </div>
+  </div>
+`
+
 const TrendingPane = () => {
   return `
     <div class="trending-pane">
@@ -49,6 +68,7 @@ const TrendingPane = () => {
           <p>128k Tweets</p>
         </div>
       </div>
+      ${trendModal}
     </div> 
   `
 }

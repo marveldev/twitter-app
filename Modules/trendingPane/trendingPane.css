@@ -71,11 +71,11 @@
 }
 
 .current-trend p:last-child {
-  /* margin: 0.5em 0; */
+  margin: 0.5em 0;
 }
 
 .current-trend:last-child {
-  /* border-bottom: none; */
+  border-bottom: none;
 }
 
 .trend-modal {
