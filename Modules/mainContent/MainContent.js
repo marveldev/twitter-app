@@ -1,30 +1,26 @@
 import { getEntryFromDb } from '../../dataStorage.js'
 
-const deleteModal = (tweetItemId) => {
-  return  `
-    <div class="delete-modal">
-      <h3>Delete Tweet?</h3>
-      <p>This can't be undone and it will be removed from your timeline.</p>
-      <button class="cancel-button">Cancel</button>
-      <button class="confirm-button" id="${tweetItemId}">Delete</button>
-    </div>
-  `
-}
+const deleteModal = `
+  <div class="delete-modal">
+    <h3>Delete Tweet?</h3>
+    <p>This can't be undone and it will be removed from your timeline.</p>
+    <button class="cancel-button">Cancel</button>
+    <button class="confirm-button">Delete</button>
+  </div>
+`
 
 const MainContent = async () => {
   const userData = await getEntryFromDb('user-data')
   return `
     <div class="main-content">
-      <div class="top-nav">
+      <div class="home">
         <div id="message">
           <strong>ENTRY ADDED SUCCESSFULLY</strong>
           <button class="message-btn">OK</button>
         </div>
-        <a href="#">
-          <img src=${userData[0] ? userData[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
-            class="small-screen-photo image" alt="photo">
-        </a>
         <strong>Home</strong>
+        <img src=${userData[0] ? userData[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
+          class="small-screen-photo image" alt="photo">
       </div>
       <div class="user-options">
         <div class="user-input"> 
@@ -53,8 +49,10 @@ const MainContent = async () => {
         </div> 
       </div>
       <div id="tweetOutput"></div>
+      <div id="deleteModalContainer">${deleteModal}</div>
     </div>
   `
 }
 
 export default MainContent
+export { deleteModal }

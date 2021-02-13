@@ -1,4 +1,4 @@
-import { addEntryToDb, getEntryFromDb, deleteEntry } from '../../dataStorage.js';
+import { addEntryToDb, getEntryFromDb, deleteEntry } from '../../dataStorage.js'
 
 const addTweetItemToDb = (input) => {
   const addTweetButtons = document.querySelectorAll('.add-tweet-button')
@@ -8,7 +8,7 @@ const addTweetItemToDb = (input) => {
   addTweetButtons.forEach(addTweetButton => {
     addTweetButton.addEventListener('click', () => {
       if (input.value.trim().length >= 1) {
-        const tweetItemId = 'id' + Date.parse(new Date()).toString();
+        const tweetItemId = 'id' + Date.parse(new Date()).toString()
         const userName = document.querySelector('.profile-name').innerText
         const userPhoto = document.querySelector('.left-nav-photo').src
         const inputValue = input.value
@@ -17,7 +17,7 @@ const addTweetItemToDb = (input) => {
             <img src="${userPhoto}" class="main-content-photo image" alt="photo">
             <div>
               <strong class="profile-name">${userName}</strong>
-              <button class="delete-button" title="${tweetItemId}">X</button>
+              <button class="delete-button" property="${tweetItemId}">X</button>
               <p class="tweet-text">${inputValue}</p>
               <div class="tweet-info">
                 <button><i class="fa fa-comment-o"></i>5.1k</button>
@@ -28,12 +28,12 @@ const addTweetItemToDb = (input) => {
             </div>
           </div>
         `
-        tweetItem += tweetOutput.innerHTML;
-        tweetOutput.innerHTML = tweetItem;
+        tweetItem += tweetOutput.innerHTML
+        tweetOutput.innerHTML = tweetItem
 
         if (tweetContainer.style.display == 'block') {
-          tweetContainer.style.display = 'none';
-          document.querySelector('#overlay').style.display = 'none';
+          tweetContainer.style.display = 'none'
+          document.querySelector('#overlay').style.display = 'none'
         }
 
         const addItemToIndexDb = {
@@ -43,17 +43,17 @@ const addTweetItemToDb = (input) => {
           inputValue: inputValue
         }
 
-        addEntryToDb('tweet-data', addItemToIndexDb);
-        // deleteTweetItem()
-        input.value = '';
+        addEntryToDb('tweet-data', addItemToIndexDb)
+        input.value = ''
+        deleteTweetItem()
       }
     })
-  });
+  })
 }
 
 const getTweetItemFromDb = async () => {
   const tweetOutput = document.querySelector('#tweetOutput')
-  const tweetData = await getEntryFromDb('tweet-data');
+  const tweetData = await getEntryFromDb('tweet-data')
   const tweetItems = tweetData.reverse().map((tweetItem) => {
     const { tweetItemId, userPhoto, userName, inputValue } = tweetItem
     return `
@@ -74,45 +74,47 @@ const getTweetItemFromDb = async () => {
     `
   })
 
-  tweetOutput.innerHTML = tweetItems.join('');
-  deleteTweetItem();
+  tweetOutput.innerHTML = tweetItems.join('')
+  deleteTweetItem()
 }
 
 const deleteTweetItem = () => {
+  let elementProperty
   const deleteButtons = document.querySelectorAll('.delete-button')
   deleteButtons.forEach(deleteButton => {
     deleteButton.addEventListener('click', () => {
-      document.querySelector('.delete-modal').style.display = 'block';
-      document.querySelector('#overlay').style.display = 'block';
-      console.log(document.querySelector('.delete-modal'));
+      elementProperty = deleteButton.getAttribute('property')
+      document.querySelector('#overlay').style.display = 'block'
+      document.querySelector('.delete-modal').style.display = 'block'
     })
   })
 
-  const confirmButtons = document.querySelectorAll('.confirm-button')
-  for (let index = 0; index < confirmButtons.length; index++) {
-    const confirmButton = confirmButtons[index];
-    confirmButton.addEventListener('click', () => {
-      const tweetOutput = document.querySelector('#tweet-output')
-      const element = confirmButton.title
-      const tweetItem = document.querySelector(`#${element}`);
-      tweetOutput.removeChild(tweetItem);
-
-      deleteEntry('tweet-item', element)
-    })
-  }
+  const confirmButton = document.querySelector('.confirm-button')
+  confirmButton.addEventListener('click', () => {
+    const tweetOutput = document.querySelector('#tweetOutput')
+    const tweetItem = document.querySelector(`#${elementProperty}`)
+    tweetOutput.removeChild(tweetItem)
+    document.querySelector('.delete-modal').style.display = 'none'
+    document.querySelector('#overlay').style.display = 'none'
+    deleteEntry('tweet-data', elementProperty)
+  })
 
   const cancelButtons = document.querySelectorAll('.cancel-button')
-  for (let index = 0; index < cancelButtons.length; index++) {
-    const cancelButton = cancelButtons[index];
+  cancelButtons.forEach(cancelButton => {
     cancelButton.addEventListener('click', () => {
-      const deleteModal = cancelButton.parentElement;
-      deleteModal.style.display = 'none';
+      document.querySelector('#overlay').style.display = 'none'
+      document.querySelector('.delete-modal').style.display = 'none'
     })
-  }
+  })
 }
 
 const addMainContentEvents = () => {
   const input = document.querySelector('.input')
+  const messageButton = document.querySelector('.message-btn')
+  messageButton.addEventListener('click', () => {
+    messageButton.parentElement.style.display = 'none'
+  })
+
   addTweetItemToDb(input)
   getTweetItemFromDb()
 }
