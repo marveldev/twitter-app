@@ -92,7 +92,7 @@
   width: 43em;
   height: 40em;
   border-radius: 1em;
-  z-index: 1;
+  z-index: 2;
 }
 
 #closeTrendModalButton {
