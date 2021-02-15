@@ -13,12 +13,12 @@ const MainContent = async () => {
   const userData = await getEntryFromDb('user-data')
   return `
     <div class="main-content">
+      <div id="message">
+        <strong>ENTRY ADDED SUCCESSFULLY</strong>
+        <button class="message-btn">OK</button>
+      </div>
       <div class="home">
-        <div id="message">
-          <strong>ENTRY ADDED SUCCESSFULLY</strong>
-          <button class="message-btn">OK</button>
-        </div>
-        <strong>Home</strong>
+        <span>Home</span>
         <img src=${userData[0] ? userData[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
           class="small-screen-photo image" alt="photo">
       </div>
