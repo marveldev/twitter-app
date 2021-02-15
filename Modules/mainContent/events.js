@@ -168,9 +168,7 @@ const getTweetItemFromDb = async () => {
             <strong class="profile-name">${userName}</strong>
             <p class="tweet-text">${inputValue}</p>
             <div class="tweet-info">
-              <button class="comment-button" property="${tweetItemId}">
-                <i class="fa fa-comment-o"></i>5.1k
-              </button>
+              <button><i class="fa fa-comment-o"></i>5.1k</button>
               <button><i class="fa fa-retweet"></i>2.1k</button>
               <button><i class="fa fa-heart-o"></i>3.1k</button>
               <button><i class="fa fa-upload"></i></button>
