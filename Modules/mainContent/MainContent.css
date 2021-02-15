@@ -4,7 +4,6 @@
   position: absolute;
   top: 0;
   left: 21em;
-  height: 100%;
 }
 
 .main-content {
@@ -13,20 +12,6 @@
   width: 42em;
   height: 100%;
 }
-
-.tweet-output {
-  max-height: 30em;
-  background-color: tomato;
-}
-
-/* #photo-container {
-  height: 3.8em;
-  width: 3.8em;
-  max-width: 3.8em;
-  object-fit: cover;
-  background-color: #000000d7;
-  margin-left: 1em;
-} */
 
 .profile-photo {
   height: 3.8em;

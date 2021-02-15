@@ -24,7 +24,7 @@ const TrendingPane = () => {
       <input type="text" placeholder="Search Twitter">
       <div class="trending-tweets">
         <strong class="tweets-header">Trends</strong> 
-        <button id="trend-button"><i class="material-icons">&#xe8b8;</i></button>
+        <button id="trendButton"><i class="material-icons">&#xe8b8;</i></button>
         <div class="current-trend">
           <p>Trending in Nigeria</p>
           <strong>Erica</strong>

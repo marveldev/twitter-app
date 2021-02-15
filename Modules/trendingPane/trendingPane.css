@@ -1,19 +1,20 @@
 .trending-pane {
-  /* margin: 0 0 0 2em; */
   height: 100%;
-  /* max-height: 10em; */
-  /* height: auto; */
 }
 
 .trending-pane input {
-  width: 90%;
+  width: 95%;
   height: 2.2em;
   padding-left: 2em;
   margin-top: 0.8em;
   border: unset;
   border-radius: 2em;
   background-color: #E6ECF0;
-  font-size: 1.5em;
+  font-size: 1.4em;
+}
+
+.trending-pane input::placeholder {
+  color: #7C8C99;
 }
 
 .trending-tweets {
@@ -21,15 +22,19 @@
   background-color: #EFF2F4;
   padding-top: 1em;
   border-radius: 1.5em;
-  /* width: 90%; */
   height: 100%;
-  /* height: 61em; */
 }
 
 .trending-pane > i {
   position: relative;
   left: 2em;
-  font-size: 1.3em;
+  bottom: 0.1em;
+  font-size: 1.2em;
+  color: #7C8C99;
+}
+
+#trendButton {
+  float: right;
 }
 
 .tweets-header {
