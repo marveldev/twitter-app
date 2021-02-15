@@ -1,4 +1,5 @@
 import { addEntryToDb, getEntryFromDb, deleteEntry } from '../../dataStorage.js'
+import CommentPage from '../commentPage/CommentPage.js'
 
 const tweetItemEvents = () => {
   let elementProperty
@@ -29,31 +30,39 @@ const tweetItemEvents = () => {
     })
   })
 
-  const commentButtons = document.querySelectorAll('.comment-button')
-  commentButtons.forEach(commentButton => {
-    commentButton.addEventListener('click', () => {
-      const elementProperty = commentButton.getAttribute('property')
-      const commentModal = document.querySelector(`.${elementProperty}`)
-      commentModal.style.display = 'block'
-      document.querySelector('#overlay').style.display = 'block'
+  const tweetItems = document.querySelectorAll('.tweet-content-item')
+  tweetItems.forEach(tweetItem => {
+    tweetItem.addEventListener('click', () => {
+      document.querySelector('#currentPage').innerHTML = CommentPage()
+      localStorage.setItem('mainpage', 'commentPage')
     })
   })
 
-  const commentModalButtons = document.querySelectorAll('.comment-modal-button')
-  commentModalButtons.forEach(commentModalButton => {
-    commentModalButton.addEventListener('click', () => {
-      commentModalButton.parentElement.parentElement.style.display = 'none'
-      document.querySelector('#overlay').style.display = 'none'
-    })
-  })
+  // const commentButtons = document.querySelectorAll('.comment-button')
+  // commentButtons.forEach(commentButton => {
+  //   commentButton.addEventListener('click', () => {
+  //     const elementProperty = commentButton.getAttribute('property')
+  //     const commentModal = document.querySelector(`.${elementProperty}`)
+  //     commentModal.style.display = 'block'
+  //     document.querySelector('#overlay').style.display = 'block'
+  //   })
+  // })
 
-  const addCommentButtons = document.querySelectorAll('.add-comment-button')
-  addCommentButtons.forEach(addCommentButton => {
-    addCommentButton.addEventListener('click', () => {
-      addCommentButton.parentElement.parentElement.style.display = 'none'
-      document.querySelector('#overlay').style.display = 'none'
-    })
-  })
+  // const commentModalButtons = document.querySelectorAll('.comment-modal-button')
+  // commentModalButtons.forEach(commentModalButton => {
+  //   commentModalButton.addEventListener('click', () => {
+  //     commentModalButton.parentElement.parentElement.style.display = 'none'
+  //     document.querySelector('#overlay').style.display = 'none'
+  //   })
+  // })
+
+  // const addCommentButtons = document.querySelectorAll('.add-comment-button')
+  // addCommentButtons.forEach(addCommentButton => {
+  //   addCommentButton.addEventListener('click', () => {
+  //     addCommentButton.parentElement.parentElement.style.display = 'none'
+  //     document.querySelector('#overlay').style.display = 'none'
+  //   })
+  // })
 }
 
 const commentModal = (tweetItemId, userName, userPhoto, inputValue) => {
@@ -102,18 +111,24 @@ const addTweetItemToDb = (input) => {
         const inputValue = input.value
         let tweetItem = `
           <div class="tweet-item" id="${tweetItemId}">
-            <img src="${userPhoto}" class="main-content-photo image" alt="photo">
-            <div>
-              <strong class="profile-name">${userName}</strong>
-              <button class="delete-button" property="${tweetItemId}">X</button>
-              <p class="tweet-text">${inputValue}</p>
-              <div class="tweet-info">
-                <button><i class="fa fa-comment-o"></i>5.1k</button>
-                <button><i class='fas fa-retweet'></i>2.1k</button>
-                <button><i class="fa fa-heart-o"></i>3.1k</button>
-                <button><i class="fa fa-upload"></i></button>
+            <div class="tweet-content-item">
+              <img src="${userPhoto}" class="main-content-photo image" alt="photo">
+              <div>
+                <strong class="profile-name">${userName}</strong>
+                <p class="tweet-text">${inputValue}</p>
+                <div class="tweet-info">
+                  <button class="comment-button" property="${tweetItemId}">
+                    <i class="fa fa-comment-o"></i>5.1k
+                  </button>
+                  <button><i class="fa fa-retweet"></i>2.1k</button>
+                  <button><i class="fa fa-heart-o"></i>3.1k</button>
+                  <button><i class="fa fa-upload"></i></button>
+                </div>
               </div>
             </div>
+            <button class="delete-button" property="${tweetItemId}">
+              <i class="fa fa-trash-o"></i>
+            </button>
           </div>
         `
         tweetItem += tweetOutput.innerHTML
@@ -146,12 +161,11 @@ const getTweetItemFromDb = async () => {
   const tweetItems = tweetData.reverse().map((tweetItem) => {
     const { tweetItemId, userPhoto, userName, inputValue } = tweetItem
     return `
-      <div id="${tweetItemId}">
-        <div class="tweet-item">
+      <div class="tweet-item" id="${tweetItemId}">
+        <div class="tweet-content-item">
           <img src="${userPhoto}" class="main-content-photo image" alt="photo">
           <div>
             <strong class="profile-name">${userName}</strong>
-            <button class="delete-button" property="${tweetItemId}">X</button>
             <p class="tweet-text">${inputValue}</p>
             <div class="tweet-info">
               <button class="comment-button" property="${tweetItemId}">
@@ -163,7 +177,9 @@ const getTweetItemFromDb = async () => {
             </div>
           </div>
         </div>
-        ${commentModal(tweetItemId, userName, userPhoto, inputValue)}
+        <button class="delete-button" property="${tweetItemId}">
+          <i class="fa fa-trash-o"></i>
+        </button>
       </div>
     `
   })
