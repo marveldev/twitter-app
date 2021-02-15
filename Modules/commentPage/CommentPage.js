@@ -1,8 +1,8 @@
 const CommentPage = () => {
   return `
     <div class="comment-page">
-      <div>
-        <button><i class="material-icons">&#xe5c4;</i></button>
+      <div class="home">
+        <button id="returnButton"><i class="material-icons">&#xe5c4;</i></button>
         <span>Tweet</span>
       </div>
       <div class="tweet-item" id="">
