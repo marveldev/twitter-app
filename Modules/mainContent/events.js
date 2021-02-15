@@ -73,11 +73,17 @@ const getTweetItemFromDb = async () => {
           </div>
         </div>
         <div class="comment-container">
-          <textarea class="comment-box" placeholder="Write a comment"></textarea>
-          <button class="add-comment-button">Add</button>
+          <div>
+            <textarea class="comment-box" placeholder="Write a comment"></textarea>
+            <button class="add-comment-button">Add</button>
+          </div>
           <div class="comment-output">
-            <p>Hey</p>
-            <button>X</button>
+            <img src="${userPhoto}" class="image" alt="photo">
+            <div>
+              <span class="profile-name">${userName}</span>
+              <button class="delete-comment">X</button>
+              <p class="comment">Hey</p>
+            </div>
           </div>
         </div>
       </div>

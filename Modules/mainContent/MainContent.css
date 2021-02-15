@@ -98,10 +98,6 @@
   height: auto;
 }
 
-.tweet-item:hover {
-  background-color: #F5F8FA;
-}
-
 .tweet-info > button {
   margin-right: 3em;
   padding: 0.2em;
@@ -187,8 +183,6 @@
   left: 50%;
 }
 
-
-
 #message {
   display: none;
   position: fixed;
@@ -230,7 +224,25 @@
 }
 
 .comment-container {
+  width: 100%;
+  height: auto;
+  margin-left: 3em;
+}
 
+.comment-container > div:first-child {
+  display: flex;
+  border-top: 1px solid  #E6ECF0;
+  /* border-bottom: 1px solid  #E6ECF0; */
+}
+
+.add-comment-button {
+  background-color: #1DA1F2;
+  height: 2.5em;
+  width: 5em;
+  color: #fff;
+  border-radius: 2em;
+  margin: auto;
+  font-weight: 600;
 }
 
 .comment-box {
@@ -248,6 +260,30 @@
   max-height: 8em;
   line-height: 1.2em;
   font-size: 1.1em;
+}
+
+.comment-output {
+  display: none;
+  grid-template-columns: 0.5fr 4fr;
+  width: 100%;
+  height: auto;
+  margin: 1em auto;
+}
+
+.comment-output > img {
+  height: 2.5em;
+  width: 2.5em;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #000000d7;
+}
+
+.comment-output span {
+  font-weight: 550;
+}
+
+.delete-comment {
+  float: right;
 }
 
 @media screen and (max-width: 425px) { 
