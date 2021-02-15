@@ -115,6 +115,11 @@ const addMainContentEvents = () => {
     messageButton.parentElement.style.display = 'none'
   })
 
+  input.addEventListener('keypress', () => {
+    input.style.height = "1px"
+    input.style.height = (3+input.scrollHeight)+"px"
+  })
+
   addTweetItemToDb(input)
   getTweetItemFromDb()
 }

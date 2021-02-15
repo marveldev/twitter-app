@@ -2,7 +2,7 @@ import { getEntryFromDb } from '../../dataStorage.js'
 
 const dropdownModal = `
   <div class="dropdown-content">
-    <button><i class='fab fa-rocketchat'></i>Topics</button>
+    <button><i class="material-icons">&#xe8e1;</i>Topics</button>
     <button><i class="fa fa-bolt"></i>Moments</button>
     <button><i class="fa fa-external-link-square"></i>Twitter Ads</button>
     <button><i class="fa fa-bar-chart"></i>Analytics</button>
@@ -25,14 +25,14 @@ const LeftNav = async () => {
   return `
     <div class="left-nav">
       <div class="left-nav-content">
-        <button id="logo"><i class='fab fa-twitter'></i></button>
+        <button id="logo"><i class="fa">&#xf099;</i></button>
         <button><i class="glyphicon glyphicon-home"></i><strong>Home</strong></button>
-        <button><i class='fas fa-hashtag'></i><strong>Explore</strong></button>
-        <button><i class='fas fa-bell'></i><strong>Notifications</strong></button>
+        <button><i class="fa fa-hashtag"></i><strong>Explore</strong></button>
+        <button><i class="fa fa-bell-o"></i><strong>Notifications</strong></button>
         <button><i class="fa fa-envelope-o"></i><strong>Messages</strong></button>
         <button><i class="fa fa-bookmark-o"></i><strong>Bookmarks</strong></button>
         <button><i class="fa fa-list-alt"></i><strong>Lists</strong></button>
-        <button><i class='fas fa-user-alt'></i><strong>Profile</strong></button>
+        <button><i class="fa fa-user-o"></i><strong>Profile</strong></button>
         <button id="dropdownButton"><i class="fa fa-caret-down"></i><strong>More</strong></button>
         <button id="tweet-modal-icon"><i class='fas fa-feather-alt'></i></button>
         <button id="tweetModalButton">Tweet</button>
@@ -76,15 +76,14 @@ const LeftNav = async () => {
           <div class="tweet-options">
             <input type="file" id="addPhoto">
             <label for="addPhoto">
-              <i class="fa fa-file-picture-o" id="photoIcon"></i>
+              <span><i class="fa fa-file-picture-o" id="photoIcon"></i></span>
             </label>
-            <button><i class="material-icons">&#xe908;</i></button>
-            <button><i class="fa fa-bar-chart"></i></button>
-            <button><i class="fa fa-smile-o"></i></button>
-            <button><i class="fa fa-calendar-plus-o"></i></button>
+            <span><i class="material-icons">&#xe908</i></span>
+            <span><i class="fa fa-bar-chart"></i></span>
+            <span><i class="fa fa-smile-o"></i></span>
+            <span><i class="fa fa-calendar-plus-o"></i></span>
             <button class="add-tweet-button">Tweet</button>
-          </div> 
-        </div>
+          </div>
         ${dropdownModal}
         ${themeModal}
       </div>

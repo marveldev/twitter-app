@@ -51,6 +51,7 @@ button {
   border-radius: 50%;
   object-fit: cover;
   background-color: #000000d7;
+  margin-right: 0.5em;
 }
 
 #overlay {
@@ -162,12 +163,12 @@ button {
 
 .tweet-options {
   margin: 1em 0 0 4.8em;
-  padding: 0.5em;
+  padding: 0.5em 0 1.5em;
   border-top: 1px solid  #E6ECF0;
 }
 
-.tweet-options i {
-  font-size: 1.5em;
+.tweet-options span {
+  font-size: 1.3em;
   padding: 0.5em;
   border-radius: 1.5em;
   color: #1DA1F2;

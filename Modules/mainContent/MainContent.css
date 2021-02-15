@@ -19,14 +19,14 @@
   background-color: tomato;
 }
 
-#photo-container {
+/* #photo-container {
   height: 3.8em;
   width: 3.8em;
   max-width: 3.8em;
   object-fit: cover;
   background-color: #000000d7;
   margin-left: 1em;
-}
+} */
 
 .profile-photo {
   height: 3.8em;
@@ -34,6 +34,8 @@
   max-width: 3.8em;
   border-radius: 50%;
   object-fit: cover;
+  background-color: #000000d7;
+  margin-left: 1em;
 }
 
 .home {
@@ -52,7 +54,8 @@
 
 .user-input {
   display: grid;
-  grid-template-columns: 0.3fr 2fr;
+  grid-template-columns: 0.3fr 1.5fr;
+  height: auto;
 }
 
 .user-options {
@@ -62,18 +65,21 @@
 }
 
 .user-input textarea {
-  width: 23em;
-  font-size: 1.5em;
-  overflow-y: hidden;
-  height: auto;
+  width: 100%;
   border: none;
-  padding: 0.5em 0;
   outline: none;
   resize: none;
+  font-size: 1.2em;
+  overflow-y: hidden;
 }
 
 .user-input textarea::placeholder {
   color: #969BA7;
+  font-size: 1.2em;
+}
+
+.user-input strong {
+  color: #1DA1F2;
 }
 
 .tweet-options a:hover,
