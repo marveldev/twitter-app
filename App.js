@@ -12,7 +12,9 @@ const App = async () => {
     <div id="overlay"></div>
     ${await LeftNav()}
     <section class="grid-container">
-      ${await MainContent()}
+      <div id="currentPage">
+        ${await MainContent()}
+      </div>
       ${TrendingPane()}
     </section>
   `
@@ -20,13 +22,9 @@ const App = async () => {
 
 request.onsuccess = async () => {
   document.getElementById('root').innerHTML = await App()
+  const currentPage = localStorage.getItem('currentPage')
+
   addLeftNavEventListeners()
   addMainContentEvents()
   addTrendingPaneEvents()
-
-  // toggleTheme()
-  // addModalEventListeners()
-  // addTweetItemToDb()
-  // getTweetItemFromDb()
-  // smallScreenEventListeners()
 }
