@@ -84,6 +84,7 @@ const LeftNav = async () => {
             <span><i class="fa fa-calendar-plus-o"></i></span>
             <button class="add-tweet-button">Tweet</button>
           </div>
+        </div>
         ${dropdownModal}
         ${themeModal}
       </div>

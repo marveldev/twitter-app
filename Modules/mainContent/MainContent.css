@@ -97,25 +97,23 @@
   background-color: #F5F8FA;
 }
 
-.tweet-info a {
-  color: black;
-  text-decoration: none;
+.tweet-info > button {
   margin-right: 3em;
   padding: 0.2em;
 }
 
-.tweet-info a:hover {
+.tweet-info > button:hover {
   color: #0a0aff;
 }
 
-.tweet-info a i {
-  font-size: 17px;
+.tweet-info > button i {
+  font-size: 1em;
   margin-right: 0.5em;
   padding: 0.5em;
   border-radius: 1em;
 }
 
-.tweet-info a:nth-child(3):hover {
+.tweet-info > button:nth-child(3):hover {
   color: #f11c00;
 } 
 
@@ -124,6 +122,7 @@
 }
 
 .delete-button {
+  float: right;
   width: 2em;
   height: 2em;
   font-size: 1.2em;

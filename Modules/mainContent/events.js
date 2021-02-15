@@ -65,7 +65,7 @@ const getTweetItemFromDb = async () => {
           <p class="tweet-text">${inputValue}</p>
           <div class="tweet-info">
             <button><i class="fa fa-comment-o"></i>5.1k</button>
-            <button><i class='fas fa-retweet'></i>2.1k</button>
+            <button><i class="fa fa-retweet"></i>2.1k</button>
             <button><i class="fa fa-heart-o"></i>3.1k</button>
             <button><i class="fa fa-upload"></i></button>
           </div>

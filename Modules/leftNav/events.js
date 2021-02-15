@@ -36,6 +36,7 @@ const addLeftNavEventListeners = () => {
   function displayModal(button, selector, value) {
     document.querySelector(button).addEventListener('click', () => {
       document.querySelector(selector).style.display = value
+      console.log(document.querySelector(selector));
       document.querySelector('#overlay').style.display = value
     })
   }
@@ -61,6 +62,8 @@ const addLeftNavEventListeners = () => {
     document.querySelector('.theme-modal').style.display = 'none'
     document.querySelector('.tweet-modal-container').style.display = 'none'
     document.querySelector('.dropdown-content').style.display = 'none'
+    document.querySelector('.delete-modal').style.display = 'none'
+    document.querySelector('.trend-modal').style.display = 'none'
   })
 
   const photoInput = document.querySelector('#profilePhoto')

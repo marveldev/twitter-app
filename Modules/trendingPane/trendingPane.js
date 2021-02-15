@@ -1,6 +1,6 @@
 const trendModal = `
   <div class="trend-modal">
-    <button id="close-trend-modal">X</button>
+    <button id="closeTrendModalButton">X</button>
     <strong>Trends</strong>
     <div class="set-location">
       <p>Location</p>
@@ -21,7 +21,7 @@ const TrendingPane = () => {
   return `
     <div class="trending-pane">
       <i class="fa fa-search"></i>
-      <input type="text" placeholder="Search Twitter">
+      <input type="text" class="search-input" placeholder="Search Twitter">
       <div class="trending-tweets">
         <strong class="tweets-header">Trends</strong> 
         <button id="trendButton"><i class="material-icons">&#xe8b8;</i></button>

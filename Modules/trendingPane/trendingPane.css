@@ -2,7 +2,7 @@
   height: 100%;
 }
 
-.trending-pane input {
+.search-input {
   width: 95%;
   height: 2.2em;
   padding-left: 2em;
@@ -13,16 +13,16 @@
   font-size: 1.4em;
 }
 
-.trending-pane input::placeholder {
+.search-input::placeholder {
   color: #7C8C99;
 }
 
 .trending-tweets {
-  margin: 2.5em 0 0 1.8em;
+  margin: 2.5em 0 1em 1.8em;
   background-color: #EFF2F4;
   padding-top: 1em;
   border-radius: 1.5em;
-  height: 100%;
+  height: fit-content;
 }
 
 .trending-pane > i {
@@ -35,6 +35,11 @@
 
 #trendButton {
   float: right;
+  margin-right: 1em;
+}
+
+#trendButton i {
+  vertical-align: middle;
 }
 
 .tweets-header {
@@ -63,7 +68,6 @@
 }
 
 .current-trend {
-  /* height: 7em; */
   width: 100%;
   margin: 1em 0 0 0;
   padding: 1em 0 0 1em;
@@ -73,10 +77,6 @@
 .current-trend p {
   margin: 0;
   color: #7C8C99;
-}
-
-.current-trend p:last-child {
-  margin: 0.5em 0;
 }
 
 .current-trend:last-child {
@@ -95,7 +95,7 @@
   z-index: 1;
 }
 
-.trend-modal button {
+#closeTrendModalButton {
   border: unset;
   font-size: 1.5em;
   color: #1da1f2;
@@ -105,7 +105,7 @@
   background-color: #fff;
 }
 
-.trend-modal button:hover {
+#closeTrendModalButton:hover {
   background-color: #F5FBFE;
 }
 
@@ -130,17 +130,18 @@
   padding: 0 0 0 1.5em;
 }
 
-.trend-modal input {
+.set-trend input {
+  float: right;
   transform: scale(1.5);
   cursor: pointer;
-}
-
-.set-trend input {
-  margin-left: 30em;
+  margin-right: 2em;
 }
 
 .set-location input {
-  margin-left: 25em;
+  float: right;
+  transform: scale(1.5);
+  cursor: pointer;
+  margin-right: 2em;
 }
 
 .trend-modal small {
