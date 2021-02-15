@@ -85,17 +85,22 @@
 }
 
 .tweet-item {
-  display: grid;
-  grid-template-columns: 0.5fr 4fr;
+  display: flex;
   width: 100%;
+  border-top: 1px solid #E6ECF0;
+  border-bottom: 1px solid #E6ECF0;
+}
+
+.tweet-content-item {
+  display: grid;
+  grid-template-columns: 0.5fr 3fr;
   padding: 1em 0 1em 0.8em;
+  width: 100%;
   height: auto;
-  border-top: 1px solid  #E6ECF0;
-  border-bottom: 1px solid  #E6ECF0;
 }
 
 .tweet-info > button {
-  margin-right: 3em;
+  margin-right: 2em;
   padding: 0.2em;
 }
 
@@ -119,8 +124,7 @@
 }
 
 .delete-button {
-  float: right;
-  margin-right: 2em;
+  margin: 1em;
   width: 2em;
   height: 2em;
   font-size: 1.2em;
@@ -218,6 +222,12 @@
 #root button:active {
   transform: translateY(4px);
 }
+
+.tweet-item:hover {
+  background-color: #F9F9F9;
+}
+
+
 
 .comment-modal-container {
   display: none;
