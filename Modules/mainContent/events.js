@@ -58,16 +58,26 @@ const getTweetItemFromDb = async () => {
     const { tweetItemId, userPhoto, userName, inputValue } = tweetItem
     return `
       <div class="tweet-item" id="${tweetItemId}">
-        <img src="${userPhoto}" class="main-content-photo image" alt="photo">
         <div>
-          <strong class="profile-name">${userName}</strong>
-          <button class="delete-button" property="${tweetItemId}">X</button>
-          <p class="tweet-text">${inputValue}</p>
-          <div class="tweet-info">
-            <button><i class="fa fa-comment-o"></i>5.1k</button>
-            <button><i class="fa fa-retweet"></i>2.1k</button>
-            <button><i class="fa fa-heart-o"></i>3.1k</button>
-            <button><i class="fa fa-upload"></i></button>
+          <img src="${userPhoto}" class="main-content-photo image" alt="photo">
+          <div>
+            <strong class="profile-name">${userName}</strong>
+            <button class="delete-button" property="${tweetItemId}">X</button>
+            <p class="tweet-text">${inputValue}</p>
+            <div class="tweet-info">
+              <button><i class="fa fa-comment-o"></i>5.1k</button>
+              <button><i class="fa fa-retweet"></i>2.1k</button>
+              <button><i class="fa fa-heart-o"></i>3.1k</button>
+              <button><i class="fa fa-upload"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="comment-container">
+          <textarea class="comment-box" placeholder="Write a comment"></textarea>
+          <button class="add-comment-button">Add</button>
+          <div class="comment-output">
+            <p>Hey</p>
+            <button>X</button>
           </div>
         </div>
       </div>
