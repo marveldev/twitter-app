@@ -97,7 +97,8 @@ button {
   border-radius: 0;
 }
 
-#closeTweetButton:hover {
+#closeTweetButton:hover,
+.comment-modal-button:hover {
   background-color: #F5FBFE;
 }
 
@@ -126,13 +127,6 @@ button {
   z-index: 1;
   box-shadow: 5px 5px 10px 5px #00000033;
 }
-
-/* .user-input button {
-  padding: 0.7em 1.2em;
-  text-decoration: none;
-  border-radius: 2em;
-  color: #1DA1F2;
-} */
 
 .tweet-input {
   display: grid;

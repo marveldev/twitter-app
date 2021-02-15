@@ -33,11 +33,25 @@ const tweetItemEvents = () => {
   commentButtons.forEach(commentButton => {
     commentButton.addEventListener('click', () => {
       const elementProperty = commentButton.getAttribute('property')
-      // const tweetOutput = document.querySelector('#tweetOutput')
       const commentModal = document.querySelector(`.${elementProperty}`)
       commentModal.style.display = 'block'
-      console.log(commentModal);
       document.querySelector('#overlay').style.display = 'block'
+    })
+  })
+
+  const commentModalButtons = document.querySelectorAll('.comment-modal-button')
+  commentModalButtons.forEach(commentModalButton => {
+    commentModalButton.addEventListener('click', () => {
+      commentModalButton.parentElement.parentElement.style.display = 'none'
+      document.querySelector('#overlay').style.display = 'none'
+    })
+  })
+
+  const addCommentButtons = document.querySelectorAll('.add-comment-button')
+  addCommentButtons.forEach(addCommentButton => {
+    addCommentButton.addEventListener('click', () => {
+      addCommentButton.parentElement.parentElement.style.display = 'none'
+      document.querySelector('#overlay').style.display = 'none'
     })
   })
 }
@@ -45,12 +59,13 @@ const tweetItemEvents = () => {
 const commentModal = (tweetItemId, userName, userPhoto, inputValue) => {
   return `
     <div class="comment-modal-container ${tweetItemId}">
-      <button id="closeCommentButton">X</button>
+      <div>
+        <button class="comment-modal-button">X</button>
+      </div>
       <div class="comment-output">
-        <img src="${userPhoto}" class="image" alt="photo">
+        <img src="${userPhoto}" class="main-content-photo image" alt="photo">
         <div>
           <span class="profile-name">${userName}</span>
-          <button class="delete-comment">X</button>
           <p class="comment">${inputValue}</p>
         </div>
       </div>
@@ -131,8 +146,8 @@ const getTweetItemFromDb = async () => {
   const tweetItems = tweetData.reverse().map((tweetItem) => {
     const { tweetItemId, userPhoto, userName, inputValue } = tweetItem
     return `
-      <div class="tweet-item" id="${tweetItemId}">
-        <div>
+      <div id="${tweetItemId}">
+        <div class="tweet-item">
           <img src="${userPhoto}" class="main-content-photo image" alt="photo">
           <div>
             <strong class="profile-name">${userName}</strong>

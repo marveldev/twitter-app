@@ -85,17 +85,13 @@
 }
 
 .tweet-item {
+  display: grid;
+  grid-template-columns: 0.5fr 4fr;
+  width: 100%;
   padding: 1em 0 1em 0.8em;
   height: auto;
   border-top: 1px solid  #E6ECF0;
   border-bottom: 1px solid  #E6ECF0;
-}
-
-.tweet-item > div:first-child{
-  display: grid;
-  grid-template-columns: 0.5fr 4fr;
-  width: 100%;
-  height: auto;
 }
 
 .tweet-info > button {
@@ -226,72 +222,68 @@
 .comment-modal-container {
   display: none;
   position: fixed;
-  top: 15em;
-  left: 35%;
-  width: 25%;
-  padding: 1em 2em;
-  height: 15em;
+  top: 5em;
+  left: 27%;
+  width: 45%;
+  padding: 1em 0em;
+  height: 50%;
   border-radius: 0.8em;
-  text-align: center;
   background-color: #fff;
   z-index: 1;
 }
 
-.comment-container > div:first-child {
-  display: flex;
-  border-top: 1px solid  #E6ECF0;
-  /* border-bottom: 1px solid  #E6ECF0; */
+.comment-modal-button {
+  font-size: 1.5em;
+  color: #1da1f2;
+  padding: 0.2em 0.6em;
+  border-radius: 1em;
+}
+
+.comment-modal-container > div:first-child {
+  border-bottom: 1px solid  #E6ECF0;
+  padding: 0 0 0.5em 0.5em;
 }
 
 .add-comment-button {
+  float: right;
   background-color: #1DA1F2;
   height: 2.5em;
   width: 5em;
   color: #fff;
   border-radius: 2em;
-  margin: auto;
+  margin: 0 2em;
   font-weight: 600;
 }
 
 .comment-box {
-  width: 80%;
-  height: 2.5em;
-  padding: 0.7em 1em;
-  background-color: #E6ECF0;
-  border-radius: 1.5em;
+  width: 23em;
+  height: 5em;
+  font-size: 1.5em;
+  border: none;
+  padding: 0.5em 1em;
   outline: none;
   resize: none;
+}
+
+.comment-box::placeholder {
+  color: #9197A3;
+}
+
+.comment-modal-container .tweet-input {
   border: none;
-  margin: 1em 0;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  max-height: 8em;
-  line-height: 1.2em;
-  font-size: 1.1em;
 }
 
 .comment-output {
-  display: none;
+  display: grid;
   grid-template-columns: 0.5fr 4fr;
   width: 100%;
   height: auto;
   margin: 1em auto;
+  padding-left: 1em;
 }
 
-.comment-output > img {
-  height: 2.5em;
-  width: 2.5em;
-  border-radius: 50%;
-  object-fit: cover;
-  background-color: #000000d7;
-}
-
-.comment-output span {
+.profile-name {
   font-weight: 550;
-}
-
-.delete-comment {
-  float: right;
 }
 
 @media screen and (max-width: 425px) { 
