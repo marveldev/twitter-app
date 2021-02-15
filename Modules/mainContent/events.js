@@ -1,5 +1,78 @@
 import { addEntryToDb, getEntryFromDb, deleteEntry } from '../../dataStorage.js'
 
+const tweetItemEvents = () => {
+  let elementProperty
+  const deleteButtons = document.querySelectorAll('.delete-button')
+  deleteButtons.forEach(deleteButton => {
+    deleteButton.addEventListener('click', () => {
+      elementProperty = deleteButton.getAttribute('property')
+      document.querySelector('#overlay').style.display = 'block'
+      document.querySelector('.delete-modal').style.display = 'block'
+    })
+  })
+
+  const confirmButton = document.querySelector('.confirm-button')
+  confirmButton.addEventListener('click', () => {
+    const tweetOutput = document.querySelector('#tweetOutput')
+    const tweetItem = document.querySelector(`#${elementProperty}`)
+    tweetOutput.removeChild(tweetItem)
+    document.querySelector('.delete-modal').style.display = 'none'
+    document.querySelector('#overlay').style.display = 'none'
+    deleteEntry('tweet-data', elementProperty)
+  })
+
+  const cancelButtons = document.querySelectorAll('.cancel-button')
+  cancelButtons.forEach(cancelButton => {
+    cancelButton.addEventListener('click', () => {
+      document.querySelector('#overlay').style.display = 'none'
+      document.querySelector('.delete-modal').style.display = 'none'
+    })
+  })
+
+  const commentButtons = document.querySelectorAll('.comment-button')
+  commentButtons.forEach(commentButton => {
+    commentButton.addEventListener('click', () => {
+      const elementProperty = commentButton.getAttribute('property')
+      // const tweetOutput = document.querySelector('#tweetOutput')
+      const commentModal = document.querySelector(`.${elementProperty}`)
+      commentModal.style.display = 'block'
+      console.log(commentModal);
+      document.querySelector('#overlay').style.display = 'block'
+    })
+  })
+}
+
+const commentModal = (tweetItemId, userName, userPhoto, inputValue) => {
+  return `
+    <div class="comment-modal-container ${tweetItemId}">
+      <button id="closeCommentButton">X</button>
+      <div class="comment-output">
+        <img src="${userPhoto}" class="image" alt="photo">
+        <div>
+          <span class="profile-name">${userName}</span>
+          <button class="delete-comment">X</button>
+          <p class="comment">${inputValue}</p>
+        </div>
+      </div>
+      <div class="tweet-input">
+        <img src="${userPhoto}" class="main-content-photo image" alt="photo">
+        <textarea class="comment-box" placeholder="Add another Tweet?"></textarea>
+      </div>
+      <div class="tweet-options">
+        <input type="file" id="addPhoto">
+        <label for="addPhoto">
+          <span><i class="fa fa-file-picture-o" id="photoIcon"></i></span>
+        </label>
+        <span><i class="material-icons">&#xe908</i></span>
+        <span><i class="fa fa-bar-chart"></i></span>
+        <span><i class="fa fa-smile-o"></i></span>
+        <span><i class="fa fa-calendar-plus-o"></i></span>
+        <button class="add-comment-button">Tweet</button>
+      </div>
+    </div>
+  `
+}
+
 const addTweetItemToDb = (input) => {
   const addTweetButtons = document.querySelectorAll('.add-tweet-button')
   const tweetContainer = document.querySelector('.tweet-modal-container')
@@ -36,6 +109,8 @@ const addTweetItemToDb = (input) => {
           document.querySelector('#overlay').style.display = 'none'
         }
 
+        input.value = ''
+
         const addItemToIndexDb = {
           tweetItemId: tweetItemId,
           userPhoto: userPhoto,
@@ -44,8 +119,7 @@ const addTweetItemToDb = (input) => {
         }
 
         addEntryToDb('tweet-data', addItemToIndexDb)
-        input.value = ''
-        deleteTweetItem()
+        tweetItemEvents()
       }
     })
   })
@@ -65,63 +139,22 @@ const getTweetItemFromDb = async () => {
             <button class="delete-button" property="${tweetItemId}">X</button>
             <p class="tweet-text">${inputValue}</p>
             <div class="tweet-info">
-              <button><i class="fa fa-comment-o"></i>5.1k</button>
+              <button class="comment-button" property="${tweetItemId}">
+                <i class="fa fa-comment-o"></i>5.1k
+              </button>
               <button><i class="fa fa-retweet"></i>2.1k</button>
               <button><i class="fa fa-heart-o"></i>3.1k</button>
               <button><i class="fa fa-upload"></i></button>
             </div>
           </div>
         </div>
-        <div class="comment-container">
-          <div>
-            <textarea class="comment-box" placeholder="Write a comment"></textarea>
-            <button class="add-comment-button">Add</button>
-          </div>
-          <div class="comment-output">
-            <img src="${userPhoto}" class="image" alt="photo">
-            <div>
-              <span class="profile-name">${userName}</span>
-              <button class="delete-comment">X</button>
-              <p class="comment">Hey</p>
-            </div>
-          </div>
-        </div>
+        ${commentModal(tweetItemId, userName, userPhoto, inputValue)}
       </div>
     `
   })
 
   tweetOutput.innerHTML = tweetItems.join('')
-  deleteTweetItem()
-}
-
-const deleteTweetItem = () => {
-  let elementProperty
-  const deleteButtons = document.querySelectorAll('.delete-button')
-  deleteButtons.forEach(deleteButton => {
-    deleteButton.addEventListener('click', () => {
-      elementProperty = deleteButton.getAttribute('property')
-      document.querySelector('#overlay').style.display = 'block'
-      document.querySelector('.delete-modal').style.display = 'block'
-    })
-  })
-
-  const confirmButton = document.querySelector('.confirm-button')
-  confirmButton.addEventListener('click', () => {
-    const tweetOutput = document.querySelector('#tweetOutput')
-    const tweetItem = document.querySelector(`#${elementProperty}`)
-    tweetOutput.removeChild(tweetItem)
-    document.querySelector('.delete-modal').style.display = 'none'
-    document.querySelector('#overlay').style.display = 'none'
-    deleteEntry('tweet-data', elementProperty)
-  })
-
-  const cancelButtons = document.querySelectorAll('.cancel-button')
-  cancelButtons.forEach(cancelButton => {
-    cancelButton.addEventListener('click', () => {
-      document.querySelector('#overlay').style.display = 'none'
-      document.querySelector('.delete-modal').style.display = 'none'
-    })
-  })
+  tweetItemEvents()
 }
 
 const addMainContentEvents = () => {
