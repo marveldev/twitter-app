@@ -4,7 +4,6 @@ import TrendingPane from './Modules/trendingPane/TrendingPane.js'
 import { request } from './dataStorage.js'
 import addLeftNavEventListeners from './Modules/leftNav/events.js'
 import addMainContentEvents from './Modules/MainContent/events.js'
-import smallScreenEventListeners from './Modules/smallScreen/events.js'
 import addTrendingPaneEvents from './Modules/trendingPane/events.js'
 
 const App = async () => {
