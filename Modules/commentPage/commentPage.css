@@ -14,11 +14,33 @@
   position: relative;
   top: 6em;
   height: fit-content;
-  padding: 0 2em;
 }
 
 .comment-info > div:first-child {
-  display: grid;
-  grid-template-columns: 0.17fr 1fr 0.1fr;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
+  padding-left: 2em;
+}
+
+.comment-info > div:nth-child(2) {
+  padding: 0 2em;
+}
+
+.profile-name {
+  margin: 1em 0;
+  flex: 0.92;
+}
+
+.comment-text {
+  font-size: 1.5em;
+}
+
+.comment-options {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.2em;
+  border-top: 1px solid #E6ECF0;
+  border-bottom: 1px solid #E6ECF0;
+  padding: 1em;
 }
