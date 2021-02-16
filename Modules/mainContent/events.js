@@ -1,5 +1,6 @@
 import { addEntryToDb, getEntryFromDb, deleteEntry } from '../../dataStorage.js'
 import CommentPage from '../commentPage/CommentPage.js'
+import addCommentPageEvents from '../commentPage/events.js'
 
 const tweetItemEvents = () => {
   let elementProperty
@@ -34,6 +35,7 @@ const tweetItemEvents = () => {
   tweetItems.forEach(tweetItem => {
     tweetItem.addEventListener('click', () => {
       document.querySelector('#currentPage').innerHTML = CommentPage()
+      // addCommentPageEvents()
       localStorage.setItem('mainpage', 'commentPage')
     })
   })
