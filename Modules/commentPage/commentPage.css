@@ -6,5 +6,19 @@
 }
 
 #returnButton {
+  vertical-align: middle;
+  color: #1DA1F2;
+}
 
+.comment-info {
+  position: relative;
+  top: 6em;
+  height: fit-content;
+  padding: 0 2em;
+}
+
+.comment-info > div:first-child {
+  display: grid;
+  grid-template-columns: 0.17fr 1fr 0.1fr;
+  width: 100%;
 }
