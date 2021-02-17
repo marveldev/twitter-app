@@ -10,6 +10,7 @@ request.onupgradeneeded = () => {
   const database = request.result
   database.createObjectStore('user-data', { autoIncrement: true })
   database.createObjectStore('tweet-data', { keyPath: 'tweetItemId' })
+  database.createObjectStore('comment-data', { keyPath: 'commentItemId' })
 }
 
 request.onerror = () => {
@@ -23,12 +24,13 @@ const addEntryToDb = (storeName, entry) => {
   store.add(entry)
 
   transaction.oncomplete = () => {
-    const message = document.querySelector('#message')
-    message.style.display = 'block'
+    // const message = document.querySelector('#message')
+    // message.style.display = 'block'
 
-    setTimeout(function() {
-      message.style.display = 'none'
-    }, 4000)
+    // setTimeout(function() {
+    //   message.style.display = 'none'
+    // }, 4000)
+    console.log('success');
   }
 
   transaction.onerror = () => {
