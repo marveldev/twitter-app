@@ -10,7 +10,7 @@ request.onupgradeneeded = () => {
   const database = request.result
   database.createObjectStore('user-data', { autoIncrement: true })
   database.createObjectStore('tweet-data', { keyPath: 'tweetItemId' })
-  database.createObjectStore('comment-data', { keyPath: 'commentItemId' })
+  database.createObjectStore('comment-data', { autoIncrement: true })
 }
 
 request.onerror = () => {
@@ -38,12 +38,12 @@ const addEntryToDb = (storeName, entry) => {
   }
 }
 
-const getEntryFromDb = (storeName) => {
+const getEntryFromDb = (storeName, id) => {
   const data = new Promise((resolve, reject) => {
     const database = request.result
     const transaction = database.transaction([storeName])
     const store = transaction.objectStore(storeName)
-    const getData = store.getAll()
+    const getData = id ? store.get(id) : store.getAll()
 
     getData.onsuccess = () => {
       resolve(getData.result)
