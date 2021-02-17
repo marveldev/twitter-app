@@ -13,21 +13,17 @@ const addCommentItemToDb = () => {
         <div class="comment-content-item">
           <img src="" class="home-page-photo image" alt="photo">
           <div>
-            <strong class="profile-name">Jane Doe</strong>
-            <p class="comment-text">Hey</p>
-            <div class="comment-info">
-              <button class="comment-button" property="${commentItemId}">
-                <i class="fa fa-comment-o"></i>5.1k
-              </button>
-              <button><i class="fa fa-recomment"></i>2.1k</button>
-              <button><i class="fa fa-heart-o"></i>3.1k</button>
+            <strong class="user-profile-name">Jane Doe</strong>
+            <p class="">Hey</p>
+            <div class="comment-item-options">
+              <button class="comment-button"><i class="fa fa-comment-o"></i></button>
+              <button><i class="fa fa-retweet"></i></button>
+              <button><i class="fa fa-heart-o"></i></button>
               <button><i class="fa fa-upload"></i></button>
             </div>
           </div>
         </div>
-        <button class="delete-button" property="${commentItemId}">
-          <i class="fa fa-trash-o"></i>
-        </button>
+        <button class="more-button" property=""><i class="material-icons">&#xe5d3;</i></button>
       </div>
     `
     commentItem += replyOutput.innerHTML
@@ -56,7 +52,7 @@ const getCommentItemFromDb = async () => {
         <div class="comment-content-item">
           <img src="" class="home-page-photo image" alt="photo">
           <div>
-            <strong class="profile-name">Jane Doe</strong>
+            <strong class="user-profile-name">Jane Doe</strong>
             <p class="">Hey</p>
             <div class="comment-item-options">
               <button class="comment-button"><i class="fa fa-comment-o"></i></button>
