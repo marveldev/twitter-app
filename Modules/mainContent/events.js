@@ -1,8 +1,7 @@
 import { addEntryToDb, getEntryFromDb, deleteEntry } from '../../dataStorage.js'
-import CommentPage from '../commentPage/CommentPage.js'
-import addCommentPageEvents from '../commentPage/events.js'
+import switchCurrentPage from '../helper.js'
 
-const tweetItemEvents = () => {
+const addTweetItemEvents = () => {
   let elementProperty
   const deleteButtons = document.querySelectorAll('.delete-button')
   deleteButtons.forEach(deleteButton => {
@@ -34,69 +33,9 @@ const tweetItemEvents = () => {
   const tweetItems = document.querySelectorAll('.tweet-content-item')
   tweetItems.forEach(tweetItem => {
     tweetItem.addEventListener('click', () => {
-      document.querySelector('#currentPage').innerHTML = CommentPage()
-      // addCommentPageEvents()
-      localStorage.setItem('mainpage', 'commentPage')
+      switchCurrentPage('commentPage')
     })
   })
-
-  // const commentButtons = document.querySelectorAll('.comment-button')
-  // commentButtons.forEach(commentButton => {
-  //   commentButton.addEventListener('click', () => {
-  //     const elementProperty = commentButton.getAttribute('property')
-  //     const commentModal = document.querySelector(`.${elementProperty}`)
-  //     commentModal.style.display = 'block'
-  //     document.querySelector('#overlay').style.display = 'block'
-  //   })
-  // })
-
-  // const commentModalButtons = document.querySelectorAll('.comment-modal-button')
-  // commentModalButtons.forEach(commentModalButton => {
-  //   commentModalButton.addEventListener('click', () => {
-  //     commentModalButton.parentElement.parentElement.style.display = 'none'
-  //     document.querySelector('#overlay').style.display = 'none'
-  //   })
-  // })
-
-  // const addCommentButtons = document.querySelectorAll('.add-comment-button')
-  // addCommentButtons.forEach(addCommentButton => {
-  //   addCommentButton.addEventListener('click', () => {
-  //     addCommentButton.parentElement.parentElement.style.display = 'none'
-  //     document.querySelector('#overlay').style.display = 'none'
-  //   })
-  // })
-}
-
-const commentModal = (tweetItemId, userName, userPhoto, inputValue) => {
-  return `
-    <div class="comment-modal-container ${tweetItemId}">
-      <div>
-        <button class="comment-modal-button">X</button>
-      </div>
-      <div class="comment-output">
-        <img src="${userPhoto}" class="main-content-photo image" alt="photo">
-        <div>
-          <span class="profile-name">${userName}</span>
-          <p class="comment">${inputValue}</p>
-        </div>
-      </div>
-      <div class="tweet-input">
-        <img src="${userPhoto}" class="main-content-photo image" alt="photo">
-        <textarea class="comment-box" placeholder="Add another Tweet?"></textarea>
-      </div>
-      <div class="tweet-options">
-        <input type="file" id="addPhoto">
-        <label for="addPhoto">
-          <span><i class="fa fa-file-picture-o" id="photoIcon"></i></span>
-        </label>
-        <span><i class="material-icons">&#xe908</i></span>
-        <span><i class="fa fa-bar-chart"></i></span>
-        <span><i class="fa fa-smile-o"></i></span>
-        <span><i class="fa fa-calendar-plus-o"></i></span>
-        <button class="add-comment-button">Tweet</button>
-      </div>
-    </div>
-  `
 }
 
 const addTweetItemToDb = (input) => {
@@ -151,7 +90,7 @@ const addTweetItemToDb = (input) => {
         }
 
         addEntryToDb('tweet-data', addItemToIndexDb)
-        tweetItemEvents()
+        addTweetItemEvents()
       }
     })
   })
@@ -185,7 +124,7 @@ const getTweetItemFromDb = async () => {
   })
 
   tweetOutput.innerHTML = tweetItems.join('')
-  tweetItemEvents()
+  addTweetItemEvents()
 }
 
 const addMainContentEvents = () => {
