@@ -13,7 +13,7 @@ const switchCurrentPage = async (page) => {
       addHomePageEvents()
       break
     case 'commentPage':
-      currentPage.innerHTML = CommentPage()
+      currentPage.innerHTML = await CommentPage()
       addCommentPageEvents()
       break
     default:
