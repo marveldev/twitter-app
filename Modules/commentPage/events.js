@@ -1,3 +1,4 @@
+import { addEntryToDb, getEntryFromDb } from "../../dataStorage.js"
 import switchCurrentPage from "../helper.js"
 
 const addCommentItemToDb = () => {
@@ -39,15 +40,40 @@ const addCommentItemToDb = () => {
     document.querySelector('.comment-modal-container').style.display = 'none'
     document.querySelector('#overlay').style.display = 'none'
 
-    // const addItemToIndexDb = {
-    //   commentItemId: commentItemId,
-    //   userPhoto: userPhoto,
-    //   userName: userName,
-    //   commentBoxValue: commentBoxValue
-    // }
+    const addItemToIndexDb = {
+      commentItemId: commentItemId,
+      commentBoxValue: commentBoxValue
+    }
 
-    // addEntryToDb('comment-data', addItemToIndexDb)
+    addEntryToDb('comment-data', addItemToIndexDb)
   }
+}
+
+const getCommentItemFromDb = async () => {
+  const commentData = await getEntryFromDb('comment-data')
+  const commentItems = commentData.reverse().map((commentItem) => {
+    const { commentItemId, commentBoxValue } = commentItem
+    return `
+      <div class="comment-item" id="${commentItemId}">
+        <div class="comment-content-item">
+          <img src="" class="main-content-photo image" alt="photo">
+          <div>
+            <strong class="profile-name">Jane Doe</strong>
+            <p class="">Hey</p>
+            <div class="comment-item-options">
+              <button class="comment-button"><i class="fa fa-comment-o"></i></button>
+              <button><i class="fa fa-retweet"></i></button>
+              <button><i class="fa fa-heart-o"></i></button>
+              <button><i class="fa fa-upload"></i></button>
+            </div>
+          </div>
+        </div>
+        <button class="more-button" property=""><i class="material-icons">&#xe5d3;</i></button>
+      </div>
+    `
+  })
+
+  document.querySelector('#commentOutput').innerHTML = commentItems.join('')
 }
 
 const addCommentPageEvents = async () => {
@@ -79,6 +105,8 @@ const addCommentPageEvents = async () => {
       addCommentItemToDb()
     })
   })
+
+  getCommentItemFromDb()
 }
 
 export default addCommentPageEvents
