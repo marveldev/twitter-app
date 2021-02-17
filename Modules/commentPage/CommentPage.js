@@ -1,4 +1,11 @@
-const CommentPage = () => {
+import { addEntryToDb, clearAllEntries, getEntryFromDb } from "../../dataStorage.js"
+
+const CommentPage = async () => {
+  const commentData = await getEntryFromDb('comment-data')
+  console.log(commentData);
+  
+  // const { userPhoto, userName, inputValue } = tweetItemObject
+
   return `
     <div class="comment-page">
       <div class="home">
@@ -7,13 +14,18 @@ const CommentPage = () => {
       </div>
       <div class="comment-content">
         <div>
-          <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" class="home-page-photo image" alt="photo">
-          <strong class="user-profile-name">Jane Doe</strong>
-          <button class="more-button" property=""><i class="material-icons">&#xe5d3;</i></button>
+          <img src="${userPhoto}" class="home-page-photo image" alt="photo">
+          <strong class="user-profile-name">${userName}</strong>
+          <button class="more-button"><i class="material-icons">&#xe5d3;</i></button>
         </div>
         <div>
-          <p class="comment-text">Hey</p>
+          <p class="comment-text">${inputValue}</p>
           <p>2:51pm. Feb 15, 2021. Twitter Web App</p>
+        </div>
+        <div class="comment-interaction">
+          <span><strong>42 </strong>Retweets</span>
+          <span><strong>12 </strong>Quote Tweets</span>
+          <span><strong>675 </strong>Likes</span>
         </div>
         <div class="comment-options">
           <button class="comment-button"><i class="fa fa-comment-o"></i></button>
@@ -21,8 +33,8 @@ const CommentPage = () => {
           <button><i class="fa fa-heart-o"></i></button>
           <button><i class="fa fa-upload"></i></button>
         </div>
+        <div id="replyOutput"></div>
       </div>
-      <div id="replyOutput"></div>
       <div class="comment-modal-container">
         <div>
           <button class="comment-modal-button">X</button>
