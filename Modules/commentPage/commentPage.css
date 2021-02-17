@@ -13,7 +13,7 @@
 .comment-content {
   position: relative;
   top: 6em;
-  height: fit-content;
+  height: auto;
   padding-bottom: 1em;
 }
 
@@ -31,20 +31,32 @@
 .user-profile-name {
   margin: 1em 0;
   flex: 0.92;
-  font-weight: 550;
+  font-weight: 650;
+  font-size: 1.1em;
 }
 
 .comment-text {
   font-size: 1.5em;
 }
 
+.comment-interaction {
+  padding: 1em 0;
+  margin: 0 2em;
+  border-top: 1px solid #E6ECF0;
+  border-bottom: 1px solid #E6ECF0;
+  font-size: 1.1em;
+}
+
+.comment-interaction > span {
+  padding-right: 1em;
+}
+
 .comment-options {
   display: flex;
   justify-content: space-around;
-  font-size: 1.2em;
-  border-top: 1px solid #E6ECF0;
+  font-size: 1.3em;
+  padding: 0.5em;
   border-bottom: 1px solid #E6ECF0;
-  padding: 0.7em;
 }
 
 .comment-item-options {
@@ -116,15 +128,9 @@
   padding-left: 1em;
 }
 
-#replyOutput {
-  position: relative;
-  top: 5em;
-}
-
 .comment-item {
   display: flex;
   width: 100%;
-  border-top: 1px solid #E6ECF0;
   border-bottom: 1px solid #E6ECF0;
 }
 
