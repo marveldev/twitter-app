@@ -9,10 +9,10 @@ const deleteModal = `
   </div>
 `
 
-const MainContent = async () => {
+const HomePage = async () => {
   const userData = await getEntryFromDb('user-data')
   return `
-    <div class="main-content">
+    <div class="home-page">
       <div id="message">
         <strong>ENTRY ADDED SUCCESSFULLY</strong>
         <button class="message-btn">OK</button>
@@ -23,7 +23,7 @@ const MainContent = async () => {
           class="small-screen-photo image" alt="photo">
       </div>
       <div class="user-options">
-        <div class="user-input"> 
+        <div class="tweet-input-container">
           <img src=${userData[0] ? userData[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
             class="profile-photo image" alt="photo">
           <div>
@@ -52,5 +52,4 @@ const MainContent = async () => {
   `
 }
 
-export default MainContent
-export { deleteModal }
+export default HomePage

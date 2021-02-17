@@ -1,5 +1,5 @@
 import { addEntryToDb, clearAllEntries } from '../../dataStorage.js'
-import { addTweetItemToDb } from '../MainContent/events.js'
+import { addTweetItemToDb } from '../homePage/events.js'
 
 const toggleTheme = () => {
   const root = document.querySelector('#root')

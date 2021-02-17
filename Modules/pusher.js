@@ -13,7 +13,7 @@ channel.bind('send-message', data => {
     <div class="tweet-item" id="${tweetItemId}">
       <a href="#">
         <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG"
-          class="main-content-photo image" alt="photo">
+          class="home-page-photo image" alt="photo">
       </a>
       <div> 
         <strong class="profile-name">${user}</strong>

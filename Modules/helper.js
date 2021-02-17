@@ -1,7 +1,7 @@
 import CommentPage from "./commentPage/CommentPage.js"
 import addCommentPageEvents from "./commentPage/events.js"
-import addMainContentEvents from "./mainContent/events.js"
-import MainContent from "./MainContent/MainContent.js"
+import addHomePageEvents from "./homePage/events.js"
+import HomePage from "./homePage/HomePage.js"
 
 const switchCurrentPage = async (page) => {
   const currentPage = document.querySelector('#currentPage')
@@ -9,16 +9,16 @@ const switchCurrentPage = async (page) => {
 
   switch (page) {
     case 'homePage':
-      currentPage.innerHTML = await MainContent()
-      addMainContentEvents()
+      currentPage.innerHTML = await HomePage()
+      addHomePageEvents()
       break
     case 'commentPage':
       currentPage.innerHTML = CommentPage()
       addCommentPageEvents()
       break
     default:
-      currentPage.innerHTML = await MainContent()
-      addMainContentEvents()
+      currentPage.innerHTML = await HomePage()
+      addHomePageEvents()
       break
   }
 }

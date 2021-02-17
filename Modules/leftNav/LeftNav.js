@@ -67,7 +67,7 @@ const LeftNav = async () => {
           <button id="closeTweetButton">X</button>
           <div class="tweet-input"> 
             <img src=${userData[0] ? userData[0].photoSource : 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'}
-              class="main-content-photo image" alt="photo">
+              class="home-page-photo image" alt="photo">
             <div>
               <textarea class="tweet-input-box" placeholder="What's happening?"></textarea>
               <strong>Everyone can reply</strong>

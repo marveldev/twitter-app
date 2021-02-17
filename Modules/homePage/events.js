@@ -53,7 +53,7 @@ const addTweetItemToDb = (input) => {
         let tweetItem = `
           <div class="tweet-item" id="${tweetItemId}">
             <div class="tweet-content-item">
-              <img src="${userPhoto}" class="main-content-photo image" alt="photo">
+              <img src="${userPhoto}" class="home-page-photo image" alt="photo">
               <div>
                 <strong class="profile-name">${userName}</strong>
                 <p class="tweet-text">${inputValue}</p>
@@ -104,7 +104,7 @@ const getTweetItemFromDb = async () => {
     return `
       <div class="tweet-item" id="${tweetItemId}">
         <div class="tweet-content-item">
-          <img src="${userPhoto}" class="main-content-photo image" alt="photo">
+          <img src="${userPhoto}" class="home-page-photo image" alt="photo">
           <div>
             <strong class="profile-name">${userName}</strong>
             <p class="tweet-text">${inputValue}</p>
@@ -127,7 +127,7 @@ const getTweetItemFromDb = async () => {
   addTweetItemEvents()
 }
 
-const addMainContentEvents = () => {
+const addHomePageEvents = () => {
   const input = document.querySelector('.input')
   const messageButton = document.querySelector('.message-btn')
   messageButton.addEventListener('click', () => {
@@ -143,5 +143,5 @@ const addMainContentEvents = () => {
   getTweetItemFromDb()
 }
 
-export default addMainContentEvents
+export default addHomePageEvents
 export { addTweetItemToDb, getTweetItemFromDb }

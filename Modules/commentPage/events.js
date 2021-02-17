@@ -2,18 +2,16 @@ import { addEntryToDb, getEntryFromDb } from "../../dataStorage.js"
 import switchCurrentPage from "../helper.js"
 
 const addCommentItemToDb = () => {
-  const commentOutput = document.querySelector('#commentOutput')
+  const replyOutput = document.querySelector('#replyOutput')
   const commentBox = document.querySelector('.comment-box')
 
   if (commentBox.value.trim().length >= 1) {
     const commentItemId = 'id' + Date.parse(new Date()).toString()
-    // const userName = document.querySelector('.profile-name').innerText
-    // const userPhoto = document.querySelector('.left-nav-photo').src
     const commentBoxValue = commentBox.value
     let commentItem = `
       <div class="comment-item" id="${commentItemId}">
         <div class="comment-content-item">
-          <img src="" class="main-content-photo image" alt="photo">
+          <img src="" class="home-page-photo image" alt="photo">
           <div>
             <strong class="profile-name">Jane Doe</strong>
             <p class="comment-text">Hey</p>
@@ -32,8 +30,8 @@ const addCommentItemToDb = () => {
         </button>
       </div>
     `
-    commentItem += commentOutput.innerHTML
-    commentOutput.innerHTML = commentItem
+    commentItem += replyOutput.innerHTML
+    replyOutput.innerHTML = commentItem
 
     commentBox.value = ''
 
@@ -56,7 +54,7 @@ const getCommentItemFromDb = async () => {
     return `
       <div class="comment-item" id="${commentItemId}">
         <div class="comment-content-item">
-          <img src="" class="main-content-photo image" alt="photo">
+          <img src="" class="home-page-photo image" alt="photo">
           <div>
             <strong class="profile-name">Jane Doe</strong>
             <p class="">Hey</p>
@@ -73,7 +71,7 @@ const getCommentItemFromDb = async () => {
     `
   })
 
-  document.querySelector('#commentOutput').innerHTML = commentItems.join('')
+  document.querySelector('#replyOutput').innerHTML = commentItems.join('')
 }
 
 const addCommentPageEvents = async () => {

@@ -10,21 +10,21 @@
   color: #1DA1F2;
 }
 
-.comment-info {
+.comment-content {
   position: relative;
   top: 6em;
   height: fit-content;
   padding-bottom: 1em;
 }
 
-.comment-info > div:first-child {
+.comment-content > div:first-child {
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding-left: 2em;
 }
 
-.comment-info > div:nth-child(2) {
+.comment-content > div:nth-child(2) {
   padding: 0 2em;
 }
 
@@ -107,7 +107,7 @@
   border: none;
 }
 
-.about-tweet {
+.about-comment {
   display: grid;
   grid-template-columns: 0.5fr 4fr;
   width: 100%;
@@ -116,7 +116,7 @@
   padding-left: 1em;
 }
 
-#commentOutput {
+#replyOutput {
   position: relative;
   top: 5em;
 }

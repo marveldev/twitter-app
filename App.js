@@ -9,9 +9,8 @@ const App = async () => {
   return `
     <div id="overlay"></div>
     ${await LeftNav()}
-    <section class="grid-container">
-      <div id="currentPage">
-      </div>
+    <section class="main-layer">
+      <div id="currentPage"></div>
       ${TrendingPane()}
     </section>
   `
