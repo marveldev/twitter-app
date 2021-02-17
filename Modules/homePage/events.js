@@ -1,4 +1,4 @@
-import { addEntryToDb, getEntryFromDb, deleteEntry } from '../../dataStorage.js'
+import { addEntryToDb, getEntryFromDb, deleteEntry, clearAllEntries } from '../../dataStorage.js'
 import switchCurrentPage from '../helper.js'
 
 const addTweetItemEvents = () => {
@@ -32,7 +32,11 @@ const addTweetItemEvents = () => {
 
   const tweetItems = document.querySelectorAll('.tweet-content-item')
   tweetItems.forEach(tweetItem => {
-    tweetItem.addEventListener('click', () => {
+    tweetItem.addEventListener('click', async () => {
+      const tweetItemId = tweetItem.parentElement.id
+      const tweetItemObject = await getEntryFromDb('tweet-data', tweetItemId)
+      clearAllEntries('comment-data')
+      addEntryToDb('comment-data', tweetItemObject)
       switchCurrentPage('commentPage')
     })
   })
@@ -55,7 +59,7 @@ const addTweetItemToDb = (input) => {
             <div class="tweet-content-item">
               <img src="${userPhoto}" class="home-page-photo image" alt="photo">
               <div>
-                <strong class="profile-name">${userName}</strong>
+                <strong class="user-profile-name">${userName}</strong>
                 <p class="tweet-text">${inputValue}</p>
                 <div class="tweet-info">
                   <button class="comment-button" property="${tweetItemId}">
@@ -106,7 +110,7 @@ const getTweetItemFromDb = async () => {
         <div class="tweet-content-item">
           <img src="${userPhoto}" class="home-page-photo image" alt="photo">
           <div>
-            <strong class="profile-name">${userName}</strong>
+            <strong class="user-profile-name">${userName}</strong>
             <p class="tweet-text">${inputValue}</p>
             <div class="tweet-info">
               <button><i class="fa fa-comment-o"></i>5.1k</button>
