@@ -2,7 +2,7 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 @import "../Modules/leftNav/leftNav.css";
-@import "../Modules/mainContent/mainContent.css";
+@import "../Modules/homePage/homePage.css";
 @import "../Modules/trendingPane/trendingPane.css";
 @import "../Modules/commentPage/commentPage.css";
 @import "./theme/lightsOutTheme.css";
