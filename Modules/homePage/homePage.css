@@ -108,19 +108,23 @@
   height: auto;
 }
 
-.tweet-info > button {
-  margin-right: 2em;
-  padding: 0.2em;
+.tweet-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1em;
 }
 
 .tweet-info > button:hover {
   color: #0a0aff;
 }
 
+.tweet-info > button:active {
+  transform: translateY(0);
+}
+
 .tweet-info > button i {
   font-size: 1em;
-  margin-right: 0.5em;
-  padding: 0.5em;
+  padding-right: 0.5em;
   border-radius: 1em;
 }
 
@@ -177,7 +181,7 @@
 
 .tweet-text {
   line-height: 1.8em;
-  margin-top: 0.5em;
+  font-size: 1.1em;
 }
 
 #addPhoto {
@@ -229,7 +233,7 @@
   height: 2em;
 }
 
-#root button:active {
+button:active {
   transform: translateY(4px);
 }
 
