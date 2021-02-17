@@ -17,7 +17,8 @@ const switchCurrentPage = async (page) => {
       addCommentPageEvents()
       break
     default:
-      currentPage.innerHTML = MainContent()
+      currentPage.innerHTML = await MainContent()
+      addMainContentEvents()
       break
   }
 }
