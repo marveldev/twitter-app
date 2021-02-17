@@ -14,6 +14,7 @@
   position: relative;
   top: 6em;
   height: fit-content;
+  padding-bottom: 1em;
 }
 
 .comment-info > div:first-child {
@@ -43,7 +44,13 @@
   font-size: 1.2em;
   border-top: 1px solid #E6ECF0;
   border-bottom: 1px solid #E6ECF0;
-  padding: 1em;
+  padding: 0.7em;
+}
+
+.comment-item-options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1em;
 }
 
 .comment-modal-container {
@@ -107,4 +114,24 @@
   height: auto;
   margin: 1em auto;
   padding-left: 1em;
+}
+
+#commentOutput {
+  position: relative;
+  top: 5em;
+}
+
+.comment-item {
+  display: flex;
+  width: 100%;
+  border-top: 1px solid #E6ECF0;
+  border-bottom: 1px solid #E6ECF0;
+}
+
+.comment-content-item {
+  display: grid;
+  grid-template-columns: 0.5fr 3fr;
+  padding: 1em 0 1em 2em;
+  width: 100%;
+  height: auto;
 }
