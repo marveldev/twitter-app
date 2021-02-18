@@ -62,7 +62,7 @@ const addTweetItemToDb = (input) => {
                 <strong class="user-profile-name">${userName}</strong>
                 <p class="tweet-text">${inputValue}</p>
                 <div class="tweet-info">
-                  <button class="comment-button" property="${tweetItemId}">
+                  <button class="comment-modal-button" property="${tweetItemId}">
                     <i class="fa fa-comment-o"></i>5.1k
                   </button>
                   <button><i class="fa fa-retweet"></i>2.1k</button>
