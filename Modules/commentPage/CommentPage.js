@@ -1,11 +1,8 @@
-import { addEntryToDb, clearAllEntries, getEntryFromDb } from "../../dataStorage.js"
+import { getEntryFromDb } from "../../dataStorage.js"
 
 const CommentPage = async () => {
   const commentData = await getEntryFromDb('comment-data')
-  console.log(commentData);
-  
-  // const { userPhoto, userName, inputValue } = tweetItemObject
-
+  const { userPhoto, userName, inputValue } = commentData[0]
   return `
     <div class="comment-page">
       <div class="home">
@@ -40,14 +37,14 @@ const CommentPage = async () => {
           <button class="comment-modal-button">X</button>
         </div>
         <div class="about-comment">
-          <img src="" class="home-page-photo image" alt="photo">
+          <img src="${userPhoto}" class="home-page-photo image" alt="photo">
           <div>
-            <span class="user-profile-name">Jane Doe</span>
-            <p>hey</p>
+            <span class="user-profile-name">${userName}</span>
+            <p>${inputValue}</p>
           </div>
         </div>
         <div class="tweet-input">
-          <img src="" class="home-page-photo image" alt="photo">
+          <img src="${userPhoto}" class="home-page-photo image" alt="photo">
           <textarea class="comment-box" placeholder="Tweet your reply"></textarea>
         </div>
         <div class="tweet-options">
@@ -59,7 +56,7 @@ const CommentPage = async () => {
           <span><i class="fa fa-bar-chart"></i></span>
           <span><i class="fa fa-smile-o"></i></span>
           <span><i class="fa fa-calendar-plus-o"></i></span>
-          <button class="add-comment-button">Reply</button>
+          <button class="add-reply-button">Reply</button>
         </div>
       </div>
     </div>
