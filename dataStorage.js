@@ -11,7 +11,6 @@ request.onupgradeneeded = () => {
   database.createObjectStore('user-data', { autoIncrement: true })
   database.createObjectStore('tweet-data', { keyPath: 'tweetItemId' })
   database.createObjectStore('comment-data', { autoIncrement: true })
-  database.createObjectStore('reply-data', { keyPath: 'replyItemId' })
 }
 
 request.onerror = () => {
