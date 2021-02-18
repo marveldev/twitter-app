@@ -35,6 +35,10 @@
   font-size: 1.1em;
 }
 
+.about-comment p {
+  font-size: 1.1em;
+}
+
 .comment-text {
   font-size: 1.5em;
 }
@@ -59,7 +63,7 @@
   border-bottom: 1px solid #E6ECF0;
 }
 
-.comment-item-options {
+.reply-item-options {
   display: flex;
   justify-content: space-between;
   font-size: 1.1em;
@@ -90,7 +94,7 @@
   padding: 0 0 0.5em 0.5em;
 }
 
-.add-comment-button {
+.add-reply-button {
   float: right;
   background-color: #1DA1F2;
   height: 2.5em;
@@ -128,13 +132,13 @@
   padding-left: 1em;
 }
 
-.comment-item {
+.reply-item {
   display: flex;
   width: 100%;
   border-bottom: 1px solid #E6ECF0;
 }
 
-.comment-content-item {
+.reply-content-item {
   display: grid;
   grid-template-columns: 0.5fr 3fr;
   padding: 1em 0 1em 2em;
