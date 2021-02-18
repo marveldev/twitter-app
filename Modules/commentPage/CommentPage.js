@@ -2,39 +2,39 @@ import { getEntryFromDb } from "../../dataStorage.js"
 
 const CommentPage = async () => {
   const commentData = await getEntryFromDb('comment-data')
-  const { userPhoto, userName, inputValue } = commentData[0]
+  const { userPhoto, userName, inputValue, tweetItemId } = commentData[0]
   return `
     <div class="comment-page">
       <div class="home">
         <button id="returnButton"><i class="material-icons">&#xe5c4;</i></button>
         <span>Tweet</span>
       </div>
-      <div class="comment-content">
+      <div class="tweet-content">
         <div>
           <img src="${userPhoto}" class="home-page-photo image" alt="photo">
           <strong class="user-profile-name">${userName}</strong>
           <button class="more-button"><i class="material-icons">&#xe5d3;</i></button>
         </div>
         <div>
-          <p class="comment-text">${inputValue}</p>
+          <p class="tweet-text">${inputValue}</p>
           <p>2:51pm. Feb 15, 2021. Twitter Web App</p>
         </div>
-        <div class="comment-interaction">
+        <div class="tweet-interaction">
           <span><strong>42 </strong>Retweets</span>
           <span><strong>12 </strong>Quote Tweets</span>
           <span><strong>675 </strong>Likes</span>
         </div>
-        <div class="comment-options">
-          <button class="comment-button"><i class="fa fa-comment-o"></i></button>
+        <div class="user-tweet-options">
+          <button class="comment-modal-button"><i class="fa fa-comment-o"></i></button>
           <button><i class="fa fa-retweet"></i></button>
           <button><i class="fa fa-heart-o"></i></button>
           <button><i class="fa fa-upload"></i></button>
         </div>
-        <div id="replyOutput"></div>
+        <div id="commentOutput"></div>
       </div>
       <div class="comment-modal-container">
         <div>
-          <button class="comment-modal-button">X</button>
+          <button class="close-comment-button">X</button>
         </div>
         <div class="about-comment">
           <img src="${userPhoto}" class="home-page-photo image" alt="photo">
@@ -56,7 +56,7 @@ const CommentPage = async () => {
           <span><i class="fa fa-bar-chart"></i></span>
           <span><i class="fa fa-smile-o"></i></span>
           <span><i class="fa fa-calendar-plus-o"></i></span>
-          <button class="add-reply-button">Reply</button>
+          <button class="add-comment-button" id=${tweetItemId}>Reply</button>
         </div>
       </div>
     </div>
