@@ -10,21 +10,21 @@
   color: #1DA1F2;
 }
 
-.comment-content {
+.tweet-content {
   position: relative;
   top: 6em;
   height: auto;
   padding-bottom: 1em;
 }
 
-.comment-content > div:first-child {
+.tweet-content > div:first-child {
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding-left: 2em;
 }
 
-.comment-content > div:nth-child(2) {
+.tweet-content > div:nth-child(2) {
   padding: 0 2em;
 }
 
@@ -39,11 +39,12 @@
   font-size: 1.1em;
 }
 
-.comment-text {
+.tweet-content .tweet-text {
   font-size: 1.5em;
+  line-height: 1em;
 }
 
-.comment-interaction {
+.tweet-interaction {
   padding: 1em 0;
   margin: 0 2em;
   border-top: 1px solid #E6ECF0;
@@ -51,11 +52,11 @@
   font-size: 1.1em;
 }
 
-.comment-interaction > span {
+.tweet-interaction > span {
   padding-right: 1em;
 }
 
-.comment-options {
+.user-tweet-options {
   display: flex;
   justify-content: space-around;
   font-size: 1.3em;
@@ -63,7 +64,7 @@
   border-bottom: 1px solid #E6ECF0;
 }
 
-.reply-item-options {
+.comment-item-options {
   display: flex;
   justify-content: space-between;
   font-size: 1.1em;
@@ -82,7 +83,7 @@
   z-index: 2;
 }
 
-.comment-modal-button {
+.close-comment-button {
   font-size: 1.5em;
   color: #1da1f2;
   padding: 0.2em 0.6em;
@@ -132,13 +133,13 @@
   padding-left: 1em;
 }
 
-.reply-item {
+.comment-item {
   display: flex;
   width: 100%;
   border-bottom: 1px solid #E6ECF0;
 }
 
-.reply-content-item {
+.comment-content-item {
   display: grid;
   grid-template-columns: 0.5fr 3fr;
   padding: 1em 0 1em 2em;
